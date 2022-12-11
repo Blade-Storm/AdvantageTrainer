@@ -60,13 +60,13 @@ fun MyAppNavHost(
     navController: NavHostController = rememberNavController(),
     startDestination: String = "home"
 ) {
-    val (couponSelection, onOptionSelected) = rememberSaveable { mutableStateOf(Coupons.FREE_CHIPS)}
-    val (couponGameEdge, updateCouponGameEdge ) = rememberSaveable { mutableStateOf("") }
-    val (couponFaceValue, updateCouponFaceValue ) = rememberSaveable { mutableStateOf("") }
-    val (couponBet, updateCouponBetValue ) = rememberSaveable { mutableStateOf("") }
-    val (deck, updateDeck) = remember { mutableStateOf(ArrayList<Card>()) }
+    var (couponSelection, onOptionSelected) = rememberSaveable { mutableStateOf(Coupons.FREE_CHIPS)}
+    var (couponGameEdge, updateCouponGameEdge ) = rememberSaveable { mutableStateOf("") }
+    var (couponFaceValue, updateCouponFaceValue ) = rememberSaveable { mutableStateOf("") }
+    var (couponBet, updateCouponBetValue ) = rememberSaveable { mutableStateOf("") }
+    var (deck, updateDeck) = remember { mutableStateOf(ArrayList<Card>()) }
 
-    val sharedPref = LocalContext.current.getSharedPreferences(
+    var sharedPref = LocalContext.current.getSharedPreferences(
         Settings.SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE)
 
     with (sharedPref.edit()) {
@@ -129,7 +129,7 @@ fun SettingsScreen(
         Text("- Speed of card flash, in seconds")
         var isSpeedDropdownExpanded by remember { mutableStateOf(false) }
         // TODO: Use mapper in settings instead of hardcoded list
-        val cardSpeedItems = listOf("0.25", "0.50", "1.00", "1.50", "2.00")
+        var cardSpeedItems = listOf("0.25", "0.50", "1.00", "1.50", "2.00")
         var selectedCardSpeedIndex by remember { mutableStateOf(sharedPref.getInt(Settings.CARD_FLASH_SPEED, 0)) }
 
 
@@ -179,7 +179,7 @@ fun SettingsScreen(
         }
 
         // TODO: Use mapper in settings instead of hardcoded list
-        val numCardToFlashItems = listOf("1 card", "2 cards", "1-3 cards")
+        var numCardToFlashItems = listOf("1 card", "2 cards", "1-3 cards")
         Text("- Number of cards to flash")
         var isNumCardToFlashExpanded by remember { mutableStateOf(false) }
         var selectedNumCardsToFlashIndex by remember { mutableStateOf(sharedPref.getInt(Settings.NUM_CARDS_TO_FLASH, 0)) }
@@ -210,7 +210,7 @@ fun SettingsScreen(
 
 
         // TODO: Use mapper in settings instead of hardcoded list
-        val numDecksToUse = listOf("1", "2", "4", "6", "8")
+        var numDecksToUse = listOf("1", "2", "4", "6", "8")
         Text("- Number of decks to use")
         var isNumOfDecksToUseExpanded by remember { mutableStateOf(false) }
         var selectedNumOfDecksToUseIndex by remember { mutableStateOf(sharedPref.getInt(Settings.NUM_DECKS_TO_COUNT, 0)) }
@@ -249,10 +249,10 @@ fun CountingDrillScreen(
     deck: ArrayList<Card>,
     updateDeck: (ArrayList<Card>) -> Unit
 ){
-    val cardVisible = remember { mutableStateOf(false) }
-    val index = remember { mutableStateOf(0) }
-    val cardFlashSpeed = Settings.cardFlashSpeedMapper[sharedPref.getInt(Settings.CARD_FLASH_SPEED, 2)]!!
-    val numCardToFlashSetting = Settings.numCardToFlashMapper[sharedPref.getInt(Settings.NUM_CARDS_TO_FLASH, 0)]!!
+    var cardVisible = remember { mutableStateOf(false) }
+    var index = remember { mutableStateOf(0) }
+    var cardFlashSpeed = Settings.cardFlashSpeedMapper[sharedPref.getInt(Settings.CARD_FLASH_SPEED, 2)]!!
+    var numCardToFlashSetting = Settings.numCardToFlashMapper[sharedPref.getInt(Settings.NUM_CARDS_TO_FLASH, 0)]!!
     var numCardToFlash = numCardToFlashSetting
 
     // If the user has setting to flash 1-3 cards set numCardToFlash to a random int between 1-3
@@ -281,7 +281,7 @@ fun CountingDrillScreen(
         if(index.value < deck.size) {
             ShowCard(deck, index.value, numCardToFlash)
         }
-    }else if(deck.size == 0){
+    }else{
         newDeck = CreateDeck(sharedPref = sharedPref)
         updateDeck(newDeck)
     }
@@ -303,7 +303,7 @@ fun CountingDrillScreen(
             Text(text = "Start")
         }
         Button(
-            onClick = onNavigateToHome,
+            onClick = {onNavigateToHome(); deck.clear()},
             Modifier.testTag("HomeButton")
         ) {
             Text(text = "Home")
@@ -547,8 +547,8 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
 
 @Composable
 fun CreateDeck(sharedPref: SharedPreferences): ArrayList<Card>{
-    val useSpanishDeck = sharedPref.getBoolean(Settings.USE_SPANISH_DECK, false)
-    val numDeckToCountSetting = sharedPref.getInt(Settings.NUM_DECKS_TO_COUNT, 0)
+    var useSpanishDeck = sharedPref.getBoolean(Settings.USE_SPANISH_DECK, false)
+    var numDeckToCountSetting = sharedPref.getInt(Settings.NUM_DECKS_TO_COUNT, 0)
     var numDecksToCount = 1
 
     // Protect ourself from trying to access the mapper with an index that is out of bounds
@@ -557,7 +557,7 @@ fun CreateDeck(sharedPref: SharedPreferences): ArrayList<Card>{
         numDecksToCount = Settings.numDecksToCountMapper[numDeckToCountSetting]!!
     }
 
-    val deck = ArrayList<Card>()
+    var deck = ArrayList<Card>()
 
     for (i in 0 until numDecksToCount){
         for (suit in Suits.values()) {
