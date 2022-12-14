@@ -83,39 +83,6 @@ class MainActivityTest {
         composeTestRule.onNode(hasTestTag("NumOfDecksToUseBox")).assertIsDisplayed()
     }
 
-    // TODO: Figure out how to assert on internal values
-    @Test
-    fun countingDrillScreen_ShouldStartDrill() {
-        val countingDrillButtonTag = "CountingDrillButton"
-        val startButton = "StartButton"
-
-        // Start the app
-        composeTestRule.setContent {
-            val sharedPref = LocalContext.current.getSharedPreferences(
-                TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE)
-
-            with (sharedPref.edit()) {
-                clear()
-                apply()
-            }
-
-            AdvantageTrainerTheme {
-                GenerateAppView()
-            }
-        }
-
-        // Navigate to the counting drill screen
-        val navigateToCountingDrillButton = composeTestRule.onAllNodes(hasClickAction()).filter(hasTestTag(countingDrillButtonTag))
-        navigateToCountingDrillButton[0].performClick()
-
-        // Click the start button
-        val startDrillButton = composeTestRule.onAllNodes(hasClickAction()).filter(hasTestTag(startButton))
-        startDrillButton[0].performClick()
-
-        // Assert that cards are being displayed
-        composeTestRule.onAllNodes(hasContentDescription("Card")).assertCountEquals(1)
-    }
-
     @Test
     fun createDeck_CreatesAllCardsForBlackjack() {
         var deck = ArrayList<Card>()
