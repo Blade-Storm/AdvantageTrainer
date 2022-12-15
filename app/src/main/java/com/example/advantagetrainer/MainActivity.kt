@@ -7,8 +7,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.selection.selectable
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -18,7 +16,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -115,135 +112,6 @@ fun MyAppNavHost(
             )
         }
     }
-}
-
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun CouponCalculatorScreen(
-    onNavigateToHome: () -> Unit,
-    couponSelection: Coupons,
-    onOptionSelected: (Coupons) -> Unit,
-    couponGameEdge: String,
-    updateCouponGameEdge: (String) -> Unit,
-    couponFaceValue: String,
-    updateCouponFaceValue: (String) -> Unit,
-    couponBet: String,
-    updateCouponBetValue: (String) -> Unit
-) {
-    val (couponExpectedValue, onCouponExpectedValueChange)  = remember { mutableStateOf("0.0") }
-    val radioOptions = Coupons.values()
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .fillMaxHeight(),
-        verticalArrangement = Arrangement.Top,
-    ) {
-        Column {
-            radioOptions.forEach { couponType ->
-                Row(
-                    Modifier
-                        .fillMaxWidth()
-                        .selectable(
-                            selected = (couponType == couponSelection),
-                            onClick = { onOptionSelected(couponType) }
-                        )
-                ) {
-                    RadioButton(
-                        selected = (couponType == couponSelection),
-                        onClick = {
-                            onOptionSelected(couponType)
-                        },
-                    )
-                    Text(
-                        text = couponType.coupon,
-                        modifier = Modifier.align(Alignment.CenterVertically)
-                    )
-                }
-            }
-
-            Text("Dollar value of your coupon")
-            Row( Modifier
-                .fillMaxWidth()) {
-                TextField(
-                    value = couponFaceValue,
-                    onValueChange = {
-                        updateCouponFaceValue(it)
-                    },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                )
-            }
-
-            Text("Your edge as a percent")
-            Row( Modifier
-                .fillMaxWidth()) {
-                TextField(
-                    value = couponGameEdge,
-                    onValueChange = {
-                        updateCouponGameEdge(it)
-                    },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                )
-            }
-
-            if(couponSelection == Coupons.MATCH_PLAY){
-                Text("Dollar amount of the bet you make with the match play")
-                Row( Modifier
-                    .fillMaxWidth()) {
-
-                    TextField(
-                        value = couponBet,
-                        onValueChange = { it ->
-                            updateCouponBetValue(it)
-                        },
-                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                    )
-                }
-            }
-
-            if(couponExpectedValue.toDouble() != 0.0){
-                Text("The value of your coupon is:")
-                Text(couponExpectedValue)
-            }
-            Text(couponExpectedValue)
-        }
-
-
-    }
-
-
-    Column(
-        modifier = Modifier
-            .padding(24.dp)
-            .fillMaxWidth()
-            .fillMaxHeight(),
-        verticalArrangement = Arrangement.Bottom,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Button(onClick = { calculateCoupon(couponSelection, couponFaceValue, couponGameEdge, couponBet, onCouponExpectedValueChange) }) {
-            Text(text = "Calculate")
-        }
-        Button(onClick = onNavigateToHome) {
-            Text(text = "Home")
-        }
-    }
-}
-
-fun calculateCoupon(
-    couponSelection: Coupons,
-    couponFaceValue: String,
-    couponGameEdge: String,
-    couponBet: String,
-    onCouponExpectedValueChange: (String) -> Unit,
-) {
-    var expectedValue = 0.0
-
-    if(couponSelection == Coupons.MATCH_PLAY){
-        expectedValue = couponFaceValue.toDouble() * (1 + couponGameEdge.toDouble())
-    }
-
-    onCouponExpectedValueChange(expectedValue.toString())
-
 }
 
 @Composable
