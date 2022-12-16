@@ -55,13 +55,13 @@ fun MyAppNavHost(
     navController: NavHostController = rememberNavController(),
     startDestination: String = "home"
 ) {
-    var (couponSelection, onOptionSelected) = rememberSaveable { mutableStateOf(Coupons.FREE_CHIPS)}
-    var (couponGameEdge, updateCouponGameEdge ) = rememberSaveable { mutableStateOf("") }
-    var (couponFaceValue, updateCouponFaceValue ) = rememberSaveable { mutableStateOf("") }
-    var (couponBet, updateCouponBetValue ) = rememberSaveable { mutableStateOf("") }
-    var (deck, updateDeck) = remember { mutableStateOf(ArrayList<Card>()) }
+    val (couponSelection, onOptionSelected) = rememberSaveable { mutableStateOf(Coupons.FREE_CHIPS)}
+    val (couponGameEdge, updateCouponGameEdge ) = rememberSaveable { mutableStateOf("") }
+    val (couponFaceValue, updateCouponFaceValue ) = rememberSaveable { mutableStateOf("") }
+    val (couponBet, updateCouponBetValue ) = rememberSaveable { mutableStateOf("") }
+    val (deck, updateDeck) = remember { mutableStateOf(ArrayList<Card>()) }
 
-    var sharedPref = LocalContext.current.getSharedPreferences(
+    val sharedPref = LocalContext.current.getSharedPreferences(
         Settings.SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE)
 
     with (sharedPref.edit()) {
@@ -81,7 +81,8 @@ fun MyAppNavHost(
             HomeScreen(
                 onNavigateToCouponCalculator = { navController.navigate("couponcalculator") },
                 onNavigateToCountingDrill = {navController.navigate("countingdrill")},
-                onNavigateToSettings = {navController.navigate("settings")}
+                onNavigateToSettings = {navController.navigate("settings")},
+                onNavigateToStrategyDrill = {navController.navigate("strategydrill")}
             )
 
         }
@@ -111,6 +112,11 @@ fun MyAppNavHost(
                 sharedPref
             )
         }
+        composable("strategydrill") {
+            StrategyDrillScreen(
+                sharedPref
+            )
+        }
     }
 }
 
@@ -118,7 +124,8 @@ fun MyAppNavHost(
 fun HomeScreen(
     onNavigateToCouponCalculator: () -> Unit,
     onNavigateToCountingDrill: () -> Unit,
-    onNavigateToSettings: () -> Unit
+    onNavigateToSettings: () -> Unit,
+    onNavigateToStrategyDrill: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -134,18 +141,25 @@ fun HomeScreen(
         ) {
             Text(text = "Counting Drill")
         }
-       Button(
+        Button(
+            onClick = onNavigateToStrategyDrill,
+            Modifier.testTag("StrategyDrillButton")
+        ) {
+            Text(text = "Strategy Drill")
+        }
+        Button(
            onClick = onNavigateToCouponCalculator,
            Modifier.testTag("CouponCalculatorButton")
-       ) {
+        ) {
             Text(text = "Coupon Calculator")
-       }
+        }
         Button(
             onClick = onNavigateToSettings,
             Modifier.testTag("SettingsButton")
         ) {
             Text(text = "Settings")
         }
+
     }
 }
 
@@ -165,6 +179,7 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
         boxOffset = 48.dp
     }
 
+    // TODO Use offset instead of padding to display the cards. Also change the zindex so the card layout is proper
     // To prevent against an IndexOutOfBoundsException if we accidently call this function with a large index
     if(index < deck.size){
         Surface(
@@ -222,8 +237,8 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
 
 @Composable
 fun CreateDeck(sharedPref: SharedPreferences): ArrayList<Card>{
-    var useSpanishDeck = sharedPref.getBoolean(Settings.USE_SPANISH_DECK, false)
-    var numDeckToCountSetting = sharedPref.getInt(Settings.NUM_DECKS_TO_COUNT, 0)
+    val useSpanishDeck = sharedPref.getBoolean(Settings.USE_SPANISH_DECK, false)
+    val numDeckToCountSetting = sharedPref.getInt(Settings.NUM_DECKS_TO_COUNT, 0)
     var numDecksToCount = 1
 
     // Protect ourself from trying to access the mapper with an index that is out of bounds
@@ -232,7 +247,7 @@ fun CreateDeck(sharedPref: SharedPreferences): ArrayList<Card>{
         numDecksToCount = Settings.numDecksToCountMapper[numDeckToCountSetting]!!
     }
 
-    var deck = ArrayList<Card>()
+    val deck = ArrayList<Card>()
 
     for (i in 0 until numDecksToCount){
         for (suit in Suits.values()) {
@@ -250,3 +265,5 @@ fun CreateDeck(sharedPref: SharedPreferences): ArrayList<Card>{
 
     return deck
 }
+
+

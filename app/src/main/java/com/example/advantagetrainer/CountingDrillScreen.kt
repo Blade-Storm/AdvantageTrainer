@@ -20,10 +20,10 @@ fun CountingDrillScreen(
     deck: ArrayList<Card>,
     updateDeck: (ArrayList<Card>) -> Unit
 ){
-    var cardVisible = remember { mutableStateOf(false) }
-    var index = remember { mutableStateOf(0) }
-    var cardFlashSpeed = Settings.cardFlashSpeedMapper[sharedPref.getInt(Settings.CARD_FLASH_SPEED, 2)]!!
-    var numCardToFlashSetting = Settings.numCardToFlashMapper[sharedPref.getInt(Settings.NUM_CARDS_TO_FLASH, 0)]!!
+    val cardVisible = remember { mutableStateOf(false) }
+    val index = remember { mutableStateOf(0) }
+    val cardFlashSpeed = Settings.cardFlashSpeedMapper[sharedPref.getInt(Settings.CARD_FLASH_SPEED, 2)]!!
+    val numCardToFlashSetting = Settings.numCardToFlashMapper[sharedPref.getInt(Settings.NUM_CARDS_TO_FLASH, 0)]!!
     var numCardToFlash = numCardToFlashSetting
 
     // If the user has setting to flash 1-3 cards set numCardToFlash to a random int between 1-3
@@ -64,6 +64,7 @@ fun CountingDrillScreen(
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // TODO: Once the user clicks Start, hide the button until the drill is over
         Button(onClick = {
             cardVisible.value = true
         },
@@ -71,6 +72,7 @@ fun CountingDrillScreen(
         ) {
             Text(text = "Start")
         }
+        // TODO: Get rid of the home button here
         Button(
             onClick = {
                 onNavigateToHome()
