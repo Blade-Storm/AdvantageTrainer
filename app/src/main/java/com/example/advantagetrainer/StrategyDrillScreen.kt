@@ -56,7 +56,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
 fun ShowStrategyDrillCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
     var xboxOffset = 0.dp
     var yboxOffset = 0.dp
-    val dealerCardIndex = (0..deck.size - 1).random()
+    val dealerCardIndex = (0 until deck.size).random()
     val singleCardIndex = index
     val doubleCardIndex = index + 1
     val tripleCardIndex = index + 2
@@ -195,7 +195,7 @@ fun getValidHandToShow(deck: ArrayList<Card>, index: Int, numCardToFlashSetting:
 
         hand = Hand(handCreator)
 
-        return if(hand.handTotal > 21 || isOddHand(hand.cards as ArrayList<Card>)){
+        return if(hand.handTotal > 21 || isOddHand(hand.cards)){
             getValidHandToShow(deck, index + 1, numCardToFlashSetting)
         }else{
             index

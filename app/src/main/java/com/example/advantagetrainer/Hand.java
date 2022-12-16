@@ -145,7 +145,7 @@ public class Hand {
     public void addCard(Card card){
         cards.add(card);
 
-        // Calulate the hand total to determin if its a soft hand: total < 12 with an Ace
+        // Calculate the hand total to determine if its a soft hand: total < 12 with an Ace
         calcHandTotal();
     }
 
@@ -161,7 +161,7 @@ public class Hand {
         return handType;
     }
 
-    public List<Card> getCards(){
+    public ArrayList<Card> getCards(){
         return cards;
     }
 
