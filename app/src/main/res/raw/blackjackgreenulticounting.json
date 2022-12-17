@@ -1,1514 +1,1802 @@
 {
-    "hard":{
-      "2": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":1, "action": "double"}, "action":"hit"}},
-        "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":3, "action": "stand"}, "action":"hit"}},
-        "13": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":-1, "action": "stand"}, "action":"hit"}},
-        "14": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "3": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":2, "action": "stand"}, "action":"hit"}},
-        "13": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "4": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":0, "action": "stand"}, "action":"hit"}},
-        "13": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "5": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "6": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":2, "action": "double"}, "action":"hit"}},
-        "9": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "7": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":3, "action": "double"}, "action":"hit"}},
-        "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "8": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "9": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action":"hit"}},
-        "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "t": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "10": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "double"}, "action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
-        "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action": "stand"}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "j": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "10": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "double"}, "action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
-        "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action": "stand"}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "q": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "10": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "double"}, "action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
-        "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action": "stand"}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "k": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "10": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "double"}, "action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
-        "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action": "stand"}},
-        "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "a": {
-        "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "10": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":3, "action": "double"},"action": "hit"}},
-        "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":5, "action": "stand"},"action":"hit"}},
-        "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":3, "action": "stand"},"action":"hit"}},
-        "17": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action":"stand"}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      }
-    },
-    "soft":{
-      "2": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":1, "action": "double"}, "action":"hit"}},
-        "18": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "3": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
-        "18": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "4": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
-        "16": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
-        "17": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
-        "18": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
-        "19": {"action": "stand", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":3, "action": "double"}, "action":"stand"}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "5": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "14": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "15": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "16": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "17": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "18": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "19": {"action": "stand", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":1, "action": "double"}, "action":"stand"}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "6": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "14": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "15": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "16": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "17": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "18": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
-        "19": {"action": "stand", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":0, "action": "double"}, "action":"stand"}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "7": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "8": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "9": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "t": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "j": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "q": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "k": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      },
-      "a": {
-        "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
-        "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
-        "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
-      }
-    },
-  "split": {
+  "hard":{
     "2": {
-      "2": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "3": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "5": {
-        "action": "double",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "7": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "count": {
-            "deviationCount": 3,
-            "action": "stand"
-          },
-          "action": "hit"
-        }
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "9": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":1, "action": "double"}, "action":"hit"}},
+      "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":3, "action": "stand"}, "action":"hit"}},
+      "13": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":-1, "action": "stand"}, "action":"hit"}},
+      "14": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "3": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":2, "action": "stand"}, "action":"hit"}},
+      "13": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "4": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "stand", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":0, "action": "stand"}, "action":"hit"}},
+      "13": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "5": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "6": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":2, "action": "double"}, "action":"hit"}},
+      "9": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "7": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":3, "action": "double"}, "action":"hit"}},
+      "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "8": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit"},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "9": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "10": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit"},
+      "16": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "t": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "10": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "double"}, "action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
+      "16": {"action": "stand"},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "j": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "10": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "double"}, "action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
+      "16": {"action": "stand"},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "q": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "10": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "double"}, "action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
+      "16": {"action": "stand"},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "k": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "10": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "double"}, "action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
+      "16": {"action": "stand"},
+      "17": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "a": {
+      "2": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "3": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "4": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "5": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "6": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "7": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "8": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "9": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "10": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":3, "action": "double"},"action": "hit"}},
+      "11": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":5, "action": "stand"},"action":"hit"}},
+      "16": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":3, "action": "stand"},"action":"hit"}},
+      "17": {"action": "stand"},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    }
+  },
+  "soft":{
+    "2": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "hit", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":1, "action": "double"}, "action":"hit"}},
+      "18": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "3": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
+      "18": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "4": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
+      "16": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
+      "17": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
+      "18": {"action": "double", "hasDeviation": true, "deviationaction":{"action":"hit"}},
+      "19": {"action": "stand", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":3, "action": "double"}, "action":"stand"}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "5": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "14": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "15": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "16": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "17": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "18": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "19": {"action": "stand", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":1, "action": "double"}, "action":"stand"}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "6": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "14": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "15": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "16": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "17": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "18": {"action": "double", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "19": {"action": "stand", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":0, "action": "double"}, "action":"stand"}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "7": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "8": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "9": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "t": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "j": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "q": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "k": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    },
+    "a": {
+      "11": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "12": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "13": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "14": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "15": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "16": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "17": {"action": "hit", "hasDeviation": false, "deviationaction":{}},
+      "18": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "19": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "20": {"action": "stand", "hasDeviation": false, "deviationaction":{}},
+      "21": {"action": "stand", "hasDeviation": false, "deviationaction":{}}
+    }
+  },
+  "split": {
+  "2": {
+    "2": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
       }
     },
     "3": {
-      "2": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "3": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "5": {
-        "action": "double",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "count": {
-            "deviationCount": 2,
-            "action": "stand"
-          },
-          "action": "hit"
-        }
-      },
-      "7": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "9": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
       }
     },
     "4": {
-      "2": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "3": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "5": {
-        "action": "double",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "count": {
-            "deviationCount": 0,
-            "action": "stand"
-          },
-          "action": "hit"
-        }
-      },
-      "7": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "9": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      }
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
     },
     "5": {
-      "2": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "3": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "4": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "5": {
-        "action": "double",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "7": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "9": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
+      "action": "double",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
       }
     },
     "6": {
-      "2": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "3": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "4": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "count": {
-            "deviationCount": 2,
-            "action": "double"
-          },
-          "action": "hit"
-        }
-      },
-      "5": {
-        "action": "double",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "7": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "9": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
       }
     },
     "7": {
-      "2": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "3": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "5": {
-        "action": "double",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "7": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "9": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "count": {
+          "deviationCount": 3,
+          "action": "stand"
+        },
+        "action": "hit"
       }
     },
     "8": {
-      "2": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "3": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "5": {
-        "action": "double",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "7": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "9": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
       }
     },
     "9": {
-      "2": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "3": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "5": {
-        "action": "double",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "7": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "9": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "stand"
-        }
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
       }
     },
     "t": {
-      "2": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "3": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "5": {
-        "action": "hit",
-        "hasDeviation": true,
-        "deviationaction": {
-          "count": {
-            "deviationCount": 4,
-            "action": "double"
-          },
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "7": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "9": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      }
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
     },
     "j": {
-      "2": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "3": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "5": {
-        "action": "hit",
-        "hasDeviation": true,
-        "deviationaction": {
-          "count": {
-            "deviationCount": 4,
-            "action": "double"
-          },
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "7": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "9": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      }
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
     },
     "q": {
-      "2": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "3": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "5": {
-        "action": "hit",
-        "hasDeviation": true,
-        "deviationaction": {
-          "count": {
-            "deviationCount": 4,
-            "action": "double"
-          },
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "7": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "9": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      }
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
     },
     "k": {
-      "2": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "3": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "5": {
-        "action": "hit",
-        "hasDeviation": true,
-        "deviationaction": {
-          "count": {
-            "deviationCount": 4,
-            "action": "double"
-          },
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "7": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "9": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      }
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
     },
     "a": {
-      "2": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "3": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "4": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "5": {
-        "action": "hit",
-        "hasDeviation": true,
-        "deviationaction": {
-          "count": {
-            "deviationCount": 3,
-            "action": "double"
-          },
-          "action": "hit"
-        }
-      },
-      "6": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "7": {
-        "action": "hit",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "8": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
-      },
-      "9": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "t": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "j": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "q": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "k": {
-        "action": "stand",
-        "hasDeviation": false,
-        "deviationaction": {}
-      },
-      "a": {
-        "action": "split",
-        "hasDeviation": true,
-        "deviationaction": {
-          "action": "hit"
-        }
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
       }
+    }
+  },
+  "3": {
+    "2": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "3": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "4": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "5": {
+      "action": "double",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "count": {
+          "deviationCount": 2,
+          "action": "stand"
+        },
+        "action": "hit"
+      }
+    },
+    "7": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "9": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  },
+  "4": {
+    "2": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "3": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "4": {
+      "action": "hit",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "5": {
+      "action": "double",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "count": {
+          "deviationCount": 0,
+          "action": "stand"
+        },
+        "action": "hit"
+      }
+    },
+    "7": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "9": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    }
+  },
+  "5": {
+    "2": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "3": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "4": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "5": {
+      "action": "double",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "7": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "9": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  },
+  "6": {
+    "2": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "3": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "4": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "count": {
+          "deviationCount": 2,
+          "action": "double"
+        },
+        "action": "hit"
+      }
+    },
+    "5": {
+      "action": "double",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "7": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "9": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  },
+  "7": {
+    "2": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "3": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "4": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "5": {
+      "action": "double",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "7": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "9": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  },
+  "8": {
+    "2": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "3": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "4": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "5": {
+      "action": "double",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "7": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "9": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  },
+  "9": {
+    "2": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "3": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "4": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "5": {
+      "action": "double",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "7": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "9": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "stand"
+      }
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  },
+  "t": {
+    "2": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "3": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "4": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "5": {
+      "action": "hit",
+      "hasDeviation": true,
+      "deviationaction": {
+        "count": {
+          "deviationCount": 4,
+          "action": "double"
+        },
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "7": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "9": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  },
+  "j": {
+    "2": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "3": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "4": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "5": {
+      "action": "hit",
+      "hasDeviation": true,
+      "deviationaction": {
+        "count": {
+          "deviationCount": 4,
+          "action": "double"
+        },
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "7": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "9": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  },
+  "q": {
+    "2": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "3": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "4": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "5": {
+      "action": "hit",
+      "hasDeviation": true,
+      "deviationaction": {
+        "count": {
+          "deviationCount": 4,
+          "action": "double"
+        },
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "7": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "9": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  },
+  "k": {
+    "2": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "3": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "4": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "5": {
+      "action": "hit",
+      "hasDeviation": true,
+      "deviationaction": {
+        "count": {
+          "deviationCount": 4,
+          "action": "double"
+        },
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "7": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "9": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  },
+  "a": {
+    "2": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "3": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "4": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "5": {
+      "action": "hit",
+      "hasDeviation": true,
+      "deviationaction": {
+        "count": {
+          "deviationCount": 3,
+          "action": "double"
+        },
+        "action": "hit"
+      }
+    },
+    "6": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "7": {
+      "action": "hit",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "8": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    },
+    "9": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "t": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "j": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "q": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "k": {
+      "action": "stand",
+      "hasDeviation": false,
+      "deviationaction": {}
+    },
+    "a": {
+      "action": "split",
+      "hasDeviation": true,
+      "deviationaction": {
+        "action": "hit"
+      }
+    }
+  }
+},
+  "surrender":{
+    "2": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {},
+      "16": {},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "3": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {},
+      "16": {},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "4": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {},
+      "16": {},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "5": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {},
+      "16": {},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "6": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {},
+      "16": {},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "7": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {},
+      "16": {},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "8": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {},
+      "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action": "hit"}},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "9": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action":"hit"}},
+      "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "t": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
+      "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action": "stand"}},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "j": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
+      "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action": "stand"}},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "q": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {"action": "surrender", "hasDeviation": true, "deviationaction":{"count": {"deviationCount":4, "action": "stand"}, "action": "hit"}},
+      "16": {"action": "surrender", "hasDeviation": true, "deviationaction":{"action": "stand"}},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "k": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {"action": "surrender"},
+      "16": {"action": "surrender"},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
+    },
+    "a": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {"action": "surrender"},
+      "16": {"action": "surrender"},
+      "17": {"action": "surrender"},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {}
     }
   }
 }

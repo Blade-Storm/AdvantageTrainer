@@ -148,6 +148,10 @@ public class Hand {
         return cards.size() == 2 && cards.get(0).getValue().equals(cards.get(1).getValue());
     }
 
+    public boolean canSurrender(){
+        return cards.size() == 2;
+    }
+
     public Card getDealerUpCard(){
         return getCards().get(0);
     }

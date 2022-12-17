@@ -47,7 +47,6 @@ class CountingDrillScreenTest {
             ) {
                 composable("countingDrillScreen") {
                     CountingDrillScreen(
-                        onNavigateToHome = { navController.navigate("home") },
                         sharedPref,
                         deck,
                         updateDeck
@@ -57,7 +56,6 @@ class CountingDrillScreenTest {
 
             AdvantageTrainerTheme {
                 CountingDrillScreen(
-                    { navController.navigate("home") },
                     sharedPref,
                     deck,
                     updateDeck

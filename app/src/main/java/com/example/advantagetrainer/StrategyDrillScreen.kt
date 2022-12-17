@@ -85,19 +85,19 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                             // Show 2 cards
                             if (numCardInHandSetting == 2 || (numCardInHandSetting > 2 && index == deck.size - 2)) {
                                 Image(
-                                    painter = painterResource(deck[singleCardIndex].cardImageId),
+                                    painter = painterResource(deck[doubleCardIndex].cardImageId),
                                     contentDescription = "Card",
                                     modifier = Modifier.offset(x = 36.dp).zIndex(1.0F),
                                 )
                                 Image(
-                                    painter = painterResource(deck[doubleCardIndex].cardImageId),
+                                    painter = painterResource(deck[singleCardIndex].cardImageId),
                                     contentDescription = "Card",
                                     modifier = Modifier.offset(y = 36.dp),
                                 )
                                 // Show 3 cards
                             } else if (numCardInHandSetting == 3) {
                                 Image(
-                                    painter = painterResource(deck[singleCardIndex].cardImageId),
+                                    painter = painterResource(deck[tripleCardIndex].cardImageId),
                                     contentDescription = "Card",
                                     modifier = Modifier.offset(x = 72.dp).zIndex(1.0F),
                                 )
@@ -107,7 +107,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                                     modifier = Modifier.offset(x = 36.dp, y = 36.dp).zIndex(0.5F)
                                 )
                                 Image(
-                                    painter = painterResource(deck[tripleCardIndex].cardImageId),
+                                    painter = painterResource(deck[singleCardIndex].cardImageId),
                                     contentDescription = "Card",
                                     modifier = Modifier.offset(y = 72.dp)
                                 )
