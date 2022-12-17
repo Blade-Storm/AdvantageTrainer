@@ -7,8 +7,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -23,6 +27,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.advantagetrainer.ui.theme.AdvantageTrainerTheme
+import org.json.JSONObject
+import org.json.JSONTokener
+import java.io.*
 
 
 class MainActivity : ComponentActivity() {
@@ -166,16 +173,13 @@ fun HomeScreen(
 @Composable
 fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
     var boxOffset = 0.dp
-    val singleCardIndex = index
     val doubleCardIndex = index + 1
     val tripleCardIndex = index + 2
-    val numCardToFlash = numCardToFlashSetting
-
 
     // Update the box offset to account for the additional cards
-    if(numCardToFlash == 2 && index < deck.size - 1){
+    if(numCardToFlashSetting == 2 && index < deck.size - 1){
         boxOffset = 24.dp
-    }else if (numCardToFlash == 3 && index < deck.size - 2){
+    }else if (numCardToFlashSetting == 3 && index < deck.size - 2){
         boxOffset = 48.dp
     }
 
@@ -184,7 +188,9 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
     if(index < deck.size){
         Surface(
             color = Color.Transparent,
-            modifier = Modifier.fillMaxHeight().fillMaxWidth()
+            modifier = Modifier
+                .fillMaxHeight()
+                .fillMaxWidth()
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -194,15 +200,15 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
                     Modifier.offset(x = boxOffset, y = boxOffset)
                 ) {
                     // Show a single card. If there is only 1 card left in the deck to show, show one card regardless of the setting
-                    if (numCardToFlash == 1 || index == deck.size - 1) {
+                    if (numCardToFlashSetting == 1 || index == deck.size - 1) {
                         Image(
-                            painter = painterResource(deck[singleCardIndex].cardImageId),
+                            painter = painterResource(deck[index].cardImageId),
                             contentDescription = "Card",
                         )
                         // Show 2 cards
-                    } else if (numCardToFlash == 2 || (numCardToFlash == 3 && index == deck.size - 2)) {
+                    } else if (numCardToFlashSetting == 2 || (numCardToFlashSetting == 3 && index == deck.size - 2)) {
                         Image(
-                            painter = painterResource(deck[singleCardIndex].cardImageId),
+                            painter = painterResource(deck[index].cardImageId),
                             contentDescription = "Card",
                         )
                         Image(
@@ -211,9 +217,9 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
                             modifier = Modifier.padding(36.dp),
                         )
                         // Show 3 cards
-                    } else if (numCardToFlash == 3) {
+                    } else if (numCardToFlashSetting == 3) {
                         Image(
-                            painter = painterResource(deck[singleCardIndex].cardImageId),
+                            painter = painterResource(deck[index].cardImageId),
                             contentDescription = "Card",
                         )
                         Image(
@@ -236,7 +242,7 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
 }
 
 @Composable
-fun CreateDeck(sharedPref: SharedPreferences): ArrayList<Card>{
+fun createDeck(sharedPref: SharedPreferences): ArrayList<Card>{
     val useSpanishDeck = sharedPref.getBoolean(Settings.USE_SPANISH_DECK, false)
     val numDeckToCountSetting = sharedPref.getInt(Settings.NUM_DECKS_TO_COUNT, 0)
     var numDecksToCount = 1
@@ -264,6 +270,29 @@ fun CreateDeck(sharedPref: SharedPreferences): ArrayList<Card>{
     deck.shuffle()
 
     return deck
+}
+
+@Composable
+fun setStrategy(): JSONObject {
+    // val id = LocalContext.current.resources.getIdentifier(R.raw.blackjackgreenulticounting.toString(), null, null)
+    val inputStream = LocalContext.current.resources.openRawResource(R.raw.blackjackgreenulticounting)
+
+    val writer: Writer = StringWriter()
+    val buffer = CharArray(1024)
+    try {
+        val reader: Reader = BufferedReader(InputStreamReader(inputStream, "UTF-8"))
+        var n: Int
+        while (reader.read(buffer).also { n = it } != -1) {
+            writer.write(buffer, 0, n)
+        }
+    } finally {
+        inputStream.close()
+    }
+
+    val jsonString: String = writer.toString()
+
+    val tokener = JSONTokener(jsonString)
+    return JSONObject(tokener)
 }
 
 

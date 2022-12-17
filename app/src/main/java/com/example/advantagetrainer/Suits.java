@@ -1,5 +1,7 @@
 package com.example.advantagetrainer;
 
+import androidx.annotation.NonNull;
+
 public enum Suits {
     CLUB ("c"),
     SPADE ("s"),
@@ -12,7 +14,7 @@ public enum Suits {
         name = s;
     }
 
-    @Override
+    @NonNull
     public String toString() {
         return this.name;
     }

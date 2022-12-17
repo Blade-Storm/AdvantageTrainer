@@ -1,20 +1,13 @@
 package com.example.advantagetrainer;
 
-import android.content.res.Resources;
-import android.content.Context;
-import android.util.Pair;
-
-import androidx.compose.ui.res.PainterResources_androidKt;
-
 /**
  * Represents a single card out of the deck
  */
 public final class Card {
     private final Suits suit;
     private final CardNames name;
-    private Integer value; // Nullable because the value of an Ace is determined at play time.
+    private final Integer value; // Nullable because the value of an Ace is determined at play time.
     private final int resId; // ResourceId for the drawable folder
-    private final Pair<CardNames, Suits> cardIdentifier; // Identifier for the card as <JACK, CLUB> for "Jack of Clubs"
 
     /**
      * Creates a new card
@@ -30,7 +23,6 @@ public final class Card {
         this.suit = suit;
         this.name = name;
         this.value = value;
-        this.cardIdentifier = Pair.create(name, suit);
         this.resId = id;
 
     }
@@ -61,14 +53,6 @@ public final class Card {
     }
 
     /**
-     * Sets the cards value
-     * @param newValue of the Card
-     */
-    public void setValue(Integer newValue){
-        value = newValue;
-    }
-
-    /**
      * Gets the name of the card. IE: A, J, 2...
      */
     public CardNames getName(){
@@ -77,9 +61,5 @@ public final class Card {
 
     public Integer getCardImageId(){
         return resId;
-    }
-
-    public Pair<CardNames, Suits> getCardIdentifier(){
-        return cardIdentifier;
     }
 }

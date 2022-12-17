@@ -52,7 +52,7 @@ fun CountingDrillScreen(
             ShowCard(deck, index.value, numCardToFlash)
         }
     }else if(deck.size == 0){
-        updateDeck(CreateDeck(sharedPref = sharedPref))
+        updateDeck(createDeck(sharedPref = sharedPref))
     }
 
 

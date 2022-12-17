@@ -1,5 +1,7 @@
 package com.example.advantagetrainer;
 
+import androidx.annotation.NonNull;
+
 public enum CardNames {
     ACE ("a"),
     KING ("k"),
@@ -21,7 +23,7 @@ public enum CardNames {
         name = s;
     }
 
-    @Override
+    @NonNull
     public String toString() {
         return this.name;
     }

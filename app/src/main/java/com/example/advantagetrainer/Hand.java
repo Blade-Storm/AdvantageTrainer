@@ -1,9 +1,7 @@
 package com.example.advantagetrainer;
 
 import androidx.annotation.NonNull;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class Hand {
     public enum HandType {
@@ -26,11 +24,9 @@ public class Hand {
     private HandType handType = null;
     private int handTotal = 0;
     public int splitCount = 0;
-    public boolean isInsured = false;
 
-    public Hand(ArrayList<Card> cards){
-        // Default
-        this.cards = cards;
+    public Hand(){
+        cards = new ArrayList<>();
     }
 
     /**
@@ -122,24 +118,9 @@ public class Hand {
         return handTotal;
     }
 
-    public boolean shouldTakeInsurance(List<Card> cards){
-        return false;
-    }
-
-//    public boolean canSurrender(){
-//        return Rules.canSurrender() && cards.size() == 2;
-//    }
-
     public boolean didBust(){
         // The player or dealer busts if their hand total is greater than 21
         return handTotal > 21;
-    }
-
-    public void clearHand(){
-        if(!cards.isEmpty()){
-            cards.clear();
-            handTotal = 0;
-        }
     }
 
     public void addCard(Card card){
@@ -147,10 +128,6 @@ public class Hand {
 
         // Calculate the hand total to determine if its a soft hand: total < 12 with an Ace
         calcHandTotal();
-    }
-
-    public int getHandSize(){
-        return cards.size();
     }
 
     private void setHandType(HandType handtype){
@@ -171,28 +148,7 @@ public class Hand {
         return cards.size() == 2 && cards.get(0).getValue().equals(cards.get(1).getValue());
     }
 
-    public boolean canDoubleDown(){
-        // Player can only double on their first two cards
-        return cards.size() == 2;
-    }
-
-    public Card removeLastCard(){
-        Card card = cards.remove(cards.size() - 1);
-
-        // Recalculate the hand total
-        calcHandTotal();
-
-        return card;
-    }
-
     public Card getDealerUpCard(){
         return getCards().get(0);
-    }
-
-    public void setInsurance(boolean insurance){
-        // If we have a split hand we cannot insure it
-        if(splitCount == 0){
-            isInsured = insurance;
-        }
     }
 }

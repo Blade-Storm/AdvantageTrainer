@@ -9,7 +9,7 @@ import org.junit.Test
 
 
 class HandTest {
-    private var hand = Hand(arrayListOf())
+    private var hand = Hand()
 
     @get:Rule
     val composeTestRule = createComposeRule()

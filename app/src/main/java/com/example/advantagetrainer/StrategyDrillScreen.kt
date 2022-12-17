@@ -20,14 +20,160 @@ import androidx.compose.ui.zIndex
 @Composable
 fun StrategyDrillScreen(sharedPref: SharedPreferences) {
     val cardVisible = remember { mutableStateOf(false) }
-    val deck = CreateDeck(sharedPref = sharedPref)
-    var index = 0
-    val numCardToFlashSetting = 3
-
+    val deck = createDeck(sharedPref = sharedPref)
+    var (index, updateIndex) = remember { mutableStateOf(1) }
+    val numCardToFlashSetting = 2
+    val actionResolver = ActionResolver(setStrategy())
 
     if(cardVisible.value) {
         index = getValidHandToShow(deck, index, numCardToFlashSetting)
-        ShowStrategyDrillCard(deck = deck, index = index, numCardToFlashSetting = numCardToFlashSetting)
+        // index = ShowStrategyDrillCard(deck = deck, index = index, numCardToFlashSetting = numCardToFlashSetting, actionResolver)
+        var xboxOffset = 0.dp
+        var yboxOffset = 0.dp
+        val dealerCardIndex = (0 .. deck.size).random()
+        val singleCardIndex = index
+        val doubleCardIndex = index + 1
+        val tripleCardIndex = index + 2
+
+        // Update the box offset to account for the additional cards
+        if(numCardToFlashSetting == 2 && index < deck.size - 1){
+            xboxOffset = (-12).dp
+            yboxOffset = 12.dp
+        }else if (numCardToFlashSetting == 3 && index < deck.size - 2){
+            xboxOffset = (-24).dp
+            yboxOffset = 12.dp
+        }
+
+        val playerHand = Hand()
+        for(i in 0 until numCardToFlashSetting){
+            playerHand.addCard(deck[index + i])
+        }
+        val dealerHand = Hand()
+        dealerHand.addCard(deck[dealerCardIndex])
+
+        // Get the action the player should take
+        val playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+
+
+        // To prevent against an IndexOutOfBoundsException if we accidently call this function with a large index
+        if(index < deck.size){
+            Surface(
+                color = Color.Transparent,
+                modifier = Modifier.fillMaxHeight().fillMaxWidth()
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier.offset(y = 6.dp)
+                ) {
+                    Row{
+                        Image(
+                            painter = painterResource(deck[dealerCardIndex].cardImageId),
+                            contentDescription = "Card",
+                        )
+                    }
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center,
+                    ) {
+                        Box(
+                            Modifier.offset(x = xboxOffset, y = yboxOffset)
+                        ) {
+                            // Show 2 cards
+                            if (numCardToFlashSetting == 2 || (numCardToFlashSetting > 2 && index == deck.size - 2)) {
+                                Image(
+                                    painter = painterResource(deck[singleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 36.dp).zIndex(1.0F),
+                                )
+                                Image(
+                                    painter = painterResource(deck[doubleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(y = 36.dp),
+                                )
+                                // Show 3 cards
+                            } else if (numCardToFlashSetting == 3) {
+                                Image(
+                                    painter = painterResource(deck[singleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 72.dp).zIndex(1.0F),
+                                )
+                                Image(
+                                    painter = painterResource(deck[doubleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 36.dp, y = 36.dp).zIndex(0.5F)
+                                )
+                                Image(
+                                    painter = painterResource(deck[tripleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(y = 72.dp)
+                                )
+                            }
+                        }
+                    }
+                }
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Bottom,
+                    modifier = Modifier.fillMaxHeight()
+                ){
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceAround,
+                        modifier = Modifier.fillMaxWidth()
+                    ){
+                        Button(onClick = {
+                            if(playerAction == Actions.DOUBLE_DOWN){
+                                updateIndex((0..deck.size).random())
+                            }
+                        },
+                            Modifier.testTag("DoubleButton")
+                        ) {
+                            Text(text = "Double")
+                        }
+                        Button(onClick = {
+                            if(playerAction == Actions.HIT){
+                                updateIndex((0..deck.size).random())
+                            }
+                        },
+                            Modifier.testTag("HitButton")
+                        ) {
+                            Text(text = "Hit")
+                        }
+                        Button(onClick = {
+                            if(playerAction == Actions.STAND){
+                                updateIndex((0..deck.size).random())
+                            }
+                        },
+                            Modifier.testTag("StandButton")
+                        ) {
+                            Text(text = "Stand")
+                        }
+                    }
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceAround,
+                        modifier = Modifier.fillMaxWidth()
+                    ){
+                        Button(onClick = {
+                            if(playerAction == Actions.SPLIT){
+                                updateIndex((0..deck.size).random())
+                            }
+                        },
+                            Modifier.testTag("SplitButton")
+                        ) {
+                            Text(text = "Split")
+                        }
+                        Button(onClick = {
+                            if(playerAction == Actions.SURRENDER){
+                                updateIndex((0..deck.size).random())
+                            }
+                        },
+                            Modifier.testTag("SurrenderButton")
+                        ) {
+                            Text(text = "Surrender")
+                        }
+                    }
+                }
+            }
+        }
     }
 
 
@@ -52,150 +198,16 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
     }
 }
 
-@Composable
-fun ShowStrategyDrillCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
-    var xboxOffset = 0.dp
-    var yboxOffset = 0.dp
-    val dealerCardIndex = (0 until deck.size).random()
-    val singleCardIndex = index
-    val doubleCardIndex = index + 1
-    val tripleCardIndex = index + 2
-    val numCardToFlash = numCardToFlashSetting
-
-
-    // Update the box offset to account for the additional cards
-    if(numCardToFlash == 2 && index < deck.size - 1){
-        xboxOffset = (-12).dp
-        yboxOffset = 12.dp
-    }else if (numCardToFlash == 3 && index < deck.size - 2){
-        xboxOffset = (-24).dp
-        yboxOffset = 12.dp
-    }
-
-    // To prevent against an IndexOutOfBoundsException if we accidently call this function with a large index
-    if(index < deck.size){
-        Surface(
-            color = Color.Transparent,
-            modifier = Modifier.fillMaxHeight().fillMaxWidth()
-        ) {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.offset(y = 6.dp)
-            ) {
-                Row{
-                    Image(
-                        painter = painterResource(deck[dealerCardIndex].cardImageId),
-                        contentDescription = "Card",
-                    )
-                }
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center,
-                ) {
-                    Box(
-                        Modifier.offset(x = xboxOffset, y = yboxOffset)
-                    ) {
-                        // Show 2 cards
-                        if (numCardToFlash == 2 || (numCardToFlash > 2 && index == deck.size - 2)) {
-                            Image(
-                                painter = painterResource(deck[singleCardIndex].cardImageId),
-                                contentDescription = "Card",
-                                modifier = Modifier.offset(x = 36.dp).zIndex(1.0F),
-                            )
-                            Image(
-                                painter = painterResource(deck[doubleCardIndex].cardImageId),
-                                contentDescription = "Card",
-                                modifier = Modifier.offset(y = 36.dp),
-                            )
-                            // Show 3 cards
-                        } else if (numCardToFlash == 3) {
-                            Image(
-                                painter = painterResource(deck[singleCardIndex].cardImageId),
-                                contentDescription = "Card",
-                                modifier = Modifier.offset(x = 72.dp).zIndex(1.0F),
-                            )
-                            Image(
-                                painter = painterResource(deck[doubleCardIndex].cardImageId),
-                                contentDescription = "Card",
-                                modifier = Modifier.offset(x = 36.dp, y = 36.dp).zIndex(0.5F)
-                            )
-                            Image(
-                                painter = painterResource(deck[tripleCardIndex].cardImageId),
-                                contentDescription = "Card",
-                                modifier = Modifier.offset(y = 72.dp)
-                            )
-                        }
-                    }
-                }
-            }
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Bottom,
-                modifier = Modifier.fillMaxHeight()
-            ){
-                Row(
-                    horizontalArrangement = Arrangement.SpaceAround,
-                    modifier = Modifier.fillMaxWidth()
-                ){
-                    Button(onClick = {
-
-                    },
-                        Modifier.testTag("DoubleButton")
-                    ) {
-                        Text(text = "Double")
-                    }
-                    Button(onClick = {
-
-                    },
-                        Modifier.testTag("HitButton")
-                    ) {
-                        Text(text = "Hit")
-                    }
-                    Button(onClick = {
-
-                    },
-                        Modifier.testTag("StandButton")
-                    ) {
-                        Text(text = "Stand")
-                    }
-                }
-                Row(
-                    horizontalArrangement = Arrangement.SpaceAround,
-                    modifier = Modifier.fillMaxWidth()
-                ){
-                    Button(onClick = {
-
-                    },
-                        Modifier.testTag("SplitButton")
-                    ) {
-                        Text(text = "Split")
-                    }
-                    Button(onClick = {
-
-                    },
-                        Modifier.testTag("SurrenderButton")
-                    ) {
-                        Text(text = "Surrender")
-                    }
-                }
-            }
-        }
-    }
-}
-
 fun getValidHandToShow(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int): Int {
-    val handCreator = arrayListOf<Card>()
-    val hand: Hand
+    val hand = Hand()
 
     if(index + numCardToFlashSetting <= deck.size){
         // Create the hand out of the cards
         for(i in 0 until numCardToFlashSetting){
-            handCreator.add(deck[index + i])
+            hand.addCard(deck[index + i])
         }
 
-        hand = Hand(handCreator)
-
-        return if(hand.handTotal > 21 || isOddHand(hand.cards)){
+        return if(hand.didBust() || isOddHand(hand.cards)){
             getValidHandToShow(deck, index + 1, numCardToFlashSetting)
         }else{
             index
@@ -211,14 +223,12 @@ fun getValidHandToShow(deck: ArrayList<Card>, index: Int, numCardToFlashSetting:
 }
 
 fun isOddHand(deck:ArrayList<Card>): Boolean{
-    val handCreator = arrayListOf<Card>()
+    val hand = Hand()
 
     // Create the hand out of the first two cards
     for(i in 0 until 2){
-        handCreator.add(deck[i])
+        hand.addCard(deck[i])
     }
-
-    val hand = Hand(handCreator)
 
     // Check for odd hands like if the first two cards are blackjack but the hand has more than two cards
     if(hand.isBlackjack && deck.size > 2){

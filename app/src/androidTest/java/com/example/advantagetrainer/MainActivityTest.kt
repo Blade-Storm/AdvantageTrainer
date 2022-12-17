@@ -16,8 +16,7 @@ class MainActivityTest {
 
     @Test
     fun homeScreen_ShouldHaveButtonsForOtherScreens() {
-        val buttonCount = 3
-        val buttonTags = listOf<String>("CountingDrillButton", "CouponCalculatorButton", "SettingsButton")
+        val buttonTags = listOf<String>("CountingDrillButton", "CouponCalculatorButton", "StrategyDrillButton", "SettingsButton")
 
         // Start the app
         composeTestRule.setContent {
@@ -26,8 +25,8 @@ class MainActivityTest {
             }
         }
 
-        val buttons = composeTestRule.onAllNodes(hasClickAction()).assertCountEquals(buttonCount)
-        for(i in 0 until buttonCount){
+        val buttons = composeTestRule.onAllNodes(hasClickAction()).assertCountEquals(buttonTags.size)
+        for(i in buttonTags.indices){
             buttons[i].assertIsDisplayed()
             buttons.filter(hasTestTag(buttonTags[i])).assertCountEquals(1)
         }
@@ -117,7 +116,7 @@ class MainActivityTest {
             }
 
             AdvantageTrainerTheme {
-                deck = CreateDeck(sharedPref = sharedPref)
+                deck = createDeck(sharedPref = sharedPref)
             }
         }
 
@@ -219,7 +218,7 @@ class MainActivityTest {
             }
 
             AdvantageTrainerTheme {
-                deck = CreateDeck(sharedPref = sharedPref)
+                deck = createDeck(sharedPref = sharedPref)
             }
         }
 
@@ -301,7 +300,7 @@ class MainActivityTest {
             }
 
             AdvantageTrainerTheme {
-                deck = CreateDeck(sharedPref = sharedPref)
+                deck = createDeck(sharedPref = sharedPref)
             }
         }
 
@@ -325,7 +324,7 @@ class MainActivityTest {
             }
 
             AdvantageTrainerTheme {
-                deck = CreateDeck(sharedPref = sharedPref)
+                deck = createDeck(sharedPref = sharedPref)
             }
         }
 
@@ -349,7 +348,7 @@ class MainActivityTest {
             }
 
             AdvantageTrainerTheme {
-                deck = CreateDeck(sharedPref = sharedPref)
+                deck = createDeck(sharedPref = sharedPref)
             }
         }
 
@@ -373,7 +372,7 @@ class MainActivityTest {
             }
 
             AdvantageTrainerTheme {
-                deck = CreateDeck(sharedPref = sharedPref)
+                deck = createDeck(sharedPref = sharedPref)
             }
         }
 
@@ -397,7 +396,7 @@ class MainActivityTest {
             }
 
             AdvantageTrainerTheme {
-                deck = CreateDeck(sharedPref = sharedPref)
+                deck = createDeck(sharedPref = sharedPref)
             }
         }
 
@@ -421,7 +420,7 @@ class MainActivityTest {
             }
 
             AdvantageTrainerTheme {
-                deck = CreateDeck(sharedPref = sharedPref)
+                deck = createDeck(sharedPref = sharedPref)
             }
         }
 
@@ -459,7 +458,7 @@ class MainActivityTest {
             }
 
             AdvantageTrainerTheme {
-                val deck = CreateDeck(sharedPref = sharedPref)
+                val deck = createDeck(sharedPref = sharedPref)
                 ShowCard(deck, indexOfCardToShow, numCardToFlashSetting)
             }
         }
@@ -482,7 +481,7 @@ class MainActivityTest {
             }
 
             AdvantageTrainerTheme {
-                val deck = CreateDeck(sharedPref = sharedPref)
+                val deck = createDeck(sharedPref = sharedPref)
                 ShowCard(deck, indexOfCardToShow, numCardToFlashSetting)
             }
         }
@@ -523,7 +522,7 @@ class MainActivityTest {
                 apply()
             }
             
-            val deck = CreateDeck(sharedPref = sharedPref)
+            val deck = createDeck(sharedPref = sharedPref)
 
             AdvantageTrainerTheme {
                 ShowCard(deck, indexOfCardToShow, numCardToFlashSetting)
@@ -547,7 +546,7 @@ class MainActivityTest {
                 apply()
             }
 
-            val deck = CreateDeck(sharedPref = sharedPref)
+            val deck = createDeck(sharedPref = sharedPref)
 
             AdvantageTrainerTheme {
                 ShowCard(deck, indexOfCardToShow, numCardToFlashSetting)
@@ -571,7 +570,7 @@ class MainActivityTest {
                 apply()
             }
 
-            val deck = CreateDeck(sharedPref = sharedPref)
+            val deck = createDeck(sharedPref = sharedPref)
 
             AdvantageTrainerTheme {
                 ShowCard(deck, indexOfCardToShow, numCardToFlashSetting)
