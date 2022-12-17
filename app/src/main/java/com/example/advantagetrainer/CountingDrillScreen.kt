@@ -2,20 +2,24 @@ package com.example.advantagetrainer
 
 import android.content.SharedPreferences
 import android.os.CountDownTimer
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.zIndex
 
 @Composable
 fun CountingDrillScreen(
-    onNavigateToHome: () -> Unit,
     sharedPref: SharedPreferences,
     deck: ArrayList<Card>,
     updateDeck: (ArrayList<Card>) -> Unit
@@ -64,23 +68,84 @@ fun CountingDrillScreen(
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // TODO: Once the user clicks Start, hide the button until the drill is over
-        Button(onClick = {
-            cardVisible.value = true
-        },
-            Modifier.testTag("StartButton")
-        ) {
-            Text(text = "Start")
-        }
-        // TODO: Get rid of the home button here
-        Button(
-            onClick = {
-                onNavigateToHome()
-                deck.clear()
+        if(!cardVisible.value){
+            Button(onClick = {
+                cardVisible.value = true
             },
-            Modifier.testTag("HomeButton")
+                Modifier.testTag("StartButton")
+            ) {
+                Text(text = "Start")
+            }
+        }
+    }
+}
+
+@Composable
+fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
+    var boxOffset = 0.dp
+    val doubleCardIndex = index + 1
+    val tripleCardIndex = index + 2
+
+    // Update the box offset to account for the additional cards
+    if(numCardToFlashSetting == 2 && index < deck.size - 1){
+        boxOffset = (-12).dp
+    }else if (numCardToFlashSetting == 3 && index < deck.size - 2){
+        boxOffset = (-24).dp
+    }
+
+    // To prevent against an IndexOutOfBoundsException if we accidently call this function with a large index
+    if(index < deck.size){
+        Surface(
+            color = Color.Transparent,
+            modifier = Modifier
+                .fillMaxHeight()
+                .fillMaxWidth()
         ) {
-            Text(text = "Home")
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Box(
+                    Modifier.offset(x = boxOffset, y = boxOffset)
+                ) {
+                    // Show a single card. If there is only 1 card left in the deck to show, show one card regardless of the setting
+                    if (numCardToFlashSetting == 1 || index == deck.size - 1) {
+                        Image(
+                            painter = painterResource(deck[index].cardImageId),
+                            contentDescription = "Card",
+                        )
+                        // Show 2 cards
+                    } else if (numCardToFlashSetting == 2 || (numCardToFlashSetting == 3 && index == deck.size - 2)) {
+                        Image(
+                            painter = painterResource(deck[index].cardImageId),
+                            contentDescription = "Card",
+                            modifier = Modifier.offset(x = 36.dp).zIndex(1.0F),
+                        )
+                        Image(
+                            painter = painterResource(deck[doubleCardIndex].cardImageId),
+                            contentDescription = "Card",
+                            modifier = Modifier.offset(y = 36.dp),
+                        )
+                        // Show 3 cards
+                    } else if (numCardToFlashSetting == 3) {
+                        Image(
+                            painter = painterResource(deck[index].cardImageId),
+                            contentDescription = "Card",
+                            modifier = Modifier.offset(x = 72.dp).zIndex(1.0F),
+                        )
+                        Image(
+                            painter = painterResource(deck[doubleCardIndex].cardImageId),
+                            contentDescription = "Card",
+                            modifier = Modifier.offset(x = 36.dp, y = 36.dp).zIndex(0.5F)
+                        )
+                        Image(
+                            painter = painterResource(deck[tripleCardIndex].cardImageId),
+                            contentDescription = "Card",
+                            modifier = Modifier.offset(y = 72.dp)
+                        )
+                    }
+                }
+            }
         }
     }
 }

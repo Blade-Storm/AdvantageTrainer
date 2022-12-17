@@ -95,7 +95,6 @@ fun MyAppNavHost(
         }
         composable("countingdrill") {
             CountingDrillScreen(
-                onNavigateToHome = { navController.navigate("home") },
                 sharedPref,
                 deck,
                 updateDeck
@@ -170,76 +169,6 @@ fun HomeScreen(
     }
 }
 
-@Composable
-fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
-    var boxOffset = 0.dp
-    val doubleCardIndex = index + 1
-    val tripleCardIndex = index + 2
-
-    // Update the box offset to account for the additional cards
-    if(numCardToFlashSetting == 2 && index < deck.size - 1){
-        boxOffset = 24.dp
-    }else if (numCardToFlashSetting == 3 && index < deck.size - 2){
-        boxOffset = 48.dp
-    }
-
-    // TODO Use offset instead of padding to display the cards. Also change the zindex so the card layout is proper
-    // To prevent against an IndexOutOfBoundsException if we accidently call this function with a large index
-    if(index < deck.size){
-        Surface(
-            color = Color.Transparent,
-            modifier = Modifier
-                .fillMaxHeight()
-                .fillMaxWidth()
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center
-            ) {
-                Box(
-                    Modifier.offset(x = boxOffset, y = boxOffset)
-                ) {
-                    // Show a single card. If there is only 1 card left in the deck to show, show one card regardless of the setting
-                    if (numCardToFlashSetting == 1 || index == deck.size - 1) {
-                        Image(
-                            painter = painterResource(deck[index].cardImageId),
-                            contentDescription = "Card",
-                        )
-                        // Show 2 cards
-                    } else if (numCardToFlashSetting == 2 || (numCardToFlashSetting == 3 && index == deck.size - 2)) {
-                        Image(
-                            painter = painterResource(deck[index].cardImageId),
-                            contentDescription = "Card",
-                        )
-                        Image(
-                            painter = painterResource(deck[doubleCardIndex].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.padding(36.dp),
-                        )
-                        // Show 3 cards
-                    } else if (numCardToFlashSetting == 3) {
-                        Image(
-                            painter = painterResource(deck[index].cardImageId),
-                            contentDescription = "Card",
-                        )
-                        Image(
-                            painter = painterResource(deck[doubleCardIndex].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.padding(36.dp),
-                        )
-                        Image(
-                            painter = painterResource(deck[tripleCardIndex].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.padding(72.dp),
-                        )
-                    }
-
-                }
-
-            }
-        }
-    }
-}
 
 @Composable
 fun createDeck(sharedPref: SharedPreferences): ArrayList<Card>{
@@ -271,28 +200,3 @@ fun createDeck(sharedPref: SharedPreferences): ArrayList<Card>{
 
     return deck
 }
-
-@Composable
-fun setStrategy(): JSONObject {
-    // val id = LocalContext.current.resources.getIdentifier(R.raw.blackjackgreenulticounting.toString(), null, null)
-    val inputStream = LocalContext.current.resources.openRawResource(R.raw.blackjackgreenulticounting)
-
-    val writer: Writer = StringWriter()
-    val buffer = CharArray(1024)
-    try {
-        val reader: Reader = BufferedReader(InputStreamReader(inputStream, "UTF-8"))
-        var n: Int
-        while (reader.read(buffer).also { n = it } != -1) {
-            writer.write(buffer, 0, n)
-        }
-    } finally {
-        inputStream.close()
-    }
-
-    val jsonString: String = writer.toString()
-
-    val tokener = JSONTokener(jsonString)
-    return JSONObject(tokener)
-}
-
-

@@ -12,10 +12,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
+import org.json.JSONObject
+import org.json.JSONTokener
+import java.io.*
 
 @Composable
 fun StrategyDrillScreen(sharedPref: SharedPreferences) {
@@ -27,7 +31,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
 
     if(cardVisible.value) {
         index = getValidHandToShow(deck, index, numCardToFlashSetting)
-        // index = ShowStrategyDrillCard(deck = deck, index = index, numCardToFlashSetting = numCardToFlashSetting, actionResolver)
+
         var xboxOffset = 0.dp
         var yboxOffset = 0.dp
         val dealerCardIndex = (0 .. deck.size).random()
@@ -180,7 +184,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
     // Hide the start button if the drill is on
     if(!cardVisible.value){
         Surface(
-            modifier = Modifier.fillMaxHeight().fillMaxWidth(),
+            modifier = Modifier.fillMaxHeight().fillMaxWidth().padding(24.dp)
         ) {
             Row(
                 verticalAlignment = Alignment.Bottom,
@@ -236,4 +240,26 @@ fun isOddHand(deck:ArrayList<Card>): Boolean{
     }
 
     return false
+}
+
+@Composable
+fun setStrategy(): JSONObject {
+    val inputStream = LocalContext.current.resources.openRawResource(R.raw.blackjackgreenulticounting)
+
+    val writer: Writer = StringWriter()
+    val buffer = CharArray(1024)
+    try {
+        val reader: Reader = BufferedReader(InputStreamReader(inputStream, "UTF-8"))
+        var n: Int
+        while (reader.read(buffer).also { n = it } != -1) {
+            writer.write(buffer, 0, n)
+        }
+    } finally {
+        inputStream.close()
+    }
+
+    val jsonString: String = writer.toString()
+
+    val tokener = JSONTokener(jsonString)
+    return JSONObject(tokener)
 }
