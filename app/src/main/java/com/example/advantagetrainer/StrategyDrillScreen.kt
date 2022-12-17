@@ -26,11 +26,11 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
     val cardVisible = remember { mutableStateOf(false) }
     val deck = createDeck(sharedPref = sharedPref)
     var (index, updateIndex) = remember { mutableStateOf(1) }
-    val numCardToFlashSetting = 2
+    val numCardInHandSetting = Settings.numCardInHandMapper[sharedPref.getInt(Settings.NUM_CARDS_IN_HAND, 2)]!!
     val actionResolver = ActionResolver(setStrategy())
 
     if(cardVisible.value) {
-        index = getValidHandToShow(deck, index, numCardToFlashSetting)
+        index = getValidHandToShow(deck, index, numCardInHandSetting)
 
         var xboxOffset = 0.dp
         var yboxOffset = 0.dp
@@ -40,16 +40,16 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
         val tripleCardIndex = index + 2
 
         // Update the box offset to account for the additional cards
-        if(numCardToFlashSetting == 2 && index < deck.size - 1){
+        if(numCardInHandSetting == 2 && index < deck.size - 1){
             xboxOffset = (-12).dp
             yboxOffset = 12.dp
-        }else if (numCardToFlashSetting == 3 && index < deck.size - 2){
+        }else if (numCardInHandSetting == 3 && index < deck.size - 2){
             xboxOffset = (-24).dp
             yboxOffset = 12.dp
         }
 
         val playerHand = Hand()
-        for(i in 0 until numCardToFlashSetting){
+        for(i in 0 until numCardInHandSetting){
             playerHand.addCard(deck[index + i])
         }
         val dealerHand = Hand()
@@ -83,7 +83,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                             Modifier.offset(x = xboxOffset, y = yboxOffset)
                         ) {
                             // Show 2 cards
-                            if (numCardToFlashSetting == 2 || (numCardToFlashSetting > 2 && index == deck.size - 2)) {
+                            if (numCardInHandSetting == 2 || (numCardInHandSetting > 2 && index == deck.size - 2)) {
                                 Image(
                                     painter = painterResource(deck[singleCardIndex].cardImageId),
                                     contentDescription = "Card",
@@ -95,7 +95,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                                     modifier = Modifier.offset(y = 36.dp),
                                 )
                                 // Show 3 cards
-                            } else if (numCardToFlashSetting == 3) {
+                            } else if (numCardInHandSetting == 3) {
                                 Image(
                                     painter = painterResource(deck[singleCardIndex].cardImageId),
                                     contentDescription = "Card",

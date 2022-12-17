@@ -15,13 +15,34 @@ fun SettingsScreen(
     sharedPref: SharedPreferences
 ) {
     Column{
+        var isSpanishDeck by remember { mutableStateOf(sharedPref.getBoolean(Settings.USE_SPANISH_DECK, false)) }
+        Box(Modifier.testTag("DeckTypeBox")){
+            Column{
+                Text("- Use Spanish21 deck? Default is Blackjack.")
+                Row{
+                    Checkbox(
+                        checked = isSpanishDeck,
+                        onCheckedChange = {
+                            isSpanishDeck = it
+                            with (sharedPref.edit()) {
+                                putBoolean(Settings.USE_SPANISH_DECK, it)
+                                apply()
+                            }
+                        },
+                        Modifier.testTag("UseSpanishDeck")
+                    )
+                    Text("Spanish21 Deck", modifier = Modifier.padding(12.dp))
+                }
+            }
+
+        }
+
         Text("Counting Drills: ")
         Text("- Speed of card flash, in seconds")
         var isSpeedDropdownExpanded by remember { mutableStateOf(false) }
         // TODO: Use mapper in settings instead of hardcoded list
         val cardSpeedItems = listOf("0.25", "0.50", "1.00", "1.50", "2.00")
         var selectedCardSpeedIndex by remember { mutableStateOf(sharedPref.getInt(Settings.CARD_FLASH_SPEED, 2)) }
-
 
         Box(Modifier.testTag("CardFlashSpeedBox")) {
             Text(
@@ -50,34 +71,11 @@ fun SettingsScreen(
         }
 
 
-        var isSpanishDeck by remember { mutableStateOf(sharedPref.getBoolean(Settings.USE_SPANISH_DECK, false)) }
-        Box(Modifier.testTag("DeckTypeBox")){
-            Column{
-                Text("- Use Spanish deck? Default is Blackjack.")
-                Row{
-                    Checkbox(
-                        checked = isSpanishDeck,
-                        onCheckedChange = {
-                            isSpanishDeck = it
-                            with (sharedPref.edit()) {
-                                putBoolean(Settings.USE_SPANISH_DECK, it)
-                                apply()
-                            }
-                        },
-                        Modifier.testTag("UseSpanishDeck")
-                    )
-                    Text("Spanish21 Deck", modifier = Modifier.padding(12.dp))
-                }
-            }
-
-        }
-
         // TODO: Use mapper in settings instead of hardcoded list
-        val numCardToFlashItems = listOf("1 card", "2 cards", "1-3 cards")
         Text("- Number of cards to flash")
+        val numCardToFlashItems = listOf("1 card", "2 cards", "1-3 cards")
         var isNumCardToFlashExpanded by remember { mutableStateOf(false) }
         var selectedNumCardsToFlashIndex by remember { mutableStateOf(sharedPref.getInt(Settings.NUM_CARDS_TO_FLASH, 0)) }
-
 
         Box(Modifier.testTag("NumOfCardsToFlashBox")) {
             Text(numCardToFlashItems[selectedNumCardsToFlashIndex],modifier = Modifier
@@ -104,11 +102,10 @@ fun SettingsScreen(
 
 
         // TODO: Use mapper in settings instead of hardcoded list
-        val numDecksToUse = listOf("1", "2", "4", "6", "8")
         Text("- Number of decks to use")
+        val numDecksToUse = listOf("1", "2", "4", "6", "8")
         var isNumOfDecksToUseExpanded by remember { mutableStateOf(false) }
         var selectedNumOfDecksToUseIndex by remember { mutableStateOf(sharedPref.getInt(Settings.NUM_DECKS_TO_COUNT, 0)) }
-
 
         Box(Modifier.testTag("NumOfDecksToUseBox")) {
             Text(numDecksToUse[selectedNumOfDecksToUseIndex],modifier = Modifier
@@ -133,5 +130,34 @@ fun SettingsScreen(
             }
         }
 
+        Text("Strategy Drills: ")
+        Text("- Number of card in hand")
+        // TODO: Use mapper in settings instead of hardcoded list
+        val numCardInHandItems = listOf("2 cards", "3 cards")
+        var isNumCardInHandExpanded by remember { mutableStateOf(false) }
+        var selectedNumCardsInHandIndex by remember { mutableStateOf(sharedPref.getInt(Settings.NUM_CARDS_IN_HAND, 0)) }
+
+        Box(Modifier.testTag("NumOfCardsInHandBox")) {
+            Text(numCardInHandItems[selectedNumCardsInHandIndex],modifier = Modifier
+                .fillMaxWidth().testTag("NumOfCardsInHandItem")
+                .clickable(onClick = { isNumCardInHandExpanded = true }))
+            DropdownMenu(
+                expanded = isNumCardInHandExpanded,
+                onDismissRequest = { isNumCardInHandExpanded = false },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                numCardInHandItems.forEachIndexed { index, s ->
+                    DropdownMenuItem(onClick = {
+                        selectedNumCardsInHandIndex = index
+                        isNumCardInHandExpanded = false
+                        with (sharedPref.edit()) {
+                            putInt(Settings.NUM_CARDS_IN_HAND, index)
+                            apply()
+                        }
+                    },
+                        text = { Text(text = s) })
+                }
+            }
+        }
     }
 }

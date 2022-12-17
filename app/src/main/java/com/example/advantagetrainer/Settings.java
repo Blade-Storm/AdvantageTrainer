@@ -10,6 +10,7 @@ public class Settings {
     public final static String USE_SPANISH_DECK = "useSpanishDeck";
     public final static String NUM_CARDS_TO_FLASH = "numCardsToFlash";
     public final static String NUM_DECKS_TO_COUNT = "numDecksToCount";
+    public final static String NUM_CARDS_IN_HAND = "numCardsInHand";
 
 
     // Maps the index from the settings selection to the value
@@ -45,5 +46,14 @@ public class Settings {
         numDecksToCountMapper.put(2, 4);
         numDecksToCountMapper.put(3, 6);
         numDecksToCountMapper.put(4, 8);
+    }
+
+    // Maps the index from the settings selection to the value
+    public final static Map<Integer, Integer> numCardInHandMapper;
+
+    static{
+        numCardInHandMapper = new HashMap<>();
+        numCardInHandMapper.put(0, 2);
+        numCardInHandMapper.put(1, 3);
     }
 }
