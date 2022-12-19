@@ -244,7 +244,7 @@ fun isOddHand(deck:ArrayList<Card>): Boolean{
 
 @Composable
 fun setStrategy(): JSONObject {
-    val inputStream = LocalContext.current.resources.openRawResource(R.raw.blackjackgreenulticounting)
+    val inputStream = LocalContext.current.resources.openRawResource(R.raw.sp21secretmonkeycount)
 
     val writer: Writer = StringWriter()
     val buffer = CharArray(1024)

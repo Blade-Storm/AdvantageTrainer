@@ -2,6 +2,7 @@ package com.example.advantagetrainer;
 
 import androidx.annotation.NonNull;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Hand {
     public enum HandType {
@@ -154,5 +155,17 @@ public class Hand {
 
     public Card getDealerUpCard(){
         return getCards().get(0);
+    }
+
+    public void clearCards(){
+        cards.clear();
+    }
+
+    public Hand withCards(List<Card> cards){
+        for(int i = 0; i < cards.size(); i++){
+            addCard(cards.get(i));
+        }
+
+        return this;
     }
 }
