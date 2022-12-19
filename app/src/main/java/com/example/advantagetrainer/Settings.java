@@ -4,6 +4,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Settings {
+    public enum Strategy{
+        BLACKJACK (R.raw.blackjackgreenulticounting),
+        SPANISH21_SECRET (R.raw.sp21secretmonkeycount);
+
+        public int rawId;
+        Strategy(int id) {
+            this.rawId = id;
+        }
+    }
+
     // Constants
     public final static String SETTINGS_FILE_LOCATION = "com.example.advantagetrainer";
     public final static String CARD_FLASH_SPEED = "cardFlashSpeed";
@@ -11,6 +21,7 @@ public class Settings {
     public final static String NUM_CARDS_TO_FLASH = "numCardsToFlash";
     public final static String NUM_DECKS_TO_COUNT = "numDecksToCount";
     public final static String NUM_CARDS_IN_HAND = "numCardsInHand";
+    public final static String STRATEGY = "strategy";
 
 
     // Maps the index from the settings selection to the value
@@ -55,5 +66,14 @@ public class Settings {
         numCardInHandMapper = new HashMap<>();
         numCardInHandMapper.put(0, 2);
         numCardInHandMapper.put(1, 3);
+    }
+
+    // Maps the index from the settings selection to the value
+    public final static Map<Integer, Strategy> strategyMapper;
+
+    static{
+        strategyMapper = new HashMap<>();
+        strategyMapper.put(0, Strategy.BLACKJACK);
+        strategyMapper.put(1, Strategy.SPANISH21_SECRET);
     }
 }

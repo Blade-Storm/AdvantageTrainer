@@ -28,7 +28,6 @@ fun SettingsScreen(
                                 putBoolean(Settings.USE_SPANISH_DECK, it)
                                 apply()
                             }
-                            Game.isSpanishGame = it
                         },
                         Modifier.testTag("UseSpanishDeck")
                     )
@@ -132,7 +131,7 @@ fun SettingsScreen(
         }
 
         Text("Strategy Drills: ")
-        Text("- Number of card in hand")
+        Text("- Number of cards in hand")
         // TODO: Use mapper in settings instead of hardcoded list
         val numCardInHandItems = listOf("2 cards", "3 cards")
         var isNumCardInHandExpanded by remember { mutableStateOf(false) }
@@ -157,6 +156,35 @@ fun SettingsScreen(
                         }
                     },
                         text = { Text(text = s) })
+                }
+            }
+        }
+
+        Text("- Strategy to use:")
+        // TODO: Use mapper in settings instead of hardcoded list
+        val strategyItems = Settings.Strategy.values()
+        var isStrategyExpanded by remember { mutableStateOf(false) }
+        var strategyIndex by remember { mutableStateOf(sharedPref.getInt(Settings.STRATEGY, 0)) }
+
+        Box(Modifier.testTag("NumOfCardsInHandBox")) {
+            Text(strategyItems[strategyIndex].name,modifier = Modifier
+                .fillMaxWidth().testTag("NumOfCardsInHandItem")
+                .clickable(onClick = { isStrategyExpanded = true }))
+            DropdownMenu(
+                expanded = isStrategyExpanded,
+                onDismissRequest = { isStrategyExpanded = false },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                strategyItems.forEachIndexed { index, s ->
+                    DropdownMenuItem(onClick = {
+                        strategyIndex = index
+                        isStrategyExpanded = false
+                        with (sharedPref.edit()) {
+                            putInt(Settings.STRATEGY, index)
+                            apply()
+                        }
+                    },
+                        text = { Text(text = s.name) })
                 }
             }
         }

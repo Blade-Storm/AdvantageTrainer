@@ -17,6 +17,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
+import com.example.advantagetrainer.Settings.Strategy
 import org.json.JSONObject
 import org.json.JSONTokener
 import java.io.*
@@ -27,7 +28,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
     val deck = createDeck(sharedPref = sharedPref)
     var (index, updateIndex) = remember { mutableStateOf(1) }
     val numCardInHandSetting = Settings.numCardInHandMapper[sharedPref.getInt(Settings.NUM_CARDS_IN_HAND, 2)]!!
-    val actionResolver = ActionResolver(setStrategy())
+    val actionResolver = ActionResolver(setStrategy(sharedPref))
 
     if(cardVisible.value) {
         index = getValidHandToShow(deck, index, numCardInHandSetting)
@@ -243,8 +244,10 @@ fun isOddHand(deck:ArrayList<Card>): Boolean{
 }
 
 @Composable
-fun setStrategy(): JSONObject {
-    val inputStream = LocalContext.current.resources.openRawResource(R.raw.sp21secretmonkeycount)
+fun setStrategy(sharedPref: SharedPreferences): JSONObject {
+    val strategy = Settings.strategyMapper[sharedPref.getInt(Settings.STRATEGY, 0)]!!
+    val inputStream = LocalContext.current.resources.openRawResource(strategy.rawId)
+    Game.isSpanishGame = strategy.name.equals(Strategy.SPANISH21_SECRET)
 
     val writer: Writer = StringWriter()
     val buffer = CharArray(1024)
