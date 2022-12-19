@@ -6,5 +6,4 @@
 3. Hand adding drill
 4. Hole card strategy + drill
 5. Replace GCUG BJ strat with BJA H17 and S17 strats
-6. Strategy selection in settings
-7. Add true count to counting drill
+6. Add true count to counting drill
