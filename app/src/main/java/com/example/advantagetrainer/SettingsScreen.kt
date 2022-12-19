@@ -28,6 +28,7 @@ fun SettingsScreen(
                                 putBoolean(Settings.USE_SPANISH_DECK, it)
                                 apply()
                             }
+                            Game.isSpanishGame = it
                         },
                         Modifier.testTag("UseSpanishDeck")
                     )

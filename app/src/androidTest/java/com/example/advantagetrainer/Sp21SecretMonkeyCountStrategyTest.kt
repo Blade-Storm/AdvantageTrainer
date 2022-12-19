@@ -1748,4 +1748,27 @@ class Sp21SecretMonkeyCountStrategyTest {
             }
         }
     }
+
+    @Test
+    fun double_threeCards() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card2)
+
+        composeTestRule.setContent {
+            actionResolver = ActionResolver(setStrategy())
+
+            Game.isSpanishGame = true;
+
+            val playerHand = Hand()
+            playerHand.addCard(testUtils.card2)
+            playerHand.addCard(testUtils.card3)
+            playerHand.addCard(testUtils.card6)
+
+            playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+
+            assert(playerAction == Actions.DOUBLE_DOWN)
+
+        }
+    }
 }

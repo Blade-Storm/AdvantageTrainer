@@ -153,11 +153,20 @@ public class Hand {
         return cards.size() == 2;
     }
 
+    public boolean canDoubleDown(){
+        if(!Game.isSpanishGame){
+            return cards.size() == 2;
+        }else {
+            return true;
+        }
+
+    }
+
     public Card getDealerUpCard(){
         return getCards().get(0);
     }
 
-    public void clearCards(){
+    public void clearHand(){
         cards.clear();
     }
 

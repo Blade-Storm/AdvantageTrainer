@@ -34,7 +34,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
 
         var xboxOffset = 0.dp
         var yboxOffset = 0.dp
-        val dealerCardIndex = (0 .. deck.size).random()
+        val dealerCardIndex = (0 until deck.size).random()
         val singleCardIndex = index
         val doubleCardIndex = index + 1
         val tripleCardIndex = index + 2
@@ -205,7 +205,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
 fun getValidHandToShow(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int): Int {
     val hand = Hand()
 
-    if(index + numCardToFlashSetting <= deck.size){
+    if(index + numCardToFlashSetting <= deck.size - 1){
         // Create the hand out of the cards
         for(i in 0 until numCardToFlashSetting){
             hand.addCard(deck[index + i])
