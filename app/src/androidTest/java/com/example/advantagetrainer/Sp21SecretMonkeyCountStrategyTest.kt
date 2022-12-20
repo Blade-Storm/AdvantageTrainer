@@ -1,5 +1,7 @@
 package com.example.advantagetrainer
 
+import android.content.Context
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.junit4.createComposeRule
 import org.junit.Rule
 import org.junit.Test
@@ -18,14 +20,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card2)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.TWO
@@ -64,14 +76,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card3)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.TWO
@@ -110,14 +132,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card4)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.TWO
@@ -156,14 +188,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card5)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.TWO
@@ -202,14 +244,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card6)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.TWO
@@ -248,14 +300,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card7)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.TWO
@@ -294,14 +356,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card8)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.TWO
@@ -340,14 +412,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card9)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.EIGHT
@@ -383,14 +465,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardt)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.EIGHT
@@ -426,14 +518,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardj)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.EIGHT
@@ -469,14 +571,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardq)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.EIGHT
@@ -512,14 +624,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardk)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.EIGHT
@@ -555,14 +677,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.carda)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(card)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     card.name == CardNames.ACE
@@ -599,14 +731,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card2)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -640,14 +782,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card3)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -681,14 +833,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card4)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -725,14 +887,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card5)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -769,14 +941,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card6)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -813,14 +995,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card7)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -854,14 +1046,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card8)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -895,14 +1097,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card9)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -936,14 +1148,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardt)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -977,14 +1199,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardj)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -1018,14 +1250,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardq)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -1059,14 +1301,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardk)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -1100,14 +1352,24 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.carda)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
                 playerHand.addCard(testUtils.carda)
                 playerHand.addCard(card)
 
-                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
                 if(
                     playerHand.cards[1].name == CardNames.TWO
@@ -1141,10 +1403,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card2)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1187,10 +1459,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card3)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1233,10 +1515,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card4)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1279,10 +1571,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card5)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1325,10 +1627,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card6)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1371,10 +1683,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card7)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1417,10 +1739,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card8)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1463,10 +1795,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.card9)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1509,10 +1851,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardt)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1555,10 +1907,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardj)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1601,10 +1963,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardq)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1647,10 +2019,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.cardk)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1693,10 +2075,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.carda)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.hardHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 if(
                     hand.handTotal == 2
@@ -1739,10 +2131,20 @@ class Sp21SecretMonkeyCountStrategyTest {
         dealerHand.addCard(testUtils.carda)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             for(hand in testUtils.surrenderHands){
-                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand)
+                playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
                 assert(playerAction == Actions.SURRENDER)
             }
@@ -1750,24 +2152,214 @@ class Sp21SecretMonkeyCountStrategyTest {
     }
 
     @Test
-    fun double_threeCards() {
+    fun double_threeCard_hardHand() {
         var playerAction: Actions
         val dealerHand = Hand()
         dealerHand.addCard(testUtils.card2)
 
         composeTestRule.setContent {
-            actionResolver = ActionResolver(setStrategy())
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
 
-            Game.isSpanishGame = true;
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
 
             val playerHand = Hand()
             playerHand.addCard(testUtils.card2)
             playerHand.addCard(testUtils.card3)
             playerHand.addCard(testUtils.card6)
 
-            playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+            playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
             assert(playerAction == Actions.DOUBLE_DOWN)
+
+        }
+    }
+
+    @Test
+    fun double_threeCard_softHand() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card6)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            val playerHand = Hand()
+            playerHand.addCard(testUtils.carda)
+            playerHand.addCard(testUtils.carda)
+            playerHand.addCard(testUtils.card4)
+
+            playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
+
+            assert(playerAction == Actions.DOUBLE_DOWN)
+
+        }
+    }
+
+    @Test
+    fun deviation_hard16vt_surrender() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardt)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            val playerHand = Hand()
+            playerHand.addCard(testUtils.card9)
+            playerHand.addCard(testUtils.card7)
+
+            playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 2, true)
+
+            assert(playerAction == Actions.SURRENDER)
+
+        }
+    }
+
+    @Test
+    fun deviation_hard9v5_double() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card5)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            val playerHand = Hand()
+            playerHand.addCard(testUtils.card4)
+            playerHand.addCard(testUtils.card5)
+
+            playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 2, true)
+
+            assert(playerAction == Actions.DOUBLE_DOWN)
+
+        }
+    }
+
+    @Test
+    fun deviation_hard13v5_stand() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card5)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            val playerHand = Hand()
+            playerHand.addCard(testUtils.card9)
+            playerHand.addCard(testUtils.card4)
+
+            playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 2, true)
+
+            assert(playerAction == Actions.STAND)
+
+        }
+    }
+
+    @Test
+    fun deviation_hard10v9_double() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card9)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            val playerHand = Hand()
+            playerHand.addCard(testUtils.card5)
+            playerHand.addCard(testUtils.card5)
+
+            playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 2, true)
+
+            assert(playerAction == Actions.DOUBLE_DOWN)
+
+        }
+    }
+
+    @Test
+    fun deviation_hard17va_stand() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.carda)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 1)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            val playerHand = Hand()
+            playerHand.addCard(testUtils.cardt)
+            playerHand.addCard(testUtils.card5)
+            playerHand.addCard(testUtils.card2)
+
+            playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 2, true)
+
+            assert(playerAction == Actions.STAND)
 
         }
     }

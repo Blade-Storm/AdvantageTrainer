@@ -34,7 +34,8 @@ class StrategyDrillScreenTest {
         composeTestRule.setContent {
             val card1 = Card(Suits.CLUB, CardNames.ACE, null, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.ACE}", null, null))
             val card2 = Card(Suits.CLUB, CardNames.TEN, 10, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.TEN}", null, null))
-            val cards = arrayListOf(card1, card2)
+            val card3 = Card(Suits.CLUB, CardNames.TEN, 10, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.TEN}", null, null))
+            val cards = arrayListOf(card1, card2, card3)
 
             val numCardToFlashSetting = 2
 
@@ -50,10 +51,11 @@ class StrategyDrillScreenTest {
         var index = 0
 
         composeTestRule.setContent {
-            val card1 = Card(Suits.CLUB, CardNames.ACE, null, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.ACE}", null, null))
-            val card2 = Card(Suits.CLUB, CardNames.TEN, 10, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.TEN}", null, null))
+            val card1 = Card(Suits.CLUB, CardNames.SIX, 6, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.SIX}", null, null))
+            val card2 = Card(Suits.CLUB, CardNames.FIVE, 5, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.FIVE}", null, null))
             val card3 = Card(Suits.CLUB, CardNames.TEN, 10, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.TEN}", null, null))
-            val cards = arrayListOf(card1, card2, card3)
+            val card4 = Card(Suits.CLUB, CardNames.TEN, 10, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.TEN}", null, null))
+            val cards = arrayListOf(card1, card2, card3, card4)
 
             val numCardToFlashSetting = 3
 
@@ -69,7 +71,8 @@ class StrategyDrillScreenTest {
         composeTestRule.setContent {
             val card1 = Card(Suits.CLUB, CardNames.TEN, 10, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.TEN}", null, null))
             val card2 = Card(Suits.CLUB, CardNames.TEN, 10, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.TEN}", null, null))
-            val cards = arrayListOf(card1, card2)
+            val card3 = Card(Suits.CLUB, CardNames.TEN, 10, LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/${Suits.CLUB}${CardNames.TEN}", null, null))
+            val cards = arrayListOf(card1, card2, card3)
 
             val numCardToFlashSetting = 2
 

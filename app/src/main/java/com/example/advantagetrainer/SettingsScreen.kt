@@ -188,5 +188,27 @@ fun SettingsScreen(
                 }
             }
         }
+
+        var useDeviations by remember { mutableStateOf(sharedPref.getBoolean(Settings.USE_DEVIATIONS, false)) }
+        Box(Modifier.testTag("UseDeviationsBox")){
+            Column{
+                Text("- Use deviations in strategy")
+                Row{
+                    Checkbox(
+                        checked = useDeviations,
+                        onCheckedChange = {
+                            useDeviations = it
+                            with (sharedPref.edit()) {
+                                putBoolean(Settings.USE_DEVIATIONS, it)
+                                apply()
+                            }
+                        },
+                        Modifier.testTag("UseDeviations")
+                    )
+                    Text("Use deviations", modifier = Modifier.padding(12.dp))
+                }
+            }
+
+        }
     }
 }

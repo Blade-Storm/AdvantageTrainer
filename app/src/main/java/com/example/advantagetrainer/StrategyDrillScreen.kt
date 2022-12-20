@@ -28,6 +28,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
     val deck = createDeck(sharedPref = sharedPref)
     var (index, updateIndex) = remember { mutableStateOf(1) }
     val numCardInHandSetting = Settings.numCardInHandMapper[sharedPref.getInt(Settings.NUM_CARDS_IN_HAND, 2)]!!
+    val useDeviations = sharedPref.getBoolean(Settings.USE_DEVIATIONS, false)!!
     val actionResolver = ActionResolver(setStrategy(sharedPref))
 
     if(cardVisible.value) {
@@ -57,14 +58,17 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
         dealerHand.addCard(deck[dealerCardIndex])
 
         // Get the action the player should take
-        val playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand)
+        var count = (-10..10).random()
+        val playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, count, useDeviations)
 
 
         // To prevent against an IndexOutOfBoundsException if we accidently call this function with a large index
         if(index < deck.size){
             Surface(
                 color = Color.Transparent,
-                modifier = Modifier.fillMaxHeight().fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .fillMaxWidth()
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -88,7 +92,9 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                                 Image(
                                     painter = painterResource(deck[doubleCardIndex].cardImageId),
                                     contentDescription = "Card",
-                                    modifier = Modifier.offset(x = 36.dp).zIndex(1.0F),
+                                    modifier = Modifier
+                                        .offset(x = 36.dp)
+                                        .zIndex(1.0F),
                                 )
                                 Image(
                                     painter = painterResource(deck[singleCardIndex].cardImageId),
@@ -100,12 +106,16 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                                 Image(
                                     painter = painterResource(deck[tripleCardIndex].cardImageId),
                                     contentDescription = "Card",
-                                    modifier = Modifier.offset(x = 72.dp).zIndex(1.0F),
+                                    modifier = Modifier
+                                        .offset(x = 72.dp)
+                                        .zIndex(1.0F),
                                 )
                                 Image(
                                     painter = painterResource(deck[doubleCardIndex].cardImageId),
                                     contentDescription = "Card",
-                                    modifier = Modifier.offset(x = 36.dp, y = 36.dp).zIndex(0.5F)
+                                    modifier = Modifier
+                                        .offset(x = 36.dp, y = 36.dp)
+                                        .zIndex(0.5F)
                                 )
                                 Image(
                                     painter = painterResource(deck[singleCardIndex].cardImageId),
@@ -121,6 +131,9 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                     verticalArrangement = Arrangement.Bottom,
                     modifier = Modifier.fillMaxHeight()
                 ){
+                    if(useDeviations){
+                        Text(text = "True count: $count")
+                    }
                     Row(
                         horizontalArrangement = Arrangement.SpaceAround,
                         modifier = Modifier.fillMaxWidth()
@@ -185,7 +198,10 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
     // Hide the start button if the drill is on
     if(!cardVisible.value){
         Surface(
-            modifier = Modifier.fillMaxHeight().fillMaxWidth().padding(24.dp)
+            modifier = Modifier
+                .fillMaxHeight()
+                .fillMaxWidth()
+                .padding(24.dp)
         ) {
             Row(
                 verticalAlignment = Alignment.Bottom,
@@ -206,7 +222,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
 fun getValidHandToShow(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int): Int {
     val hand = Hand()
 
-    if(index + numCardToFlashSetting <= deck.size - 1){
+    if(index + numCardToFlashSetting < deck.size){
         // Create the hand out of the cards
         for(i in 0 until numCardToFlashSetting){
             hand.addCard(deck[index + i])
@@ -247,7 +263,7 @@ fun isOddHand(deck:ArrayList<Card>): Boolean{
 fun setStrategy(sharedPref: SharedPreferences): JSONObject {
     val strategy = Settings.strategyMapper[sharedPref.getInt(Settings.STRATEGY, 0)]!!
     val inputStream = LocalContext.current.resources.openRawResource(strategy.rawId)
-    Game.isSpanishGame = strategy.name.equals(Strategy.SPANISH21_SECRET)
+    Game.isSpanishGame = strategy.name == Strategy.SPANISH21_SECRET.name
 
     val writer: Writer = StringWriter()
     val buffer = CharArray(1024)

@@ -3,6 +3,8 @@ package com.example.advantagetrainer;
 import java.util.List;
 
 public class TestUtils {
+    public String TEST_SETTINGS_FILE_LOCATION = "com.example.advantagetrainertest";
+
     Card card2 = new Card(Suits.CLUB, CardNames.TWO, CardValueMapper.cardValueMapper.get(CardNames.TWO), 1);
     Card card3 = new Card(Suits.CLUB, CardNames.THREE, CardValueMapper.cardValueMapper.get(CardNames.THREE), 1);
     Card card4 = new Card(Suits.CLUB, CardNames.FOUR, CardValueMapper.cardValueMapper.get(CardNames.FOUR), 1);

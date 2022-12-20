@@ -35,7 +35,7 @@ class MainActivityTest {
     @Test
     fun homeScreen_ShouldNavigateToCountingDrillScreen() {
         val homeButtonTag = "CountingDrillButton"
-        val countingDrillButtonTags = listOf<String>("HomeButton", "StartButton")
+        val countingDrillButtonTags = listOf<String>("StartButton")
 
         // Start the app
         composeTestRule.setContent {
@@ -51,11 +51,9 @@ class MainActivityTest {
         navigateToCountingDrillButton[0].performClick()
 
         // Assert we are on the CountingDrillScreen by looking at the buttons
-        val countingDrillScreenButtons = composeTestRule.onAllNodes(hasClickAction()).assertCountEquals(2)
-        for(i in 0 until 2){
-            countingDrillScreenButtons[i].assertIsDisplayed()
-            countingDrillScreenButtons.filter(hasTestTag(countingDrillButtonTags[i])).assertCountEquals(1)
-        }
+        val countingDrillScreenButtons = composeTestRule.onAllNodes(hasClickAction()).assertCountEquals(1)
+        countingDrillScreenButtons[0].assertIsDisplayed()
+        countingDrillScreenButtons.filter(hasTestTag(countingDrillButtonTags[0])).assertCountEquals(1)
     }
 
     @Test
