@@ -3,6 +3,7 @@ package com.example.advantagetrainer
 import android.content.Context
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.junit4.createComposeRule
+import junit.framework.TestCase.assertEquals
 import org.junit.Rule
 import org.junit.Test
 
@@ -1502,7 +1503,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }

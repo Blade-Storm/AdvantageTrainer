@@ -6,6 +6,7 @@ import org.json.JSONObject;
 public class ActionResolver {
     private static JSONObject strategyObject = null;
     private final String actionKey = "action";
+    private final String altActionKey = "altaction";
     private final String deviationKey = "deviation";
     private final String countKey = "count";
     private final String deviationSignKey = "sign";
@@ -14,6 +15,7 @@ public class ActionResolver {
     private JSONObject playerActionObject;
     private JSONObject deviationActionObject;
     public Actions action = null;
+    public Actions altAction = null;
     public Actions deviationAction = null;
     public Settings.StrategyDeviationSign deviationSign = null;
     public int deviationCount = 0;
@@ -24,10 +26,17 @@ public class ActionResolver {
 
     public Actions getActionFromStrategy(Hand playerHand, Hand dealerHand, int count, boolean useDeviations) throws JSONException{
         // Check for actions to take
-        action = checkSurrender(playerHand, dealerHand, count, useDeviations);
-        action = action == null ? checkSplit(playerHand, dealerHand, count, useDeviations) : action;
-        action = action == null ? checkSoft(playerHand, dealerHand, count, useDeviations): action;
-        action = action == null ? checkHard(playerHand, dealerHand, count, useDeviations): action;
+        if(Game.isSpanishGame){
+            action = checkSurrender(playerHand, dealerHand, count, useDeviations);
+            action = action == null ? checkSplit(playerHand, dealerHand, count, useDeviations) : action;
+            action = action == null ? checkSoft(playerHand, dealerHand, count, useDeviations): action;
+            action = action == null ? checkHard(playerHand, dealerHand, count, useDeviations): action;
+        }else{
+            action = checkSplit(playerHand, dealerHand, count, useDeviations);
+            action = action == null ? checkSurrender(playerHand, dealerHand, count, useDeviations) : action;
+            action = action == null ? checkSoft(playerHand, dealerHand, count, useDeviations): action;
+            action = action == null ? checkHard(playerHand, dealerHand, count, useDeviations): action;
+        }
         return action;
     }
 
@@ -141,12 +150,19 @@ public class ActionResolver {
 
     public Actions checkDouble(Hand playerHand, JSONObject playerActionObject) throws JSONException{
         action = Actions.stringToAction(playerActionObject.get(actionKey).toString());
-        if(action.equals(Actions.DOUBLE_DOWN) && playerHand.canDoubleDown()){
-            return Actions.DOUBLE_DOWN;
-        }else if (action.equals(Actions.DOUBLE_DOWN) && !playerHand.canDoubleDown()){
-            return Actions.HIT;
+
+        if(playerActionObject.has(altActionKey)) {
+            altAction = Actions.stringToAction(playerActionObject.get(altActionKey).toString());
+        }else{
+            altAction = null;
         }
 
-        return action;
+        if(action.equals(Actions.DOUBLE_DOWN) && playerHand.canDoubleDown()){
+            return Actions.DOUBLE_DOWN;
+        }else if (action.equals(Actions.DOUBLE_DOWN) && !playerHand.canDoubleDown() && altAction != null){
+            return altAction;
+        }else{
+            return action;
+        }
     }
 }
