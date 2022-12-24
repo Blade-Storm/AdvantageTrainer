@@ -49,22 +49,22 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -105,22 +105,22 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -161,22 +161,22 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -218,18 +218,18 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -271,18 +271,18 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -321,16 +321,16 @@ class BJAH17Test {
                     || card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                     || card.name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -338,7 +338,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -375,7 +375,7 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -383,18 +383,18 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -431,7 +431,7 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -439,18 +439,18 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -486,7 +486,7 @@ class BJAH17Test {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -495,7 +495,7 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -503,7 +503,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -539,7 +539,7 @@ class BJAH17Test {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -548,7 +548,7 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -556,7 +556,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -592,7 +592,7 @@ class BJAH17Test {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -601,7 +601,7 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -609,7 +609,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -645,7 +645,7 @@ class BJAH17Test {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -654,7 +654,7 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -662,7 +662,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -698,7 +698,7 @@ class BJAH17Test {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -707,7 +707,7 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -715,7 +715,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -754,11 +754,11 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -767,9 +767,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -807,12 +807,12 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.FOUR
                     || playerHand.cards[1].name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -821,9 +821,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -859,14 +859,14 @@ class BJAH17Test {
                     playerHand.cards[1].name == CardNames.TWO
                     || playerHand.cards[1].name == CardNames.THREE
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.FOUR
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -875,9 +875,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -917,7 +917,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -926,9 +926,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -969,7 +969,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SEVEN
                     || playerHand.cards[1].name == CardNames.EIGHT
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.NINE
                     || playerHand.cards[1].name == CardNames.TEN
@@ -977,9 +977,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1018,7 +1018,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.SEVEN
                     || playerHand.cards[1].name == CardNames.EIGHT
@@ -1028,9 +1028,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1069,7 +1069,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.SEVEN
                     || playerHand.cards[1].name == CardNames.EIGHT
@@ -1079,9 +1079,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1121,7 +1121,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1130,9 +1130,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1172,7 +1172,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1181,9 +1181,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1223,7 +1223,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1232,9 +1232,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1274,7 +1274,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1283,9 +1283,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1325,7 +1325,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1334,9 +1334,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1376,7 +1376,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1385,9 +1385,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -2032,12 +2032,12 @@ class BJAH17Test {
                     || hand.handTotal == 9
                     || hand.handTotal == 12
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 13
                     || hand.handTotal == 14
@@ -2088,13 +2088,13 @@ class BJAH17Test {
                     || hand.handTotal == 8
                     || hand.handTotal == 12
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 9
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 13
                     || hand.handTotal == 14
@@ -2144,13 +2144,13 @@ class BJAH17Test {
                     || hand.handTotal == 7
                     || hand.handTotal == 8
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 9
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 12
                     || hand.handTotal == 13
@@ -2201,13 +2201,13 @@ class BJAH17Test {
                     || hand.handTotal == 7
                     || hand.handTotal == 8
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 9
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 12
                     || hand.handTotal == 13
@@ -2258,13 +2258,13 @@ class BJAH17Test {
                     || hand.handTotal == 7
                     || hand.handTotal == 8
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 9
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 12
                     || hand.handTotal == 13
@@ -2321,12 +2321,12 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2378,12 +2378,12 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2434,16 +2434,16 @@ class BJAH17Test {
                     || hand.handTotal == 14
                     || hand.handTotal == 15
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if(
                     hand.handTotal == 16
                 ){
-                    assert(playerAction == Actions.SURRENDER)
+                    assertEquals(Actions.SURRENDER, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18

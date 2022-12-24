@@ -47,16 +47,16 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                     || card.name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
@@ -64,7 +64,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.KING
                     || card.name == CardNames.NINE
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -104,23 +104,23 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                     || card.name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -161,22 +161,22 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -217,22 +217,22 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -273,22 +273,22 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -327,16 +327,16 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                     || card.name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -344,7 +344,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -383,24 +383,24 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -437,7 +437,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -446,14 +446,14 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -489,7 +489,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -498,7 +498,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -506,7 +506,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -542,7 +542,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -551,7 +551,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -559,7 +559,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -595,7 +595,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -604,7 +604,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -612,7 +612,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -648,7 +648,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -657,7 +657,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -665,7 +665,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -700,7 +700,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                 if(
                     card.name == CardNames.ACE
                 ){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -709,7 +709,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals( Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -717,9 +717,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (card.name == CardNames.EIGHT){
-                    assert(playerAction == Actions.SURRENDER)
+                    assertEquals(Actions.SURRENDER, playerAction)
                 }
             }
         }
@@ -758,7 +758,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.SEVEN
                     || playerHand.cards[1].name == CardNames.EIGHT
@@ -768,9 +768,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -809,7 +809,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.SEVEN
                     || playerHand.cards[1].name == CardNames.EIGHT
@@ -819,9 +819,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -859,7 +859,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.FOUR
                     || playerHand.cards[1].name == CardNames.FIVE
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -868,14 +868,14 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if(
                     playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }
             }
         }
@@ -912,7 +912,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.THREE
                     || playerHand.cards[1].name == CardNames.FOUR
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -921,15 +921,15 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if(
                     playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }
             }
         }
@@ -965,7 +965,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     playerHand.cards[1].name == CardNames.TWO
                     || playerHand.cards[1].name == CardNames.THREE
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -974,16 +974,16 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }else if(
                     playerHand.cards[1].name == CardNames.FOUR
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }
             }
         }
@@ -1022,7 +1022,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.SEVEN
                     || playerHand.cards[1].name == CardNames.EIGHT
@@ -1032,9 +1032,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1073,7 +1073,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.SEVEN
                     || playerHand.cards[1].name == CardNames.EIGHT
@@ -1083,9 +1083,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1125,7 +1125,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1134,9 +1134,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1176,7 +1176,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1185,9 +1185,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1227,7 +1227,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1236,9 +1236,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1278,7 +1278,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1287,9 +1287,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1329,7 +1329,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1338,9 +1338,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1380,7 +1380,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1389,9 +1389,9 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assert(playerAction == Actions.SPLIT)
+                    assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1432,12 +1432,12 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 13
                     || hand.handTotal == 14
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 15
                     || hand.handTotal == 16
@@ -1447,7 +1447,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1488,12 +1488,12 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 13
                     || hand.handTotal == 14
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 15
                     || hand.handTotal == 16
@@ -1543,12 +1543,12 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 12
                     || hand.handTotal == 13
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 14
                     || hand.handTotal == 15
@@ -1559,7 +1559,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1599,12 +1599,12 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 12
                     || hand.handTotal == 13
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 14
                     || hand.handTotal == 15
@@ -1615,7 +1615,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1653,13 +1653,13 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 8
                     || hand.handTotal == 12
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 9
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 13
                     || hand.handTotal == 14
@@ -1671,7 +1671,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1714,12 +1714,12 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -1727,7 +1727,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1770,12 +1770,12 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -1783,7 +1783,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1827,11 +1827,11 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -1839,7 +1839,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1883,11 +1883,11 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -1895,7 +1895,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1939,11 +1939,11 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -1951,7 +1951,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1995,11 +1995,11 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2007,7 +2007,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2051,11 +2051,11 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2063,7 +2063,7 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2150,7 +2150,7 @@ class Sp21SecretMonkeyCountStrategyTest {
             for(hand in testUtils.surrenderHands){
                 playerAction = actionResolver.getActionFromStrategy(hand, dealerHand, 0, false)
 
-                assert(playerAction == Actions.SURRENDER)
+                assertEquals(Actions.SURRENDER, playerAction)
             }
         }
     }
@@ -2181,7 +2181,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
-            assert(playerAction == Actions.DOUBLE_DOWN)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
 
         }
     }
@@ -2212,7 +2212,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 0, false)
 
-            assert(playerAction == Actions.DOUBLE_DOWN)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
 
         }
     }
@@ -2242,7 +2242,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 2, true)
 
-            assert(playerAction == Actions.SURRENDER)
+            assertEquals(Actions.SURRENDER, playerAction)
 
         }
     }
@@ -2272,7 +2272,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 2, true)
 
-            assert(playerAction == Actions.DOUBLE_DOWN)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
 
         }
     }
@@ -2302,7 +2302,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 2, true)
 
-            assert(playerAction == Actions.STAND)
+            assertEquals(Actions.STAND, playerAction)
 
         }
     }
@@ -2332,7 +2332,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 2, true)
 
-            assert(playerAction == Actions.DOUBLE_DOWN)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
 
         }
     }
@@ -2363,7 +2363,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, 2, true)
 
-            assert(playerAction == Actions.STAND)
+            assertEquals(Actions.STAND, playerAction)
 
         }
     }
