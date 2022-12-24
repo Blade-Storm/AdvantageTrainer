@@ -91,5 +91,20 @@ public class TestUtils {
     Hand softak = new Hand().withCards(List.of(carda, cardk));
     List<Hand> softHands = List.of(softaa,softa2,softa3,softa4,softa5,softa6,softa7,softa8,softa9,softat,softaj,softaq,softak);
 
+    Hand softaaa = new Hand().withCards(List.of(carda, carda, carda));
+    Hand softaa2 = new Hand().withCards(List.of(carda, carda, card2));
+    Hand softaa3 = new Hand().withCards(List.of(carda, carda, card3));
+    Hand softaa4 = new Hand().withCards(List.of(carda, carda, card4));
+    Hand softaa5 = new Hand().withCards(List.of(carda, carda, card5));
+    Hand softaa6 = new Hand().withCards(List.of(carda, carda, card6));
+    Hand softaa7 = new Hand().withCards(List.of(carda, carda, card7));
+    Hand softaa8 = new Hand().withCards(List.of(carda, carda, card8));
+    Hand softaa9 = new Hand().withCards(List.of(carda, carda, card9));
+    Hand softaat = new Hand().withCards(List.of(carda, carda, cardt));
+    Hand softaaj = new Hand().withCards(List.of(carda, carda, cardj));
+    Hand softaaq = new Hand().withCards(List.of(carda, carda, cardq));
+    Hand softaak = new Hand().withCards(List.of(carda, carda, cardk));
+    List<Hand> softHands_threeCard = List.of(softaaa,softaa2,softaa3,softaa4,softaa5,softaa6,softaa7,softaa8,softaa9,softaat,softaaj,softaaq,softaak);
+
     List<Hand> surrenderHands = List.of(hard16,hard17,split8);
 }

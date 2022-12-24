@@ -51,6 +51,8 @@ public class ActionResolver {
                 deviationAction = checkDeviations(playerActionObject, count);
                 if (deviationAction != null && deviationAction == Actions.SURRENDER && playerHand.canSurrender()){
                     return Actions.SURRENDER;
+                }else if (deviationAction != null){
+                    return deviationAction;
                 }
             }
 
@@ -96,6 +98,13 @@ public class ActionResolver {
             dealerHandObject = handTypeObject.getJSONObject(dealerHand.getDealerUpCard().getName().toString());
             playerActionObject = dealerHandObject.getJSONObject(playerHand.getCards().get(0).getName().toString());
 
+            if(playerActionObject.has(deviationKey) && useDeviations){
+                deviationAction = checkDeviations(playerActionObject, count);
+                if (deviationAction != null && deviationAction == Actions.SPLIT) {
+                    return Actions.SPLIT;
+                }
+            }
+
             if(playerActionObject.has(actionKey)) {
                 return Actions.stringToAction(playerActionObject.get(actionKey).toString());
             }else{
@@ -110,12 +119,29 @@ public class ActionResolver {
             handTypeObject = strategyObject.getJSONObject(Hand.HandType.SOFT.toString());
             dealerHandObject = handTypeObject.getJSONObject(dealerHand.getDealerUpCard().getName().toString());
             playerActionObject = dealerHandObject.getJSONObject(String.valueOf(playerHand.getHandTotal()));
+            action = Actions.stringToAction(playerActionObject.get(actionKey).toString());
 
             // Check for deviations first, against the count if we are using deviations
             if(playerActionObject.has(deviationKey) && useDeviations){
                 deviationAction = checkDeviations(playerActionObject, count);
+
                 if (deviationAction != null && deviationAction == Actions.DOUBLE_DOWN && playerHand.canDoubleDown()) {
                     return Actions.DOUBLE_DOWN;
+                } else if(deviationAction != null && deviationAction == Actions.DOUBLE_DOWN && !playerHand.canDoubleDown()){
+                    if(action == Actions.DOUBLE_DOWN) {
+                        if(playerActionObject.has(altActionKey)) {
+                            altAction = Actions.stringToAction(playerActionObject.get(altActionKey).toString());
+
+                            // Action and altAction should never be the same. Sanity check here.
+                            if(altAction == Actions.DOUBLE_DOWN){
+                                return null;
+                            }
+
+                            return altAction;
+                        }
+                    }else{
+                        return action;
+                    }
                 }else{
                     return deviationAction;
                 }
@@ -132,13 +158,30 @@ public class ActionResolver {
             handTypeObject = strategyObject.getJSONObject(Hand.HandType.HARD.toString());
             dealerHandObject = handTypeObject.getJSONObject(dealerHand.getDealerUpCard().getName().toString());
             playerActionObject = dealerHandObject.getJSONObject(String.valueOf(playerHand.getHandTotal()));
+            action = Actions.stringToAction(playerActionObject.get(actionKey).toString());
 
             // Check for deviations first, against the count if we are using deviations
             if(playerActionObject.has(deviationKey) && useDeviations){
                 deviationAction = checkDeviations(playerActionObject, count);
+
                 if (deviationAction != null && deviationAction == Actions.DOUBLE_DOWN && playerHand.canDoubleDown()) {
                     return Actions.DOUBLE_DOWN;
-                }else{
+                } else if(deviationAction != null && deviationAction == Actions.DOUBLE_DOWN && !playerHand.canDoubleDown()){
+                    if(action == Actions.DOUBLE_DOWN) {
+                        if(playerActionObject.has(altActionKey)) {
+                            altAction = Actions.stringToAction(playerActionObject.get(altActionKey).toString());
+
+                            // Action and altAction should never be the same. Sanity check here.
+                            if(altAction == Actions.DOUBLE_DOWN){
+                                return null;
+                            }
+
+                            return altAction;
+                        }
+                    }else{
+                        return action;
+                    }
+                }else if(deviationAction != null){
                     return deviationAction;
                 }
             }

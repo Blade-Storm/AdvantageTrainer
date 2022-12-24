@@ -3624,4 +3624,1319 @@ class BJAH17Test {
             assertEquals(Actions.SURRENDER, playerAction)
         }
     }
+
+    @Test
+    fun deviation_split_v4() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card4)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitt, dealerHand, 6, true)
+            assertEquals(Actions.SPLIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitj, dealerHand, 6, true)
+            assertEquals(Actions.SPLIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitq, dealerHand, 6, true)
+            assertEquals(Actions.SPLIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitk, dealerHand, 6, true)
+            assertEquals(Actions.SPLIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_split_v5() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card5)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitt, dealerHand, 5, true)
+            assertEquals(Actions.SPLIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitj, dealerHand, 5, true)
+            assertEquals(Actions.SPLIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitq, dealerHand, 5, true)
+            assertEquals(Actions.SPLIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitk, dealerHand, 5, true)
+            assertEquals(Actions.SPLIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_split_v6() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card6)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitt, dealerHand, 4, true)
+            assertEquals(Actions.SPLIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitj, dealerHand, 4, true)
+            assertEquals(Actions.SPLIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitq, dealerHand, 4, true)
+            assertEquals(Actions.SPLIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.splitk, dealerHand, 4, true)
+            assertEquals(Actions.SPLIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_soft_v2() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card2)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.softa6, dealerHand, 1, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_soft_v2_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card2)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.softaa5, dealerHand, 1, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_soft_v4() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card4)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.softa8, dealerHand, 3, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_soft_v4_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card4)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.softaa7, dealerHand, 3, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_soft_v5() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card5)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.softa8, dealerHand, 1, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_soft_v5_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card5)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.softaa7, dealerHand, 1, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_soft_v6() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card6)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.softa8, dealerHand, -1, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_soft_v6_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card6)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.softaa7, dealerHand, -1, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v2() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card2)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard9, dealerHand, 1, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard12, dealerHand, 3, true)
+            assertEquals(Actions.STAND, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard13, dealerHand, -1, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v2_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card2)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard9_threeCard, dealerHand, 1, true)
+            assertEquals(Actions.HIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard12_threeCard, dealerHand, 3, true)
+            assertEquals(Actions.STAND, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard13_threeCard, dealerHand, -1, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v3() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card3)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard12, dealerHand, 2, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v3_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card3)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard12_threeCard, dealerHand, 2, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v4() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card4)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard12, dealerHand, -1, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v4_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card4)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard12_threeCard, dealerHand, -1, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v6() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card6)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard8, dealerHand, 2, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v6_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card6)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard8_threeCard, dealerHand, 2, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v7() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card7)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard9, dealerHand, 3, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v7_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card7)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard9_threeCard, dealerHand, 3, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v9() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card9)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 4, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_v9_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card9)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 4, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_vt() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardt)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 4, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_vt_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardt)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
+            assertEquals(Actions.HIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 4, true)
+            assertEquals(Actions.STAND, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_vj() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardj)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 4, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_vj_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardj)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
+            assertEquals(Actions.HIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 4, true)
+            assertEquals(Actions.STAND, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_vq() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardq)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 4, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_vq_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardq)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
+            assertEquals(Actions.HIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 4, true)
+            assertEquals(Actions.STAND, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_vk() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardk)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 4, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_vk_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardk)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
+            assertEquals(Actions.HIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 4, true)
+            assertEquals(Actions.STAND, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_va() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.carda)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 3, true)
+            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 5, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 3, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_hard_va_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.carda)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 3, true)
+            assertEquals(Actions.HIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 5, true)
+            assertEquals(Actions.STAND, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 3, true)
+            assertEquals(Actions.STAND, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_v8() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card8)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 4, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_v8_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card8)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 4, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_v9() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card9)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 2, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, -1, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_v9_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.card9)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 2, true)
+            assertEquals(Actions.HIT, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, -1, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_vt() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardt)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_vt_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardt)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 0, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_vj() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardj)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_vj_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardj)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 0, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_vq() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardq)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_vq_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardq)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 0, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_vk() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardk)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_vk_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.cardk)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 0, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_va() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.carda)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
+            assertEquals(Actions.SURRENDER, playerAction)
+        }
+    }
+
+    @Test
+    fun deviation_surrender_va_threeCard() {
+        var playerAction: Actions
+        val dealerHand = Hand()
+        dealerHand.addCard(testUtils.carda)
+
+        composeTestRule.setContent {
+            val sharedPref = LocalContext.current.getSharedPreferences(
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+            )
+
+            with(sharedPref.edit()) {
+                clear()
+                putInt(Settings.STRATEGY, 2)
+                apply()
+            }
+
+            actionResolver = ActionResolver(setStrategy(sharedPref))
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)
+            assertEquals(Actions.HIT, playerAction)
+        }
+    }
 }

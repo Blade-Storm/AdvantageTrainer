@@ -2105,21 +2105,24 @@ class Sp21SecretMonkeyCountStrategyTest {
                     || hand.handTotal == 13
                     || hand.handTotal == 14
                     || hand.handTotal == 15
-                    || hand.handTotal == 16
-                    || hand.handTotal == 17
                 ){
-                    assert(playerAction == Actions.HIT)
+                    assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assert(playerAction == Actions.DOUBLE_DOWN)
+                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 18
                     || hand.handTotal == 19
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assert(playerAction == Actions.STAND)
+                    assertEquals(Actions.STAND, playerAction)
+                } else if (
+                    hand.handTotal == 16
+                    || hand.handTotal == 17
+                ){
+                    assertEquals(Actions.SURRENDER, playerAction)
                 }
             }
         }
