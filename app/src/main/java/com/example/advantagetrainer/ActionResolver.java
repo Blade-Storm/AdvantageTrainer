@@ -29,14 +29,12 @@ public class ActionResolver {
         if(Game.isSpanishGame){
             action = checkSurrender(playerHand, dealerHand, count, useDeviations);
             action = action == null ? checkSplit(playerHand, dealerHand, count, useDeviations) : action;
-            action = action == null ? checkSoft(playerHand, dealerHand, count, useDeviations): action;
-            action = action == null ? checkHard(playerHand, dealerHand, count, useDeviations): action;
         }else{
             action = checkSplit(playerHand, dealerHand, count, useDeviations);
             action = action == null ? checkSurrender(playerHand, dealerHand, count, useDeviations) : action;
-            action = action == null ? checkSoft(playerHand, dealerHand, count, useDeviations): action;
-            action = action == null ? checkHard(playerHand, dealerHand, count, useDeviations): action;
         }
+
+        action = action == null ? checkHardOrSoft(playerHand, dealerHand, count, useDeviations) : action;
         return action;
     }
 
@@ -114,98 +112,59 @@ public class ActionResolver {
         return null;
     }
 
-    public Actions checkSoft(Hand playerHand, Hand dealerHand, int count, boolean useDeviations) throws JSONException {
-        if(playerHand.getHandType() == Hand.HandType.SOFT){
-            handTypeObject = strategyObject.getJSONObject(Hand.HandType.SOFT.toString());
-            dealerHandObject = handTypeObject.getJSONObject(dealerHand.getDealerUpCard().getName().toString());
-            playerActionObject = dealerHandObject.getJSONObject(String.valueOf(playerHand.getHandTotal()));
-            action = Actions.stringToAction(playerActionObject.get(actionKey).toString());
-
-            // Check for deviations first, against the count if we are using deviations
-            if(playerActionObject.has(deviationKey) && useDeviations){
-                deviationAction = checkDeviations(playerActionObject, count);
-
-                if (deviationAction != null && deviationAction == Actions.DOUBLE_DOWN && playerHand.canDoubleDown()) {
-                    return Actions.DOUBLE_DOWN;
-                } else if(deviationAction != null && deviationAction == Actions.DOUBLE_DOWN && !playerHand.canDoubleDown()){
-                    if(action == Actions.DOUBLE_DOWN) {
-                        if(playerActionObject.has(altActionKey)) {
-                            altAction = Actions.stringToAction(playerActionObject.get(altActionKey).toString());
-
-                            // Action and altAction should never be the same. Sanity check here.
-                            if(altAction == Actions.DOUBLE_DOWN){
-                                return null;
-                            }
-
-                            return altAction;
-                        }
-                    }else{
-                        return action;
-                    }
-                }else{
-                    return deviationAction;
-                }
-            }
-
-            return checkDouble(playerHand, playerActionObject);
-        }
-
-        return null;
-    }
-
-    public Actions checkHard(Hand playerHand, Hand dealerHand, int count, boolean useDeviations) throws JSONException {
-        if(playerHand.getHandType() == Hand.HandType.HARD){
+    public Actions checkHardOrSoft(Hand playerHand, Hand dealerHand, int count, boolean useDeviations) throws JSONException {
+        if(playerHand.getHandType() == Hand.HandType.HARD) {
             handTypeObject = strategyObject.getJSONObject(Hand.HandType.HARD.toString());
-            dealerHandObject = handTypeObject.getJSONObject(dealerHand.getDealerUpCard().getName().toString());
-            playerActionObject = dealerHandObject.getJSONObject(String.valueOf(playerHand.getHandTotal()));
-            action = Actions.stringToAction(playerActionObject.get(actionKey).toString());
-
-            // Check for deviations first, against the count if we are using deviations
-            if(playerActionObject.has(deviationKey) && useDeviations){
-                deviationAction = checkDeviations(playerActionObject, count);
-
-                if (deviationAction != null && deviationAction == Actions.DOUBLE_DOWN && playerHand.canDoubleDown()) {
-                    return Actions.DOUBLE_DOWN;
-                } else if(deviationAction != null && deviationAction == Actions.DOUBLE_DOWN && !playerHand.canDoubleDown()){
-                    if(action == Actions.DOUBLE_DOWN) {
-                        if(playerActionObject.has(altActionKey)) {
-                            altAction = Actions.stringToAction(playerActionObject.get(altActionKey).toString());
-
-                            // Action and altAction should never be the same. Sanity check here.
-                            if(altAction == Actions.DOUBLE_DOWN){
-                                return null;
-                            }
-
-                            return altAction;
-                        }
-                    }else{
-                        return action;
-                    }
-                }else if(deviationAction != null){
-                    return deviationAction;
-                }
-            }
-            return checkDouble(playerHand, playerActionObject);
+        } else if (playerHand.getHandType() == Hand.HandType.SOFT){
+            handTypeObject = strategyObject.getJSONObject(Hand.HandType.SOFT.toString());
         }
 
-        return null;
-    }
-
-    public Actions checkDouble(Hand playerHand, JSONObject playerActionObject) throws JSONException{
+        dealerHandObject = handTypeObject.getJSONObject(dealerHand.getDealerUpCard().getName().toString());
+        playerActionObject = dealerHandObject.getJSONObject(String.valueOf(playerHand.getHandTotal()));
         action = Actions.stringToAction(playerActionObject.get(actionKey).toString());
 
-        if(playerActionObject.has(altActionKey)) {
+        if(playerActionObject.has(altActionKey)){
             altAction = Actions.stringToAction(playerActionObject.get(altActionKey).toString());
-        }else{
-            altAction = null;
         }
 
-        if(action.equals(Actions.DOUBLE_DOWN) && playerHand.canDoubleDown()){
+        if(playerActionObject.has(deviationKey)) {
+            deviationAction = checkDeviations(playerActionObject, count);
+        }
+
+        if(useDeviations && deviationAction != null){
+            if (deviationAction == Actions.DOUBLE_DOWN && playerHand.canDoubleDown()) {
+                return Actions.DOUBLE_DOWN;
+            } else if(deviationAction == Actions.DOUBLE_DOWN && !playerHand.canDoubleDown()){
+                if(action == Actions.DOUBLE_DOWN) {
+                    if(altAction != null) {
+                        // Action and altAction should never be the same. Sanity check here.
+                        if(altAction == Actions.DOUBLE_DOWN){
+                            return null;
+                        }
+
+                        return altAction;
+                    }
+                }else{
+                    return action;
+                }
+            }else{
+                return deviationAction;
+            }
+        }else if(action == Actions.DOUBLE_DOWN && playerHand.canDoubleDown()) {
             return Actions.DOUBLE_DOWN;
-        }else if (action.equals(Actions.DOUBLE_DOWN) && !playerHand.canDoubleDown() && altAction != null){
-            return altAction;
-        }else{
+        }else if(action == Actions.DOUBLE_DOWN && !playerHand.canDoubleDown()) {
+            if(altAction != null) {
+                // Action and altAction should never be the same. Sanity check here.
+                if (altAction == Actions.DOUBLE_DOWN) {
+                    return null;
+                }
+
+                return altAction;
+            }
+        } else{
             return action;
         }
+
+        return null;
     }
 }
