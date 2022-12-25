@@ -74,7 +74,7 @@ public class Settings {
         numCardToFlashMapper.put(0, 1);
         numCardToFlashMapper.put(1, 2);
         numCardToFlashMapper.put(2, 3);
-
+        numCardToFlashMapper.put(3, 4);
     }
 
     // Maps the index from the settings selection to the value

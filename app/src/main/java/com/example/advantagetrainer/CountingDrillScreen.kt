@@ -33,6 +33,8 @@ fun CountingDrillScreen(
     // If the user has setting to flash 1-3 cards set numCardToFlash to a random int between 1-3
     if(numCardToFlashSetting == 3){
         numCardToFlash = (1..3).random()
+    }else if(numCardToFlashSetting == 4){
+        numCardToFlash = (1..4).random()
     }
 
     if(cardVisible.value) {
@@ -85,12 +87,15 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
     var boxOffset = 0.dp
     val doubleCardIndex = index + 1
     val tripleCardIndex = index + 2
+    val quadrupleCardIndex = index + 3
 
     // Update the box offset to account for the additional cards
     if(numCardToFlashSetting == 2 && index < deck.size - 1){
         boxOffset = (-12).dp
     }else if (numCardToFlashSetting == 3 && index < deck.size - 2){
         boxOffset = (-24).dp
+    }else if (numCardToFlashSetting == 4 && index < deck.size - 3){
+        boxOffset = (-36).dp
     }
 
     // To prevent against an IndexOutOfBoundsException if we accidently call this function with a large index
@@ -140,6 +145,27 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
                         )
                         Image(
                             painter = painterResource(deck[tripleCardIndex].cardImageId),
+                            contentDescription = "Card",
+                            modifier = Modifier.offset(y = 72.dp)
+                        )
+                    } else if (numCardToFlashSetting == 4) {
+                        Image(
+                            painter = painterResource(deck[index].cardImageId),
+                            contentDescription = "Card",
+                            modifier = Modifier.offset(x = 104.dp, y = (-36).dp).zIndex(1.5F)
+                        )
+                        Image(
+                            painter = painterResource(deck[doubleCardIndex].cardImageId),
+                            contentDescription = "Card",
+                            modifier = Modifier.offset(x = 72.dp, y = 0.dp).zIndex(1.0F)
+                        )
+                        Image(
+                            painter = painterResource(deck[tripleCardIndex].cardImageId),
+                            contentDescription = "Card",
+                            modifier = Modifier.offset(x = 36.dp, y = 36.dp).zIndex(0.5F)
+                        )
+                        Image(
+                            painter = painterResource(deck[quadrupleCardIndex].cardImageId),
                             contentDescription = "Card",
                             modifier = Modifier.offset(y = 72.dp)
                         )

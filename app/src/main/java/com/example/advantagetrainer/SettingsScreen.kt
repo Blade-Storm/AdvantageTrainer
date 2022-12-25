@@ -74,7 +74,7 @@ fun SettingsScreen(
 
         // TODO: Use mapper in settings instead of hardcoded list
         Text("- Number of cards to flash")
-        val numCardToFlashItems = listOf("1 card", "2 cards", "1-3 cards")
+        val numCardToFlashItems = listOf("1 card", "2 cards", "1-3 cards", "1-4 cards")
         var isNumCardToFlashExpanded by remember { mutableStateOf(false) }
         var selectedNumCardsToFlashIndex by remember { mutableStateOf(sharedPref.getInt(Settings.NUM_CARDS_TO_FLASH, 0)) }
 
