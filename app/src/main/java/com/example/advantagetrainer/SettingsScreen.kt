@@ -164,7 +164,7 @@ fun SettingsScreen(
         // TODO: Use mapper in settings instead of hardcoded list
         val strategyItems = Settings.Strategy.values()
         var isStrategyExpanded by remember { mutableStateOf(false) }
-        var strategyIndex by remember { mutableStateOf(sharedPref.getInt(Settings.STRATEGY, 0)) }
+        var strategyIndex by remember { mutableStateOf(sharedPref.getInt(Settings.STRATEGY, 1)) }
 
         Box(Modifier.testTag("NumOfCardsInHandBox")) {
             Text(strategyItems[strategyIndex].name,modifier = Modifier

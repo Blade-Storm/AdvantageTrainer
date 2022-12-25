@@ -7,9 +7,9 @@ import java.util.Map;
 
 public class Settings {
     public enum Strategy{
-        BLACKJACK (R.raw.blackjackgreenulticounting),
         SPANISH21_SECRET (R.raw.sp21secretmonkeycount),
-        BJA_H17 (R.raw.bjah17);
+        BJA_H17 (R.raw.bjah17),
+        BJA_S17 (R.raw.bjas17);
 
         public final int rawId;
         Strategy(int id) {
@@ -103,8 +103,8 @@ public class Settings {
 
     static{
         strategyMapper = new HashMap<>();
-        strategyMapper.put(0, Strategy.BLACKJACK);
-        strategyMapper.put(1, Strategy.SPANISH21_SECRET);
-        strategyMapper.put(2, Strategy.BJA_H17);
+        strategyMapper.put(0, Strategy.SPANISH21_SECRET);
+        strategyMapper.put(1, Strategy.BJA_H17);
+        strategyMapper.put(2, Strategy.BJA_S17);
     }
 }

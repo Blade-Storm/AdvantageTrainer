@@ -27,7 +27,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -83,7 +83,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -139,7 +139,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -195,7 +195,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -251,7 +251,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -307,7 +307,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -363,7 +363,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -419,7 +419,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -472,7 +472,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -525,7 +525,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -578,7 +578,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -631,7 +631,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -684,7 +684,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -738,7 +738,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -789,7 +789,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -840,7 +840,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -894,7 +894,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -948,7 +948,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1002,7 +1002,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1053,7 +1053,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1104,7 +1104,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1155,7 +1155,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1206,7 +1206,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1257,7 +1257,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1308,7 +1308,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1359,7 +1359,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1410,7 +1410,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1466,7 +1466,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1522,7 +1522,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1578,7 +1578,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1634,7 +1634,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1690,7 +1690,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1746,7 +1746,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1802,7 +1802,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1858,7 +1858,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1914,7 +1914,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -1970,7 +1970,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -2026,7 +2026,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -2082,7 +2082,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -2141,7 +2141,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -2168,7 +2168,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -2199,7 +2199,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -2230,7 +2230,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -2260,7 +2260,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -2290,7 +2290,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -2320,7 +2320,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 
@@ -2350,7 +2350,7 @@ class Sp21SecretMonkeyCountStrategyTest {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.STRATEGY, 0)
                 apply()
             }
 

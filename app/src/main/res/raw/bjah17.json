@@ -936,7 +936,7 @@
       "14": {},
       "15": {"deviation":  {"count":  -1, "action":  "surrender", "sign":  "greaterThanOrEqual"}},
       "16": {"action": "surrender"},
-      "17": {},
+      "17": {"action": "surrender"},
       "18": {},
       "19": {},
       "20": {},

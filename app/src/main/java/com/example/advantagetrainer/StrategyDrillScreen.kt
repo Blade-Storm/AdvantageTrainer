@@ -261,7 +261,7 @@ fun isOddHand(deck:ArrayList<Card>): Boolean{
 
 @Composable
 fun setStrategy(sharedPref: SharedPreferences): JSONObject {
-    val strategy = Settings.strategyMapper[sharedPref.getInt(Settings.STRATEGY, 0)]!!
+    val strategy = Settings.strategyMapper[sharedPref.getInt(Settings.STRATEGY, 1)]!!
     val inputStream = LocalContext.current.resources.openRawResource(strategy.rawId)
     Game.isSpanishGame = strategy.name == Strategy.SPANISH21_SECRET.name
 

@@ -27,7 +27,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -83,7 +83,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -139,7 +139,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -195,7 +195,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -248,7 +248,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -301,7 +301,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -357,7 +357,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -413,7 +413,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -469,7 +469,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -522,7 +522,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -575,7 +575,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -628,7 +628,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -681,7 +681,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -734,7 +734,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -788,7 +788,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -842,7 +842,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -896,7 +896,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -947,7 +947,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -998,7 +998,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1049,7 +1049,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1100,7 +1100,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1151,7 +1151,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1202,7 +1202,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1253,7 +1253,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1304,7 +1304,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1355,7 +1355,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1406,7 +1406,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1453,7 +1453,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1500,7 +1500,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1543,7 +1543,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1586,7 +1586,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1629,7 +1629,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1676,7 +1676,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1723,7 +1723,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1771,7 +1771,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1819,7 +1819,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1867,7 +1867,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1915,7 +1915,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -1963,7 +1963,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2011,7 +2011,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2068,7 +2068,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2125,7 +2125,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2182,7 +2182,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2239,7 +2239,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2296,7 +2296,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2353,7 +2353,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2410,7 +2410,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2470,7 +2470,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2530,7 +2530,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2590,7 +2590,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2650,7 +2650,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2710,7 +2710,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2742,11 +2742,11 @@ class BJAH17Test {
                     assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     hand.handTotal == 16
+                    || hand.handTotal == 17
                 ){
                     assertEquals(Actions.SURRENDER, playerAction)
                 } else if (
-                    hand.handTotal == 17
-                    || hand.handTotal == 18
+                    hand.handTotal == 18
                     || hand.handTotal == 19
                     || hand.handTotal == 20
                     || hand.handTotal == 21
@@ -2770,7 +2770,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2824,7 +2824,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2878,7 +2878,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2932,7 +2932,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -2986,7 +2986,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3040,7 +3040,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3094,7 +3094,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3148,7 +3148,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3202,7 +3202,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3256,7 +3256,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3310,7 +3310,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3364,7 +3364,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3418,7 +3418,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3472,7 +3472,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3497,7 +3497,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3526,7 +3526,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3555,7 +3555,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3584,7 +3584,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3613,7 +3613,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3621,6 +3621,10 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
+            assertEquals(Actions.SURRENDER, playerAction)
+
+            playerAction =
+                actionResolver.getActionFromStrategy(testUtils.hard17, dealerHand, 0, false)
             assertEquals(Actions.SURRENDER, playerAction)
         }
     }
@@ -3638,7 +3642,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3675,7 +3679,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3712,7 +3716,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3749,7 +3753,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3774,7 +3778,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3799,7 +3803,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3824,7 +3828,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3849,7 +3853,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3874,7 +3878,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3899,7 +3903,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3924,7 +3928,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3949,7 +3953,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -3982,7 +3986,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4015,7 +4019,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4040,7 +4044,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4065,7 +4069,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4090,7 +4094,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4115,7 +4119,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4140,7 +4144,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4165,7 +4169,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4190,7 +4194,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4215,7 +4219,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4240,7 +4244,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4265,7 +4269,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4298,7 +4302,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4331,7 +4335,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4364,7 +4368,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4397,7 +4401,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4430,7 +4434,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4463,7 +4467,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4496,7 +4500,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4529,7 +4533,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4562,7 +4566,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4595,7 +4599,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4620,7 +4624,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4645,7 +4649,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4674,7 +4678,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4703,7 +4707,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4728,7 +4732,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4753,7 +4757,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4778,7 +4782,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4803,7 +4807,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4828,7 +4832,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4853,7 +4857,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4878,7 +4882,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4903,7 +4907,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
@@ -4928,7 +4932,7 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 2)
+                putInt(Settings.STRATEGY, 1)
                 apply()
             }
 
