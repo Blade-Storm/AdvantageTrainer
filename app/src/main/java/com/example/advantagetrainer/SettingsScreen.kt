@@ -12,6 +12,7 @@ import androidx.compose.ui.unit.dp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
+    onNavigateToStrategyDisplayScreen: () -> Unit,
     sharedPref: SharedPreferences
 ) {
     Column{
@@ -187,6 +188,10 @@ fun SettingsScreen(
                         text = { Text(text = s.name) })
                 }
             }
+        }
+
+        TextButton(onClick = { onNavigateToStrategyDisplayScreen() }) {
+            Text("View strategy table")
         }
 
         var useDeviations by remember { mutableStateOf(sharedPref.getBoolean(Settings.USE_DEVIATIONS, false)) }
