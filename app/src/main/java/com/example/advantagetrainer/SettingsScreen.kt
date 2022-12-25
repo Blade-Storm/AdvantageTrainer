@@ -134,7 +134,7 @@ fun SettingsScreen(
         Text("Strategy Drills: ")
         Text("- Number of cards in hand")
         // TODO: Use mapper in settings instead of hardcoded list
-        val numCardInHandItems = listOf("2 cards", "3 cards")
+        val numCardInHandItems = listOf("2 cards", "3 cards", "2-4 cards", "2-5 cards")
         var isNumCardInHandExpanded by remember { mutableStateOf(false) }
         var selectedNumCardsInHandIndex by remember { mutableStateOf(sharedPref.getInt(Settings.NUM_CARDS_IN_HAND, 0)) }
 

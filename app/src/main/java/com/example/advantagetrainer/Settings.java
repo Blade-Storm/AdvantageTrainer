@@ -96,6 +96,8 @@ public class Settings {
         numCardInHandMapper = new HashMap<>();
         numCardInHandMapper.put(0, 2);
         numCardInHandMapper.put(1, 3);
+        numCardInHandMapper.put(2, 4);
+        numCardInHandMapper.put(3, 5);
     }
 
     // Maps the index from the settings selection to the value

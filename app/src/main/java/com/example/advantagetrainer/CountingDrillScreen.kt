@@ -120,7 +120,7 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
                             contentDescription = "Card",
                         )
                         // Show 2 cards
-                    } else if (numCardToFlashSetting == 2 || (numCardToFlashSetting == 3 && index == deck.size - 2)) {
+                    } else if (numCardToFlashSetting == 2 || ((numCardToFlashSetting == 3 || numCardToFlashSetting == 4) && index == deck.size - 2)) {
                         Image(
                             painter = painterResource(deck[index].cardImageId),
                             contentDescription = "Card",

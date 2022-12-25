@@ -27,9 +27,16 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
     val cardVisible = remember { mutableStateOf(false) }
     val deck = createDeck(sharedPref = sharedPref)
     var (index, updateIndex) = remember { mutableStateOf(1) }
-    val numCardInHandSetting = Settings.numCardInHandMapper[sharedPref.getInt(Settings.NUM_CARDS_IN_HAND, 2)]!!
+    var numCardInHandSetting = Settings.numCardInHandMapper[sharedPref.getInt(Settings.NUM_CARDS_IN_HAND, 2)]!!
     val useDeviations = sharedPref.getBoolean(Settings.USE_DEVIATIONS, false)!!
     val actionResolver = ActionResolver(setStrategy(sharedPref))
+
+    // If the user has setting to flash 1-3 cards set numCardToFlash to a random int between 1-3
+    if(numCardInHandSetting == 4){
+        numCardInHandSetting = (2..4).random()
+    }else if(numCardInHandSetting == 5){
+        numCardInHandSetting = (2..5).random()
+    }
 
     if(cardVisible.value) {
         index = getValidHandToShow(deck, index, numCardInHandSetting)
@@ -40,13 +47,21 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
         val singleCardIndex = index
         val doubleCardIndex = index + 1
         val tripleCardIndex = index + 2
+        val quadrupleCardIndex = index + 3
+        val quintupleCardIndex = index + 4
 
         // Update the box offset to account for the additional cards
         if(numCardInHandSetting == 2 && index < deck.size - 1){
-            xboxOffset = (-12).dp
+            xboxOffset = (-24).dp
             yboxOffset = 12.dp
         }else if (numCardInHandSetting == 3 && index < deck.size - 2){
-            xboxOffset = (-24).dp
+            xboxOffset = (-36).dp
+            yboxOffset = 12.dp
+        }else if (numCardInHandSetting == 4 && index < deck.size - 3){
+            xboxOffset = (-48).dp
+            yboxOffset = 12.dp
+        }else if (numCardInHandSetting == 5 && index < deck.size - 4){
+            xboxOffset = (-60).dp
             yboxOffset = 12.dp
         }
 
@@ -66,13 +81,10 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
         if(index < deck.size){
             Surface(
                 color = Color.Transparent,
-                modifier = Modifier
-                    .fillMaxHeight()
-                    .fillMaxWidth()
+                modifier = Modifier.fillMaxHeight().fillMaxWidth()
             ) {
                 Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = Modifier.offset(y = 6.dp)
+                    modifier = Modifier.offset(y = 6.dp, x = 6.dp)
                 ) {
                     Row{
                         Image(
@@ -83,6 +95,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.Center,
+                        modifier = Modifier.fillMaxWidth()
                     ) {
                         Box(
                             Modifier.offset(x = xboxOffset, y = yboxOffset)
@@ -119,6 +132,53 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                                 )
                                 Image(
                                     painter = painterResource(deck[singleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(y = 72.dp)
+                                )
+                            } else if (numCardInHandSetting == 4) {
+                                Image(
+                                    painter = painterResource(deck[index].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 104.dp, y = (-36).dp).zIndex(1.5F)
+                                )
+                                Image(
+                                    painter = painterResource(deck[doubleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 72.dp, y = 0.dp).zIndex(1.0F)
+                                )
+                                Image(
+                                    painter = painterResource(deck[tripleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 36.dp, y = 36.dp).zIndex(0.5F)
+                                )
+                                Image(
+                                    painter = painterResource(deck[quadrupleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(y = 72.dp)
+                                )
+                            } else if (numCardInHandSetting == 5) {
+                                Image(
+                                    painter = painterResource(deck[index].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 140.dp, y = (-72).dp).zIndex(2F)
+                                )
+                                Image(
+                                    painter = painterResource(deck[doubleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 104.dp, y = (-36).dp).zIndex(1.5F)
+                                )
+                                Image(
+                                    painter = painterResource(deck[tripleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 72.dp, y = 0.dp).zIndex(1.0F)
+                                )
+                                Image(
+                                    painter = painterResource(deck[quadrupleCardIndex].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 36.dp, y = 36.dp).zIndex(0.5F)
+                                )
+                                Image(
+                                    painter = painterResource(deck[quintupleCardIndex].cardImageId),
                                     contentDescription = "Card",
                                     modifier = Modifier.offset(y = 72.dp)
                                 )
