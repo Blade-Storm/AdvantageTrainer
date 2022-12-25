@@ -13,6 +13,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import org.json.JSONObject
+
+var action: String? = null
+var deviationCount: String? = null
+var sign: String? = null
+var altAction: String? = null
+var modifier: Modifier? = null
+var text: String? = null
+val splitHands = arrayListOf<String>("","2,2","3,3","4,4","5,5","6,6","7,7","8,8","9,9","T,T","A,A")
+val softHands = arrayListOf<String>("","A,2","A,3","A,4","A,5","A,6","A,7","A,8","A,9")
+val hardHands = arrayListOf<String>("","2-8","9","10","11","12","13","14","15","16","17+")
 
 @Composable
 fun StrategyDisplayScreen(
@@ -20,9 +31,6 @@ fun StrategyDisplayScreen(
 ) {
     // Get strategy JSON
     val strategy = setStrategy(sharedPref = sharedPref)
-    var action: String? = null
-    var deviationCount: String? = null
-    var sign: String? = null
     val strategyHard = strategy.getJSONObject("hard")
     val strategySoft = strategy.getJSONObject("soft")
     val strategySplit = strategy.getJSONObject("split")
@@ -47,17 +55,9 @@ fun StrategyDisplayScreen(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.background(Color.LightGray)
             ) {
-                Text(text = "", modifier = Modifier.padding(6.dp))
-                Text(text = "2,2", modifier = Modifier.padding(6.dp))
-                Text(text = "3,3", modifier = Modifier.padding(6.dp))
-                Text(text = "4,4", modifier = Modifier.padding(6.dp))
-                Text(text = "5,5", modifier = Modifier.padding(6.dp))
-                Text(text = "6,6", modifier = Modifier.padding(6.dp))
-                Text(text = "7,7", modifier = Modifier.padding(6.dp))
-                Text(text = "8,8", modifier = Modifier.padding(6.dp))
-                Text(text = "9,9", modifier = Modifier.padding(6.dp))
-                Text(text = "T,T", modifier = Modifier.padding(6.dp))
-                Text(text = "A,A", modifier = Modifier.padding(6.dp))
+                for(i in 0 until splitHands.size){
+                    Text(text = splitHands[i], modifier = Modifier.padding(6.dp))
+                }
             }
             for (i in 2 until strategySplit.length() + 2) {
                 var dealerCardValue = i.toString()
@@ -94,61 +94,12 @@ fun StrategyDisplayScreen(
                                     val playerHandObject =
                                         dealerHandObject.getJSONObject(playerCardValue)
 
-                                    if (playerHandObject.has("deviation")) {
-                                        deviationCount =
-                                            playerHandObject.getJSONObject("deviation").get("count")
-                                                .toString()
-                                        sign =
-                                            playerHandObject.getJSONObject("deviation").get("sign")
-                                                .toString()
+                                    assignCellValues(playerHandObject)
 
-                                        if (sign == Settings.StrategyDeviationSign.GREATER_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.GREATER.sign) {
-                                            sign = "+"
-                                        } else if (sign == Settings.StrategyDeviationSign.LESS_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.LESS.sign) {
-                                            sign = "-"
-                                        }
-                                    } else {
-                                        deviationCount = null
-                                        sign = null
-                                    }
+                                    text = if(action != null) "Y" else "N"
+                                    modifier = if(action != null) Modifier.background(Color.Green).padding(6.dp).width(20.dp) else Modifier.background(Color.White).padding(6.dp).width(20.dp)
 
-                                    action = if (playerHandObject.has("action")) playerHandObject.get("action").toString() else null
-
-                                    if (deviationCount == null) {
-                                        if (action != null) {
-                                            Text(
-                                                "Y",
-                                                modifier = Modifier.background(Color.Green)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else{
-                                            Text(
-                                                "N",
-                                                modifier = Modifier.background(Color.White)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        }
-                                    } else {
-                                        if (action != null) {
-                                            Text(
-                                                deviationCount.toString() + sign,
-                                                color = Color.Red,
-                                                modifier = Modifier.background(Color.Green)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else {
-                                            Text(
-                                                deviationCount.toString() + sign,
-                                                modifier = Modifier.background(Color.White)
-                                                    .padding(6.dp).width(20.dp),
-                                                color = Color.Red,
-                                                textAlign = TextAlign.Center
-                                            )
-                                        }
-                                    }
+                                    GenerateCell()
                                 }
                             }
                         }
@@ -173,15 +124,9 @@ fun StrategyDisplayScreen(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.background(Color.LightGray)
             ) {
-                Text(text = "", modifier = Modifier.padding(6.dp))
-                Text(text = "A,2", modifier = Modifier.padding(6.dp))
-                Text(text = "A,3", modifier = Modifier.padding(6.dp))
-                Text(text = "A,4", modifier = Modifier.padding(6.dp))
-                Text(text = "A,5", modifier = Modifier.padding(6.dp))
-                Text(text = "A,6", modifier = Modifier.padding(6.dp))
-                Text(text = "A,7", modifier = Modifier.padding(6.dp))
-                Text(text = "A,8", modifier = Modifier.padding(6.dp))
-                Text(text = "A,9", modifier = Modifier.padding(6.dp))
+                for(i in 0 until softHands.size){
+                    Text(text = softHands[i], modifier = Modifier.padding(6.dp))
+                }
             }
             for (i in 2 until strategySoft.length() + 2) {
                 var dealerCardValue = i.toString()
@@ -211,85 +156,9 @@ fun StrategyDisplayScreen(
                                     val playerHandObject =
                                         dealerHandObject.getJSONObject((j+11).toString())
 
-                                    if (playerHandObject.has("deviation")) {
-                                        deviationCount =
-                                            playerHandObject.getJSONObject("deviation").get("count")
-                                                .toString()
-                                        sign =
-                                            playerHandObject.getJSONObject("deviation").get("sign")
-                                                .toString()
-
-                                        if (sign == Settings.StrategyDeviationSign.GREATER_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.GREATER.sign) {
-                                            sign = "+"
-                                        } else if (sign == Settings.StrategyDeviationSign.LESS_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.LESS.sign) {
-                                            sign = "-"
-                                        }
-                                    } else {
-                                        deviationCount = null
-                                        sign = null
-                                    }
-
-                                    action = playerHandObject.get("action").toString()
-
-                                    if (deviationCount == null) {
-                                        if (action.toString().slice(0..0).uppercase() == "H") {
-                                            Text(
-                                                action.toString().slice(0..0).uppercase(),
-                                                modifier = Modifier.background(Color.White)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else if (action.toString().slice(0..0)
-                                                .uppercase() == "S"
-                                        ) {
-                                            Text(
-                                                action.toString().slice(0..0).uppercase(),
-                                                modifier = Modifier.background(Color.Yellow)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else if (action.toString().slice(0..0)
-                                                .uppercase() == "D"
-                                        ) {
-                                            Text(
-                                                action.toString().slice(0..0).uppercase(),
-                                                modifier = Modifier.background(Color.Green)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        }
-
-                                    } else {
-                                        if (action.toString().slice(0..0).uppercase() == "H") {
-                                            Text(
-                                                deviationCount.toString() + sign,
-                                                color = Color.Red,
-                                                modifier = Modifier.background(Color.White)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else if (action.toString().slice(0..0)
-                                                .uppercase() == "S"
-                                        ) {
-                                            Text(
-                                                deviationCount.toString() + sign,
-                                                modifier = Modifier.background(Color.Yellow)
-                                                    .padding(6.dp).width(20.dp),
-                                                color = Color.Red,
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else if (action.toString().slice(0..0)
-                                                .uppercase() == "D"
-                                        ) {
-                                            Text(
-                                                deviationCount.toString() + sign,
-                                                modifier = Modifier.background(Color.Green)
-                                                    .padding(6.dp).width(20.dp),
-                                                color = Color.Red,
-                                                textAlign = TextAlign.Center
-                                            )
-                                        }
-                                    }
+                                    assignCellValues(playerHandObject)
+                                    assignCellModifier()
+                                    GenerateCell()
                                 }
                             }
                         }
@@ -314,17 +183,9 @@ fun StrategyDisplayScreen(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.background(Color.LightGray)
             ) {
-                Text(text = "", modifier = Modifier.padding(6.dp))
-                Text(text = "2-8", modifier = Modifier.padding(6.dp))
-                Text(text = "9", modifier = Modifier.padding(6.dp))
-                Text(text = "10", modifier = Modifier.padding(6.dp))
-                Text(text = "11", modifier = Modifier.padding(6.dp))
-                Text(text = "12", modifier = Modifier.padding(6.dp))
-                Text(text = "13", modifier = Modifier.padding(6.dp))
-                Text(text = "14", modifier = Modifier.padding(6.dp))
-                Text(text = "15", modifier = Modifier.padding(6.dp))
-                Text(text = "16", modifier = Modifier.padding(6.dp))
-                Text(text = "17+", modifier = Modifier.padding(6.dp))
+                for(i in 0 until hardHands.size){
+                    Text(text = hardHands[i], modifier = Modifier.padding(6.dp))
+                }
             }
             for (i in 2 until strategyHard.length() + 2) {
                 var dealerCardValue = i.toString()
@@ -354,85 +215,9 @@ fun StrategyDisplayScreen(
                                     val playerHandObject =
                                         dealerHandObject.getJSONObject(j.toString())
 
-                                    if (playerHandObject.has("deviation")) {
-                                        deviationCount =
-                                            playerHandObject.getJSONObject("deviation").get("count")
-                                                .toString()
-                                        sign =
-                                            playerHandObject.getJSONObject("deviation").get("sign")
-                                                .toString()
-
-                                        if (sign == Settings.StrategyDeviationSign.GREATER_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.GREATER.sign) {
-                                            sign = "+"
-                                        } else if (sign == Settings.StrategyDeviationSign.LESS_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.LESS.sign) {
-                                            sign = "-"
-                                        }
-                                    } else {
-                                        deviationCount = null
-                                        sign = null
-                                    }
-
-                                    action = playerHandObject.get("action").toString()
-
-                                    if (deviationCount == null) {
-                                        if (action.toString().slice(0..0).uppercase() == "H") {
-                                            Text(
-                                                action.toString().slice(0..0).uppercase(),
-                                                modifier = Modifier.background(Color.White)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else if (action.toString().slice(0..0)
-                                                .uppercase() == "S"
-                                        ) {
-                                            Text(
-                                                action.toString().slice(0..0).uppercase(),
-                                                modifier = Modifier.background(Color.Yellow)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else if (action.toString().slice(0..0)
-                                                .uppercase() == "D"
-                                        ) {
-                                            Text(
-                                                action.toString().slice(0..0).uppercase(),
-                                                modifier = Modifier.background(Color.Green)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        }
-
-                                    } else {
-                                        if (action.toString().slice(0..0).uppercase() == "H") {
-                                            Text(
-                                                deviationCount.toString() + sign,
-                                                color = Color.Red,
-                                                modifier = Modifier.background(Color.White)
-                                                    .padding(6.dp).width(20.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else if (action.toString().slice(0..0)
-                                                .uppercase() == "S"
-                                        ) {
-                                            Text(
-                                                deviationCount.toString() + sign,
-                                                modifier = Modifier.background(Color.Yellow)
-                                                    .padding(6.dp).width(20.dp),
-                                                color = Color.Red,
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else if (action.toString().slice(0..0)
-                                                .uppercase() == "D"
-                                        ) {
-                                            Text(
-                                                deviationCount.toString() + sign,
-                                                modifier = Modifier.background(Color.Green)
-                                                    .padding(6.dp).width(20.dp),
-                                                color = Color.Red,
-                                                textAlign = TextAlign.Center
-                                            )
-                                        }
-                                    }
+                                    assignCellValues(playerHandObject)
+                                    assignCellModifier()
+                                    GenerateCell()
                                 }
                             }
                         }
@@ -491,61 +276,9 @@ fun StrategyDisplayScreen(
                                     val playerHandObject =
                                         dealerHandObject.getJSONObject(j.toString())
 
-                                    if (playerHandObject.has("deviation")) {
-                                        deviationCount =
-                                            playerHandObject.getJSONObject("deviation").get("count")
-                                                .toString()
-                                        sign =
-                                            playerHandObject.getJSONObject("deviation").get("sign")
-                                                .toString()
-
-                                        if (sign == Settings.StrategyDeviationSign.GREATER_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.GREATER.sign) {
-                                            sign = "+"
-                                        } else if (sign == Settings.StrategyDeviationSign.LESS_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.LESS.sign) {
-                                            sign = "-"
-                                        }
-                                    } else {
-                                        deviationCount = null
-                                        sign = null
-                                    }
-
-                                    action = if(playerHandObject.has("action")) playerHandObject.get("action").toString() else null
-
-                                    if (deviationCount == null) {
-                                        if (action != null) {
-                                            Text(
-                                                "LS",
-                                                modifier = Modifier.background(Color.Green)
-                                                    .padding(2.dp).width(30.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        } else {
-                                            Text(
-                                                "",
-                                                modifier = Modifier.background(Color.White)
-                                                    .padding(2.dp).width(30.dp),
-                                                textAlign = TextAlign.Center
-                                            )
-                                        }
-                                    } else {
-                                        if (action != null) {
-                                            Text(
-                                                deviationCount.toString() + sign,
-                                                modifier = Modifier.background(Color.Green)
-                                                    .padding(2.dp).width(30.dp),
-                                                textAlign = TextAlign.Center,
-                                                color = Color.Red
-                                            )
-                                        } else {
-                                            Text(
-                                                deviationCount.toString() + sign,
-                                                modifier = Modifier.background(Color.White)
-                                                    .padding(2.dp).width(30.dp),
-                                                textAlign = TextAlign.Center,
-                                                color = Color.Red
-                                            )
-                                        }
-                                    }
+                                    assignCellValues(playerHandObject)
+                                    assignCellModifier()
+                                    GenerateCell()
                                 }
                             }
                         }
@@ -553,5 +286,64 @@ fun StrategyDisplayScreen(
                 }
             }
         }
+    }
+}
+
+fun assignCellValues(playerHandObject: JSONObject){
+    if (playerHandObject.has("deviation")) {
+        deviationCount = playerHandObject.getJSONObject("deviation").get("count").toString()
+        sign = playerHandObject.getJSONObject("deviation").get("sign").toString()
+
+        if (sign == Settings.StrategyDeviationSign.GREATER_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.GREATER.sign) {
+            sign = "+"
+        } else if (sign == Settings.StrategyDeviationSign.LESS_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.LESS.sign) {
+            sign = "-"
+        }
+    } else {
+        deviationCount = null
+        sign = null
+    }
+
+    action = if (playerHandObject.has("action")) playerHandObject.get("action").toString() else null
+    altAction = if(playerHandObject.has("altaction")) playerHandObject.get("altaction").toString() else null
+}
+
+fun assignCellModifier(){
+    if(action.toString() == Actions.DOUBLE_DOWN.toString() && (altAction != null && altAction.toString() == Actions.STAND.toString())){
+        modifier = Modifier.background(Color.Cyan).padding(6.dp).width(20.dp)
+        text = "Ds"
+    }else if(action.toString() == "hit"){
+        modifier = Modifier.background(Color.White).padding(6.dp).width(20.dp)
+        text = "H"
+    }else if (action.toString() == "stand"){
+        modifier = Modifier.background(Color.Yellow).padding(6.dp).width(20.dp)
+        text = "S"
+    }else if (action.toString() == "double") {
+        modifier = Modifier.background(Color.Green).padding(6.dp).width(20.dp)
+        text = "D"
+    }else if(action.toString() == "surrender"){
+        modifier = Modifier.background(Color.Green).padding(2.dp).width(30.dp)
+        text = "LS"
+    }else{
+        modifier = Modifier.background(Color.White).padding(2.dp).width(30.dp)
+        text = ""
+    }
+}
+
+@Composable
+fun GenerateCell(){
+    if (deviationCount == null) {
+        Text(
+            text!!,
+            modifier = modifier!!,
+            textAlign = TextAlign.Center
+        )
+    } else {
+        Text(
+            deviationCount.toString() + sign,
+            modifier = modifier!!,
+            textAlign = TextAlign.Center,
+            color = Color.Red
+        )
     }
 }
