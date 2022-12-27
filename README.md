@@ -12,5 +12,6 @@ Counting > Flash, Strategy, Settings
 Coupon Calculator
 Settings
 6. Refactor all JSon usages with GSON
+7. Update counting strategy hands to be more consistent in placement (bottom left starting)
 
 
