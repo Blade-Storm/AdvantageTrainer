@@ -84,18 +84,16 @@ fun CountingDrillScreen(
 
 @Composable
 fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
-    var boxOffset = 0.dp
-    val doubleCardIndex = index + 1
-    val tripleCardIndex = index + 2
-    val quadrupleCardIndex = index + 3
+    var xboxOffset = 0.dp
+    var yboxOffset = 0.dp
 
     // Update the box offset to account for the additional cards
-    if(numCardToFlashSetting == 2 && index < deck.size - 1){
-        boxOffset = (-12).dp
-    }else if (numCardToFlashSetting == 3 && index < deck.size - 2){
-        boxOffset = (-24).dp
+    if (numCardToFlashSetting == 3 && index < deck.size - 2){
+        xboxOffset = (-12).dp
+        yboxOffset = 12.dp
     }else if (numCardToFlashSetting == 4 && index < deck.size - 3){
-        boxOffset = (-36).dp
+        xboxOffset = (-24).dp
+        yboxOffset = 24.dp
     }
 
     // To prevent against an IndexOutOfBoundsException if we accidently call this function with a large index
@@ -111,7 +109,7 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
                 horizontalArrangement = Arrangement.Center
             ) {
                 Box(
-                    Modifier.offset(x = boxOffset, y = boxOffset)
+                    Modifier.offset(x = xboxOffset, y = yboxOffset)
                 ) {
                     // Show a single card. If there is only 1 card left in the deck to show, show one card regardless of the setting
                     if (numCardToFlashSetting == 1 || index == deck.size - 1) {
@@ -121,54 +119,30 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
                         )
                         // Show 2 cards
                     } else if (numCardToFlashSetting == 2 || ((numCardToFlashSetting == 3 || numCardToFlashSetting == 4) && index == deck.size - 2)) {
-                        Image(
-                            painter = painterResource(deck[index].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.offset(x = 36.dp).zIndex(1.0F),
-                        )
-                        Image(
-                            painter = painterResource(deck[doubleCardIndex].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.offset(y = 36.dp),
-                        )
+                        for(i in 0 until numCardToFlashSetting){
+                            Image(
+                                painter = painterResource(deck[index + i].cardImageId),
+                                contentDescription = "Card",
+                                modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
+                            )
+                        }
                         // Show 3 cards
                     } else if (numCardToFlashSetting == 3) {
-                        Image(
-                            painter = painterResource(deck[index].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.offset(x = 72.dp).zIndex(1.0F),
-                        )
-                        Image(
-                            painter = painterResource(deck[doubleCardIndex].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.offset(x = 36.dp, y = 36.dp).zIndex(0.5F)
-                        )
-                        Image(
-                            painter = painterResource(deck[tripleCardIndex].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.offset(y = 72.dp)
-                        )
+                        for(i in 0 until numCardToFlashSetting){
+                            Image(
+                                painter = painterResource(deck[index + i].cardImageId),
+                                contentDescription = "Card",
+                                modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
+                            )
+                        }
                     } else if (numCardToFlashSetting == 4) {
-                        Image(
-                            painter = painterResource(deck[index].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.offset(x = 104.dp, y = (-36).dp).zIndex(1.5F)
-                        )
-                        Image(
-                            painter = painterResource(deck[doubleCardIndex].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.offset(x = 72.dp, y = 0.dp).zIndex(1.0F)
-                        )
-                        Image(
-                            painter = painterResource(deck[tripleCardIndex].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.offset(x = 36.dp, y = 36.dp).zIndex(0.5F)
-                        )
-                        Image(
-                            painter = painterResource(deck[quadrupleCardIndex].cardImageId),
-                            contentDescription = "Card",
-                            modifier = Modifier.offset(y = 72.dp)
-                        )
+                        for(i in 0 until numCardToFlashSetting){
+                            Image(
+                                painter = painterResource(deck[index + i].cardImageId),
+                                contentDescription = "Card",
+                                modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
+                            )
+                        }
                     }
                 }
             }
