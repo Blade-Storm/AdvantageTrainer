@@ -1,4 +1,4 @@
-# AdvatangeTrainer
+# AdvantageTrainer
 
 ### TODOS
 1. Hand adding drill
@@ -11,3 +11,5 @@ Counting > Flash, Strategy, Settings
 Coupon Calculator
 Settings
 5. Add a hard mode deck with 10s removed and As added
+6. Modify the Json strategy loading to be using Java instead of Kotlin resources
+7. Create GH Action to run tests on Main merge
