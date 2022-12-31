@@ -167,9 +167,9 @@ fun SettingsScreen(
         var isStrategyExpanded by remember { mutableStateOf(false) }
         var strategyIndex by remember { mutableStateOf(sharedPref.getInt(Settings.STRATEGY, 1)) }
 
-        Box(Modifier.testTag("NumOfCardsInHandBox")) {
+        Box(Modifier.testTag("StrategyToUse")) {
             Text(strategyItems[strategyIndex].name,modifier = Modifier
-                .fillMaxWidth().testTag("NumOfCardsInHandItem")
+                .fillMaxWidth().testTag("StrategyToUseItem")
                 .clickable(onClick = { isStrategyExpanded = true }))
             DropdownMenu(
                 expanded = isStrategyExpanded,

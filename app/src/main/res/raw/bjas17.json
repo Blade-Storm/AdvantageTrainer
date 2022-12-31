@@ -1,946 +1,3886 @@
 {
-  "hard":{
-    "2": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "hit", "deviation":  {"count":  1, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "10": {"action": "double", "altaction": "hit"},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "hit", "deviation":  {"count":  3, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "13": {"action": "stand", "deviation":  {"count":  -1, "action":  "hit", "sign":  "lessThanOrEqual"}},
-      "14": {"action": "stand"},
-      "15": {"action": "stand"},
-      "16": {"action": "stand"},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+  "hard": [
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
     },
-    "3": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "double", "altaction": "hit"},
-      "10": {"action": "double", "altaction": "hit"},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "hit", "deviation":  {"count":  2, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "13": {"action": "stand"},
-      "14": {"action": "stand"},
-      "15": {"action": "stand"},
-      "16": {"action": "stand"},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
     },
-    "4": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "double", "altaction": "hit"},
-      "10": {"action": "double", "altaction": "hit"},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "stand", "deviation":  {"count":  0, "action":  "hit", "sign":  "lessThan"}},
-      "13": {"action": "stand"},
-      "14": {"action": "stand"},
-      "15": {"action": "stand"},
-      "16": {"action": "stand"},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
     },
-    "5": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "double", "altaction": "hit"},
-      "10": {"action": "double", "altaction": "hit"},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "stand"},
-      "13": {"action": "stand"},
-      "14": {"action": "stand"},
-      "15": {"action": "stand"},
-      "16": {"action": "stand"},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
     },
-    "6": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit", "deviation":  {"count":  2, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "9": {"action": "double", "altaction": "hit"},
-      "10": {"action": "double", "altaction": "hit"},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "stand"},
-      "13": {"action": "stand"},
-      "14": {"action": "stand"},
-      "15": {"action": "stand"},
-      "16": {"action": "stand"},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
     },
-    "7": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "hit", "deviation":  {"count":  3, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "10": {"action": "double", "altaction": "hit"},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
     },
-    "8": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "hit"},
-      "10": {"action": "double", "altaction": "hit"},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
     },
-    "9": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "hit"},
-      "10": {"action": "double", "altaction": "hit"},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit", "deviation":  {"count":  4, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 9,
+      "playerAction": "HIT",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 1,
+      "deviationSign": "GREATER_OR_EQUAL"
     },
-    "t": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "hit"},
-      "10": {"action": "hit", "deviation":  {"count":  4, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit", "deviation":  {"count":  4, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "16": {"action": "hit", "deviation":  {"count":  0, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 10,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
     },
-    "j": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "hit"},
-      "10": {"action": "hit", "deviation":  {"count":  4, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit", "deviation":  {"count":  4, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "16": {"action": "hit", "deviation":  {"count":  0, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
     },
-    "q": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "hit"},
-      "10": {"action": "hit", "deviation":  {"count":  4, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit", "deviation":  {"count":  4, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "16": {"action": "hit", "deviation":  {"count":  0, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 12,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 3,
+      "deviationSign": "GREATER_OR_EQUAL"
     },
-    "k": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "hit"},
-      "10": {"action": "hit", "deviation":  {"count":  4, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "11": {"action": "double", "altaction": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit", "deviation":  {"count":  4, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "16": {"action": "hit", "deviation":  {"count":  0, "action":  "stand", "sign":  "greaterThanOrEqual"}},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 13,
+      "playerAction": "STAND",
+      "deviationAction": "HIT",
+      "deviationCount": -1,
+      "deviationSign": "LESS_OR_EQUAL"
     },
-    "a": {
-      "2": {"action": "hit"},
-      "3": {"action": "hit"},
-      "4": {"action": "hit"},
-      "5": {"action": "hit"},
-      "6": {"action": "hit"},
-      "7": {"action": "hit"},
-      "8": {"action": "hit"},
-      "9": {"action": "hit"},
-      "10": {"action": "hit", "deviation":  {"count":  4, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "11": {"action": "hit", "deviation":  {"count":  1, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "stand"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 14,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 15,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 16,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TWO",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 9,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 10,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 12,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 2,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 13,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 14,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 15,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 16,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "THREE",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 9,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 10,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 12,
+      "playerAction": "STAND",
+      "deviationAction": "HIT",
+      "deviationCount": 0,
+      "deviationSign": "LESS"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 13,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 14,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 15,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 16,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 9,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 10,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 12,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 13,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 14,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 15,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 16,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 8,
+      "playerAction": "HIT",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 2,
+      "deviationSign": "GREATER_OR_EQUAL"
+
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 9,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 10,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 12,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 13,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 14,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 15,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 16,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SIX",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 9,
+      "playerAction": "HIT",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 3,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 10,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 9,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 10,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 9,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 10,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 16,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "NINE",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 9,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 10,
+      "playerAction": "HIT",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 15,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 16,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 0,
+      "deviationSign": "GREATER"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "TEN",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 9,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 10,
+      "playerAction": "HIT",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 15,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 16,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 0,
+      "deviationSign": "GREATER"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "JACK",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 9,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 10,
+      "playerAction": "HIT",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 15,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 16,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 0,
+      "deviationSign": "GREATER"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 9,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 10,
+      "playerAction": "HIT",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 11,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 15,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 16,
+      "playerAction": "HIT",
+      "deviationAction": "STAND",
+      "deviationCount": 0,
+      "deviationSign": "GREATER"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "KING",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 2,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 3,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 4,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 5,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 6,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 7,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 8,
+      "playerAction": "HIT"
+
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 9,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 10,
+      "playerAction": "HIT",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 11,
+      "playerAction": "HIT",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 1,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 17,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "hard",
+      "dealerCard": "ACE",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    }],
+  "soft": [
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 17,
+      "playerAction": "HIT",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 1,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 18,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TWO",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 17,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 18,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "THREE",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 15,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 16,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 17,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 18,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 19,
+      "playerAction": "STAND",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 3,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 13,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 14,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 15,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 16,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 17,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 18,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 19,
+      "playerAction": "STAND",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 1,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 13,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 14,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 15,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 16,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 17,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 18,
+      "playerAction": "DOUBLE_DOWN",
+      "playerAltAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 19,
+      "playerAction": "STAND",
+      "deviationAction": "DOUBLE_DOWN",
+      "deviationCount": 1,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SIX",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 17,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 17,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 18,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 17,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 18,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "NINE",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 17,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 18,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "TEN",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 17,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 18,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "JACK",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 17,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 18,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 17,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 18,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "KING",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 11,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 12,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 13,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 14,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 15,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 16,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 17,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 18,
+      "playerAction": "HIT"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 19,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 20,
+      "playerAction": "STAND"
+    },
+    {
+      "handType": "soft",
+      "dealerCard": "ACE",
+      "playerHandTotal": 21,
+      "playerAction": "STAND"
+    }],
+  "split": [
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerHandTotal": 4,
+      "playerCard": "TWO",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerHandTotal": 6,
+      "playerCard": "THREE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "SIX",
+      "playerHandTotal": 12,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "NINE",
+      "playerHandTotal": 18,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "TEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "JACK",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "KING",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TWO",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerHandTotal": 4,
+      "playerCard": "TWO",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerHandTotal": 6,
+      "playerCard": "THREE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "SIX",
+      "playerHandTotal": 12,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "NINE",
+      "playerHandTotal": 18,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "TEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "JACK",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "KING",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "THREE",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 4,
+      "playerCard": "TWO",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 6,
+      "playerCard": "THREE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "SIX",
+      "playerHandTotal": 12,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "NINE",
+      "playerHandTotal": 18,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "TEN",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 6,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "JACK",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 6,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 6,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "KING",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 6,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FOUR",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 4,
+      "playerCard": "TWO",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 6,
+      "playerCard": "THREE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "SIX",
+      "playerHandTotal": 12,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "NINE",
+      "playerHandTotal": 18,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "TEN",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 5,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "JACK",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 5,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 5,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "KING",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 5,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "FIVE",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerHandTotal": 4,
+      "playerCard": "TWO",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerHandTotal": 6,
+      "playerCard": "THREE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "SIX",
+      "playerHandTotal": 12,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "NINE",
+      "playerHandTotal": 18,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "TEN",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "JACK",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "KING",
+      "playerHandTotal": 20,
+      "deviationAction": "SPLIT",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SIX",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 4,
+      "playerCard": "TWO",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 6,
+      "playerCard": "THREE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "SIX",
+      "playerHandTotal": 12
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "NINE",
+      "playerHandTotal": 18
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "TEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "JACK",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "KING",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "SEVEN",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 4,
+      "playerCard": "TWO"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 6,
+      "playerCard": "THREE"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "SIX",
+      "playerHandTotal": 12
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "NINE",
+      "playerHandTotal": 18,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "TEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "JACK",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "KING",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "EIGHT",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerHandTotal": 4,
+      "playerCard": "TWO"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerHandTotal": 6,
+      "playerCard": "THREE"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "SIX",
+      "playerHandTotal": 12
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "NINE",
+      "playerHandTotal": 18,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "TEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "JACK",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "KING",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "NINE",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerHandTotal": 4,
+      "playerCard": "TWO"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerHandTotal": 6,
+      "playerCard": "THREE"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "SIX",
+      "playerHandTotal": 12
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "NINE",
+      "playerHandTotal": 18
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "TEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "JACK",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "KING",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "TEN",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerHandTotal": 4,
+      "playerCard": "TWO"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerHandTotal": 6,
+      "playerCard": "THREE"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "SIX",
+      "playerHandTotal": 12
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "NINE",
+      "playerHandTotal": 18
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "TEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "JACK",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "KING",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "JACK",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 4,
+      "playerCard": "TWO"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 6,
+      "playerCard": "THREE"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "SIX",
+      "playerHandTotal": 12
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "NINE",
+      "playerHandTotal": 18
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "TEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "JACK",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "KING",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "QUEEN",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerHandTotal": 4,
+      "playerCard": "TWO"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerHandTotal": 6,
+      "playerCard": "THREE"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "SIX",
+      "playerHandTotal": 12
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "NINE",
+      "playerHandTotal": 18
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "TEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "JACK",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "KING",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "KING",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerHandTotal": 4,
+      "playerCard": "TWO"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerHandTotal": 6,
+      "playerCard": "THREE"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "FOUR",
+      "playerHandTotal": 8
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "FIVE",
+      "playerHandTotal": 10
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "SIX",
+      "playerHandTotal": 12
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "SEVEN",
+      "playerHandTotal": 14
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "playerAction": "SPLIT"
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "NINE",
+      "playerHandTotal": 18
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "TEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "JACK",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "QUEEN",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "KING",
+      "playerHandTotal": 20
+    },
+    {
+      "handType": "split",
+      "dealerCard": "ACE",
+      "playerCard": "ACE",
+      "playerAction": "SPLIT"
+    }],
+  "surrender": [
+    {
+      "handType": "surrender",
+      "dealerCard": "TWO",
+      "playerHandTotal": 15
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "TWO",
+      "playerHandTotal": 16
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "TWO",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "THREE",
+      "playerHandTotal": 15
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "THREE",
+      "playerHandTotal": 16
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "THREE",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 15
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 16
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "FOUR",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 15
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 16
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "FIVE",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "SIX",
+      "playerHandTotal": 15
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "SIX",
+      "playerHandTotal": 16
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "SIX",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 15
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 16
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "SEVEN",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 15
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 16,
+      "deviationAction": "SURRENDER",
+      "deviationCount": 4,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "EIGHT",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "NINE",
+      "playerHandTotal": 15,
+      "deviationAction": "SURRENDER",
+      "deviationCount": 2,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "NINE",
+      "playerHandTotal": 16,
+      "deviationAction": "HIT",
+      "playerAction": "SURRENDER",
+      "deviationCount": -1,
+      "deviationSign": "LESS_OR_EQUAL"
+    },{
+      "handType": "surrender",
+      "dealerCard": "NINE",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "TEN",
+      "playerHandTotal": 15,
+      "deviationAction": "HIT",
+      "playerAction": "SURRENDER",
+      "deviationCount": 0,
+      "deviationSign": "LESS"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "TEN",
+      "playerHandTotal": 16,
+      "playerAction": "SURRENDER"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "TEN",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "JACK",
+      "playerHandTotal": 15,
+      "deviationAction": "HIT",
+      "playerAction": "SURRENDER",
+      "deviationCount": 0,
+      "deviationSign": "LESS"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "JACK",
+      "playerHandTotal": 16,
+      "playerAction": "SURRENDER"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "JACK",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 15,
+      "deviationAction": "HIT",
+      "playerAction": "SURRENDER",
+      "deviationCount": 0,
+      "deviationSign": "LESS"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 16,
+      "playerAction": "SURRENDER"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "QUEEN",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "KING",
+      "playerHandTotal": 15,
+      "deviationAction": "HIT",
+      "playerAction": "SURRENDER",
+      "deviationCount": 0,
+      "deviationSign": "LESS"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "KING",
+      "playerHandTotal": 16,
+      "playerAction": "SURRENDER"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "KING",
+      "playerHandTotal": 17
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "ACE",
+      "playerHandTotal": 15,
+      "deviationAction": "SURRENDER",
+      "deviationCount": 2,
+      "deviationSign": "GREATER_OR_EQUAL"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "ACE",
+      "playerHandTotal": 16,
+      "playerAction": "SURRENDER"
+    },
+    {
+      "handType": "surrender",
+      "dealerCard": "ACE",
+      "playerHandTotal": 17
     }
-  },
-  "soft":{
-    "2": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "hit", "deviation":  {"count":  1, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "18": {"action": "double", "altaction": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "3": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "double", "altaction": "hit"},
-      "18": {"action": "double", "altaction": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "4": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "double", "altaction": "hit"},
-      "16": {"action": "double", "altaction": "hit"},
-      "17": {"action": "double", "altaction": "hit"},
-      "18": {"action": "double", "altaction": "stand"},
-      "19": {"action": "stand", "deviation":  {"count":  3, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "5": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "double", "altaction": "hit"},
-      "14": {"action": "double", "altaction": "hit"},
-      "15": {"action": "double", "altaction": "hit"},
-      "16": {"action": "double", "altaction": "hit"},
-      "17": {"action": "double", "altaction": "hit"},
-      "18": {"action": "double", "altaction": "stand"},
-      "19": {"action": "stand", "deviation":  {"count":  1, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "6": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "double", "altaction": "hit"},
-      "14": {"action": "double", "altaction": "hit"},
-      "15": {"action": "double", "altaction": "hit"},
-      "16": {"action": "double", "altaction": "hit"},
-      "17": {"action": "double", "altaction": "hit"},
-      "18": {"action": "double", "altaction": "stand"},
-      "19": {"action": "stand", "deviation":  {"count":  1, "action":  "double", "sign":  "greaterThanOrEqual"}},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "7": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "hit"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "8": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "hit"},
-      "18": {"action": "stand"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "9": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "hit"},
-      "18": {"action": "hit"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "t": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "hit"},
-      "18": {"action": "hit"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "j": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "hit"},
-      "18": {"action": "hit"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "q": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "hit"},
-      "18": {"action": "hit"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "k": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "hit"},
-      "18": {"action": "hit"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    },
-    "a": {
-      "11": {"action": "hit"},
-      "12": {"action": "hit"},
-      "13": {"action": "hit"},
-      "14": {"action": "hit"},
-      "15": {"action": "hit"},
-      "16": {"action": "hit"},
-      "17": {"action": "hit"},
-      "18": {"action": "hit"},
-      "19": {"action": "stand"},
-      "20": {"action": "stand"},
-      "21": {"action": "stand"}
-    }
-  },
-  "split": {
-    "2": {
-      "2": {"action": "split"},
-      "3": {"action": "split"},
-      "4": {},
-      "5": {},
-      "6": {"action": "split"},
-      "7": {"action": "split"},
-      "8": {"action": "split"},
-      "9": {"action": "split"},
-      "t": {},
-      "j": {},
-      "q": {},
-      "k": {},
-      "a": {"action": "split"}
-    },
-    "3": {
-      "2": {"action": "split"},
-      "3": {"action": "split"},
-      "4": {},
-      "5": {},
-      "6": {"action": "split"},
-      "7": {"action": "split"},
-      "8": {"action": "split"},
-      "9": {"action": "split"},
-      "t": {},
-      "j": {},
-      "q": {},
-      "k": {},
-      "a": {"action": "split"}
-    },
-    "4": {
-      "2": {"action": "split"},
-      "3": {"action": "split"},
-      "4": {},
-      "5": {},
-      "6": {"action": "split"},
-      "7": {"action": "split"},
-      "8": {"action": "split"},
-      "9": {"action": "split"},
-      "t": {"deviation":  {"count":  6, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "j": {"deviation":  {"count":  6, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "q": {"deviation":  {"count":  6, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "k": {"deviation":  {"count":  6, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "a": {"action": "split"}
-    },
-    "5": {
-      "2": {"action": "split"},
-      "3": {"action": "split"},
-      "4": {"action": "split"},
-      "5": {},
-      "6": {"action": "split"},
-      "7": {"action": "split"},
-      "8": {"action": "split"},
-      "9": {"action": "split"},
-      "t": {"deviation":  {"count":  5, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "j": {"deviation":  {"count":  5, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "q": {"deviation":  {"count":  5, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "k": {"deviation":  {"count":  5, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "a": {"action": "split"}
-    },
-    "6": {
-      "2": {"action": "split"},
-      "3": {"action": "split"},
-      "4": {"action": "split"},
-      "5": {},
-      "6": {"action": "split"},
-      "7": {"action": "split"},
-      "8": {"action": "split"},
-      "9": {"action": "split"},
-      "t": {"deviation":  {"count":  4, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "j": {"deviation":  {"count":  4, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "q": {"deviation":  {"count":  4, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "k": {"deviation":  {"count":  4, "action":  "split", "sign":  "greaterThanOrEqual"}},
-      "a": {"action": "split"}
-    },
-    "7": {
-      "2": {"action": "split"},
-      "3": {"action": "split"},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {"action": "split"},
-      "8": {"action": "split"},
-      "9": {},
-      "t": {},
-      "j": {},
-      "q": {},
-      "k": {},
-      "a": {"action": "split"}
-    },
-    "8": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {"action": "split"},
-      "9": {"action": "split"},
-      "t": {},
-      "j": {},
-      "q": {},
-      "k": {},
-      "a": {"action": "split"}
-    },
-    "9": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {"action": "split"},
-      "9": {"action": "split"},
-      "t": {},
-      "j": {},
-      "q": {},
-      "k": {},
-      "a": {"action": "split"}
-    },
-    "t": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {"action": "split"},
-      "9": {},
-      "t": {},
-      "j": {},
-      "q": {},
-      "k": {},
-      "a": {"action": "split"}
-    },
-    "j": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {"action": "split"},
-      "9": {},
-      "t": {},
-      "j": {},
-      "q": {},
-      "k": {},
-      "a": {"action": "split"}
-    },
-    "q": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {"action": "split"},
-      "9": {},
-      "t": {},
-      "j": {},
-      "q": {},
-      "k": {},
-      "a": {"action": "split"}
-    },
-    "k": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {"action": "split"},
-      "9": {},
-      "t": {},
-      "j": {},
-      "q": {},
-      "k": {},
-      "a": {"action": "split"}
-    },
-    "a": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {"action": "split"},
-      "9": {},
-      "t": {},
-      "j": {},
-      "q": {},
-      "k": {},
-      "a": {"action": "split"}
-    }
-  },
-  "surrender":{
-    "2": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {},
-      "16": {},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "3": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {},
-      "16": {},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "4": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {},
-      "16": {},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "5": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {},
-      "16": {},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "6": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {},
-      "16": {},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "7": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {},
-      "16": {},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "8": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {},
-      "16": {"deviation":  {"count":  4, "action":  "surrender", "sign":  "greaterThanOrEqual"}},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "9": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {"deviation":  {"count":  2, "action":  "surrender", "sign":  "greaterThanOrEqual"}},
-      "16": {"action": "surrender", "deviation":  {"count":  -1, "action":  "hit", "sign":  "lessThanOrEqual"}},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "t": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {"action": "surrender","deviation":  {"count":  0, "action":  "hit", "sign":  "lessThanOrEqual"}},
-      "16": {"action": "surrender"},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "j": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {"action": "surrender","deviation":  {"count":  0, "action":  "hit", "sign":  "lessThanOrEqual"}},
-      "16": {"action": "surrender"},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "q": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {"action": "surrender","deviation":  {"count":  0, "action":  "hit", "sign":  "lessThanOrEqual"}},
-      "16": {"action": "surrender"},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "k": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {"action": "surrender","deviation":  {"count":  0, "action":  "hit", "sign":  "lessThanOrEqual"}},
-      "16": {"action": "surrender"},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    },
-    "a": {
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {"deviation":  {"count":  2, "action":  "surrender", "sign":  "greaterThanOrEqual"}},
-      "16": {"action": "surrender"},
-      "17": {},
-      "18": {},
-      "19": {},
-      "20": {},
-      "21": {}
-    }
-  }
+  ]
 }

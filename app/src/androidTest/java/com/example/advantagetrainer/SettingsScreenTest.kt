@@ -9,8 +9,6 @@ import org.junit.Rule
 import org.junit.Test
 
 class SettingsScreenTest {
-    private val TEST_SETTINGS_FILE_LOCATION = "com.example.advantagetrainertest"
-
     @get:Rule
     val composeTestRule = createComposeRule()
     
@@ -19,7 +17,7 @@ class SettingsScreenTest {
         // Start the app
         composeTestRule.setContent {
             val sharedPref = LocalContext.current.getSharedPreferences(
-                TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE)
+                TestUtils().TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE)
 
             with (sharedPref.edit()) {
                 clear()
@@ -27,7 +25,7 @@ class SettingsScreenTest {
             }
 
             AdvantageTrainerTheme {
-                SettingsScreen(sharedPref = sharedPref)
+                SettingsScreen({}, sharedPref = sharedPref)
             }
         }
 
@@ -42,7 +40,7 @@ class SettingsScreenTest {
         // Start the app
         composeTestRule.setContent {
             val sharedPref = LocalContext.current.getSharedPreferences(
-                TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE)
+                TestUtils().TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE)
 
             with (sharedPref.edit()) {
                 clear()
@@ -54,7 +52,7 @@ class SettingsScreenTest {
             }
 
             AdvantageTrainerTheme {
-                SettingsScreen(sharedPref = sharedPref)
+                SettingsScreen({}, sharedPref = sharedPref)
             }
         }
 

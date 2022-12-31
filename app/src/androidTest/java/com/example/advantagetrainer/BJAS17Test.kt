@@ -4310,7 +4310,7 @@ class BJAS17Test {
             assertEquals(Actions.STAND, playerAction)
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 1, true)
             assertEquals(Actions.STAND, playerAction)
         }
     }
@@ -4376,7 +4376,7 @@ class BJAS17Test {
             assertEquals(Actions.STAND, playerAction)
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 1, true)
             assertEquals(Actions.STAND, playerAction)
         }
     }
@@ -4442,7 +4442,7 @@ class BJAS17Test {
             assertEquals(Actions.STAND, playerAction)
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 1, true)
             assertEquals(Actions.STAND, playerAction)
         }
     }
@@ -4508,7 +4508,7 @@ class BJAS17Test {
             assertEquals(Actions.STAND, playerAction)
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 1, true)
             assertEquals(Actions.STAND, playerAction)
         }
     }
@@ -4699,7 +4699,7 @@ class BJAS17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
             assertEquals(Actions.HIT, playerAction)
         }
     }
@@ -4749,7 +4749,7 @@ class BJAS17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
             assertEquals(Actions.HIT, playerAction)
         }
     }
@@ -4799,7 +4799,7 @@ class BJAS17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
             assertEquals(Actions.HIT, playerAction)
         }
     }
@@ -4849,7 +4849,7 @@ class BJAS17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
             assertEquals(Actions.HIT, playerAction)
         }
     }

@@ -1,7 +1,5 @@
 package com.example.advantagetrainer;
 
-import androidx.annotation.NonNull;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,32 +12,6 @@ public class Settings {
         public final int rawId;
         Strategy(int id) {
             this.rawId = id;
-        }
-    }
-
-    public enum StrategyDeviationSign{
-        GREATER ("greaterThan"),
-        GREATER_OR_EQUAL("greaterThanOrEqual"),
-        LESS ("lessThan"),
-        LESS_OR_EQUAL("lessThanOrEqual");
-
-        public final String sign;
-        StrategyDeviationSign(String sign){
-            this.sign = sign;
-        }
-
-        @NonNull
-        public String toString() {
-            return this.sign;
-        }
-        public static StrategyDeviationSign stringToDeviationSign(String sign){
-            switch(sign){
-                case "greaterThan": return GREATER;
-                case "greaterThanOrEqual": return GREATER_OR_EQUAL;
-                case "lessThan": return LESS;
-                case "lessThanOrEqual": return LESS_OR_EQUAL;
-                default: throw new IllegalArgumentException();
-            }
         }
     }
 

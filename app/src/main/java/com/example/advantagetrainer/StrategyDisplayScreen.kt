@@ -13,17 +13,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import org.json.JSONObject
 
 var action: String? = null
 var deviationCount: String? = null
+var deviationAction: String? = null
 var sign: String? = null
 var altAction: String? = null
 var modifier: Modifier? = null
 var text: String? = null
-val splitHands = arrayListOf<String>("","2,2","3,3","4,4","5,5","6,6","7,7","8,8","9,9","T,T","A,A")
-val softHands = arrayListOf<String>("","A,2","A,3","A,4","A,5","A,6","A,7","A,8","A,9")
-val hardHands = arrayListOf<String>("","2-8","9","10","11","12","13","14","15","16","17+")
+val dealerHands = arrayListOf("2","3","4","5","6","7","8","9","t","a")
 
 @Composable
 fun StrategyDisplayScreen(
@@ -31,14 +29,17 @@ fun StrategyDisplayScreen(
 ) {
     // Get strategy JSON
     val strategy = setStrategy(sharedPref = sharedPref)
-    val strategyHard = strategy.getJSONObject("hard")
-    val strategySoft = strategy.getJSONObject("soft")
-    val strategySplit = strategy.getJSONObject("split")
-    val strategySurrender = strategy.getJSONObject("surrender")
+    val strategyHard = strategy.hard
+    val strategySoft = strategy.soft
+    val strategySplit = strategy.split
+    val strategySurrender = strategy.surrender
 
     Column(
-        modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState())
+        modifier = Modifier
+            .fillMaxWidth()
+            .verticalScroll(rememberScrollState())
     ) {
+
         Text(
             "Pair Splitting",
             modifier = Modifier.fillMaxWidth(),
@@ -50,64 +51,67 @@ fun StrategyDisplayScreen(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
         ) {
+            val set: MutableSet<String> = mutableSetOf("")
             Column(
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.background(Color.LightGray)
             ) {
-                for(i in 0 until splitHands.size){
-                    Text(text = splitHands[i], modifier = Modifier.padding(6.dp))
+                strategySplit.sortedWith(nullsFirst(compareBy { it.playerHandTotal }))
+                strategySplit.reverse()
+                for(i in 0 until strategySplit.size){
+                    if(strategySplit[i].playerCard == CardNames.ACE){
+                        set.add("A,A")
+                    }else if(strategySplit[i].playerCard == CardNames.TEN){
+                        set.add("T,T")
+                    }else if(strategySplit[i].playerCard != CardNames.QUEEN && strategySplit[i].playerCard != CardNames.JACK && strategySplit[i].playerCard != CardNames.KING){
+                        val card = CardValueMapper.cardValueMapper[strategySplit[i].playerCard].toString()
+                        set.add("$card,$card")
+                    }
+                }
+
+                set.forEach {
+                    Text(text = it, modifier = Modifier.padding(6.dp))
                 }
             }
-            for (i in 2 until strategySplit.length() + 2) {
-                var dealerCardValue = i.toString()
-                if (i.toString() == "10") {
-                    dealerCardValue = "t"
-                } else if (i.toString() == "13") {
-                    dealerCardValue = "a"
-                }
+            for (i in 0 until dealerHands.size) {
+                Column {
+                    Text(
+                        dealerHands[i].uppercase(),
+                        modifier = Modifier
+                            .background(Color.LightGray)
+                            .padding(6.dp)
+                            .width(20.dp),
+                        textAlign = TextAlign.Center
+                    )
 
-                if (strategySplit.has(dealerCardValue)) {
-                    Column(
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        modifier = Modifier.background(Color.LightGray)
-                    ) {
-                        Text(
-                            if (dealerCardValue.uppercase() == "T") "10" else dealerCardValue.uppercase(),
-                            modifier = Modifier.padding(6.dp),
-                            textAlign = TextAlign.Center
-                        )
+                    for (j in 0 until strategySplit.size) {
+                        if(strategySplit[j].playerCard != CardNames.QUEEN && strategySplit[j].playerCard != CardNames.JACK && strategySplit[j].playerCard != CardNames.KING){
+                            if (strategySplit[j].dealerCard.name == CardNames.stringToCardNames(
+                                    dealerHands[i]
+                                ).name
+                            ) {
+                                assignCellValues2(strategySplit[j])
 
-                        val dealerHandObject = strategySplit.getJSONObject(dealerCardValue)
+                                text = if(action != null) "Y" else "N"
+                                text = if(deviationCount != null) deviationCount.toString() + sign else text
+                                modifier = if(action != null) Modifier
+                                    .background(Color.Green)
+                                    .padding(6.dp)
+                                    .width(20.dp) else Modifier
+                                    .background(Color.White)
+                                    .padding(6.dp)
+                                    .width(20.dp)
 
-                        for (j in 0 until dealerHandObject.length()) {
-                            var playerCardValue = (j+2).toString()
-                            if ((j+2).toString() == "10") {
-                                playerCardValue = "t"
-                            } else if ((j+2).toString() == "13") {
-                                playerCardValue = "a"
-                            }
-
-                            if (j in 0..13) {
-                                if (dealerHandObject.has(playerCardValue)) {
-                                    val playerHandObject =
-                                        dealerHandObject.getJSONObject(playerCardValue)
-
-                                    assignCellValues(playerHandObject)
-
-                                    text = if(action != null) "Y" else "N"
-                                    modifier = if(action != null) Modifier.background(Color.Green).padding(6.dp).width(20.dp) else Modifier.background(Color.White).padding(6.dp).width(20.dp)
-
-                                    GenerateCell()
-                                }
+                                GenerateCell2()
                             }
                         }
                     }
+
                 }
             }
         }
-        
+
         Text(
             "Soft Totals",
             modifier = Modifier.fillMaxWidth(),
@@ -119,50 +123,69 @@ fun StrategyDisplayScreen(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
         ) {
+            val set: MutableSet<String> = mutableSetOf("")
             Column(
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.background(Color.LightGray)
             ) {
-                for(i in 0 until softHands.size){
-                    Text(text = softHands[i], modifier = Modifier.padding(6.dp))
+                strategySoft.sortBy { it.playerHandTotal }
+                strategySoft.reverse()
+                for(i in 0 until strategySoft.size){
+                    if(strategySoft[i].playerCard != null ){
+                        val card = CardValueMapper.cardValueMapper[strategySoft[i].playerCard].toString()
+                        set.add("$card,$card")
+                    }else if(strategySoft[i].playerCard == null){
+                        set.add(strategySoft[i].playerHandTotal.toString())
+                    }
+                }
+
+                set.forEach {
+                    if(it == ""){
+                        Text(text = "", modifier = Modifier.padding(6.dp))
+                    }else if(it == "13"){
+                        Text(text = "A,2", modifier = Modifier.padding(6.dp))
+                    }else if(it == "14"){
+                        Text(text = "A,3", modifier = Modifier.padding(6.dp))
+                    }else if(it == "15"){
+                        Text(text = "A,4", modifier = Modifier.padding(6.dp))
+                    }else if(it == "16"){
+                        Text(text = "A,5", modifier = Modifier.padding(6.dp))
+                    }else if(it == "17"){
+                        Text(text = "A,6", modifier = Modifier.padding(6.dp))
+                    }else if(it == "18"){
+                        Text(text = "A,7", modifier = Modifier.padding(6.dp))
+                    }else if(it == "19"){
+                        Text(text = "A,8", modifier = Modifier.padding(6.dp))
+                    }else if(it == "20"){
+                        Text(text = "A,9", modifier = Modifier.padding(6.dp))
+                    }
                 }
             }
-            for (i in 2 until strategySoft.length() + 2) {
-                var dealerCardValue = i.toString()
-                if (i.toString() == "10") {
-                    dealerCardValue = "t"
-                } else if (i.toString() == "13") {
-                    dealerCardValue = "a"
-                }
+            for (i in 0 until dealerHands.size) {
+                Column() {
+                    Text(
+                        dealerHands[i].uppercase(),
+                        modifier = Modifier
+                            .background(Color.LightGray)
+                            .padding(6.dp)
+                            .width(20.dp),
+                        textAlign = TextAlign.Center
+                    )
 
-                if (strategySoft.has(dealerCardValue)) {
-                    Column(
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        modifier = Modifier.background(Color.LightGray)
-                    ) {
-                        Text(
-                            if (dealerCardValue.uppercase() == "T") "10" else dealerCardValue.uppercase(),
-                            modifier = Modifier.padding(6.dp),
-                            textAlign = TextAlign.Center
-                        )
-
-                        val dealerHandObject = strategySoft.getJSONObject(dealerCardValue)
-
-                        for (j in 0 until dealerHandObject.length()) {
-                            if (j+11 in 13..20) {
-                                if (dealerHandObject.has((j+11).toString())) {
-                                    val playerHandObject =
-                                        dealerHandObject.getJSONObject((j+11).toString())
-
-                                    assignCellValues(playerHandObject)
-                                    assignCellModifier()
-                                    GenerateCell()
-                                }
+                    for (j in 0 until strategySoft.size) {
+                        if(strategySoft[j].playerHandTotal in 13..20) {
+                            if (strategySoft[j].dealerCard.name == CardNames.stringToCardNames(
+                                    dealerHands[i]
+                                ).name
+                            ) {
+                                assignCellValues2(strategySoft[j])
+                                assignCellModifier2()
+                                GenerateCell2()
                             }
                         }
                     }
+
                 }
             }
         }
@@ -178,50 +201,53 @@ fun StrategyDisplayScreen(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
         ) {
+            val set: MutableSet<String> = mutableSetOf("")
             Column(
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.background(Color.LightGray)
             ) {
-                for(i in 0 until hardHands.size){
-                    Text(text = hardHands[i], modifier = Modifier.padding(6.dp))
+                strategyHard.sortBy { it.playerHandTotal }
+                strategyHard.reverse()
+                for(i in 0 until strategyHard.size){
+                    if(strategyHard[i].playerCard != null ){
+                        val card = CardValueMapper.cardValueMapper[strategyHard[i].playerCard].toString()
+                        set.add("$card,$card")
+                    }else if(strategyHard[i].playerCard == null){
+                        if(strategyHard[i].playerHandTotal in 8..17){
+                            set.add(strategyHard[i].playerHandTotal.toString())
+                        }
+                    }
+                }
+
+                set.forEach {
+                    Text(text = it, modifier = Modifier.padding(6.dp))
                 }
             }
-            for (i in 2 until strategyHard.length() + 2) {
-                var dealerCardValue = i.toString()
-                if (i.toString() == "10") {
-                    dealerCardValue = "t"
-                } else if (i.toString() == "13") {
-                    dealerCardValue = "a"
-                }
+            for (i in 0 until dealerHands.size) {
+                Column() {
+                    Text(
+                        dealerHands[i].uppercase(),
+                        modifier = Modifier
+                            .background(Color.LightGray)
+                            .padding(6.dp)
+                            .width(20.dp),
+                        textAlign = TextAlign.Center
+                    )
 
-                if (strategyHard.has(dealerCardValue)) {
-                    Column(
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        modifier = Modifier.background(Color.LightGray)
-                    ) {
-                        Text(
-                            if (dealerCardValue.uppercase() == "T") "10" else dealerCardValue.uppercase(),
-                            modifier = Modifier.padding(6.dp),
-                            textAlign = TextAlign.Center
-                        )
-
-                        val dealerHandObject = strategyHard.getJSONObject(dealerCardValue)
-
-                        for (j in 0 until dealerHandObject.length()) {
-                            if (j in 8..17) {
-                                if (dealerHandObject.has(j.toString())) {
-                                    val playerHandObject =
-                                        dealerHandObject.getJSONObject(j.toString())
-
-                                    assignCellValues(playerHandObject)
-                                    assignCellModifier()
-                                    GenerateCell()
-                                }
+                    for (j in 0 until strategyHard.size) {
+                        if(strategyHard[j].playerHandTotal in 8..17){
+                            if (strategyHard[j].dealerCard.name == CardNames.stringToCardNames(
+                                    dealerHands[i]
+                                ).name
+                            ) {
+                                assignCellValues2(strategyHard[j])
+                                assignCellModifier2()
+                                GenerateCell2()
                             }
                         }
                     }
+
                 }
             }
         }
@@ -237,49 +263,50 @@ fun StrategyDisplayScreen(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
         ) {
+            val set: MutableSet<String> = mutableSetOf("")
             Column(
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.background(Color.LightGray)
             ) {
-                Text(text = "", modifier = Modifier.padding(3.dp))
-                Text(text = "14", modifier = Modifier.padding(3.dp))
-                Text(text = "15", modifier = Modifier.padding(3.dp))
-                Text(text = "16", modifier = Modifier.padding(3.dp))
-                Text(text = "17", modifier = Modifier.padding(3.dp))
-            }
-            for (i in 2 until strategySurrender.length() + 2) {
-                var dealerCardValue = i.toString()
-                if (i.toString() == "10") {
-                    dealerCardValue = "t"
-                } else if (i.toString() == "13") {
-                    dealerCardValue = "a"
+                strategySurrender.sortBy { it.playerHandTotal }
+                strategySurrender.reverse()
+                for(i in 0 until strategySurrender.size){
+                    if(strategySurrender[i].playerCard != null ){
+                        val card = CardValueMapper.cardValueMapper[strategySurrender[i].playerCard].toString()
+                        set.add("$card,$card")
+                    }else if(strategySurrender[i].playerCard == null){
+                        set.add(strategySurrender[i].playerHandTotal.toString())
+                    }
                 }
 
-                if (strategySurrender.has(dealerCardValue)) {
-                    Column(
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        modifier = Modifier.background(Color.LightGray)
-                    ) {
+                set.forEach {
+                    Text(text = it, modifier = Modifier.padding(5.dp))
+                }
+            }
+            for (i in 0 until dealerHands.size) {
+                Column(
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                ) {
+                    if (CardNames.stringToCardNames(dealerHands[i]) == CardNames.ACE || CardValueMapper.cardValueMapper[(CardNames.stringToCardNames(dealerHands[i]))]!! > 5){
                         Text(
-                            if (dealerCardValue.uppercase() == "T") "10" else dealerCardValue.uppercase(),
-                            modifier = Modifier.padding(6.dp),
+                            dealerHands[i].uppercase(),
+                            modifier = Modifier
+                                .background(Color.LightGray)
+                                .padding(5.dp)
+                                .width(35.dp),
                             textAlign = TextAlign.Center
                         )
 
-                        val dealerHandObject = strategySurrender.getJSONObject(dealerCardValue)
-
-                        for (j in 0 until dealerHandObject.length()) {
-                            if (j in 14..17) {
-                                if (dealerHandObject.has(j.toString())) {
-                                    val playerHandObject =
-                                        dealerHandObject.getJSONObject(j.toString())
-
-                                    assignCellValues(playerHandObject)
-                                    assignCellModifier()
-                                    GenerateCell()
-                                }
+                        for (j in 0 until strategySurrender.size) {
+                            if (strategySurrender[j].dealerCard.name == CardNames.stringToCardNames(
+                                    dealerHands[i]
+                                ).name
+                            ) {
+                                assignCellValues2(strategySurrender[j])
+                                assignCellModifier2()
+                                GenerateCell2()
                             }
                         }
                     }
@@ -289,61 +316,72 @@ fun StrategyDisplayScreen(
     }
 }
 
-fun assignCellValues(playerHandObject: JSONObject){
-    if (playerHandObject.has("deviation")) {
-        deviationCount = playerHandObject.getJSONObject("deviation").get("count").toString()
-        sign = playerHandObject.getJSONObject("deviation").get("sign").toString()
+fun assignCellValues2(strategyHand: StrategyCombinatorial.Hand){
+    if (strategyHand.deviationAction != null) {
+        deviationCount = strategyHand.deviationCount.toString()
+        sign = strategyHand.deviationSign.toString()
+        deviationAction = strategyHand.deviationAction.toString()
 
-        if (sign == Settings.StrategyDeviationSign.GREATER_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.GREATER.sign) {
+        if (sign == StrategyDeviationSign.GREATER_OR_EQUAL.name || sign == StrategyDeviationSign.GREATER.name) {
             sign = "+"
-        } else if (sign == Settings.StrategyDeviationSign.LESS_OR_EQUAL.sign || sign == Settings.StrategyDeviationSign.LESS.sign) {
+        } else if (sign == StrategyDeviationSign.LESS_OR_EQUAL.name || sign == StrategyDeviationSign.LESS.name) {
             sign = "-"
         }
-    } else {
-        deviationCount = null
+    }else{
         sign = null
+        deviationCount = null
     }
 
-    action = if (playerHandObject.has("action")) playerHandObject.get("action").toString() else null
-    altAction = if(playerHandObject.has("altaction")) playerHandObject.get("altaction").toString() else null
+    action = if(strategyHand.playerAction != null) strategyHand.playerAction.toString() else null
+    altAction = if(strategyHand.playerAltAction != null) strategyHand.playerAltAction.toString() else null
 }
 
-fun assignCellModifier(){
+fun assignCellModifier2(){
     if(action.toString() == Actions.DOUBLE_DOWN.toString() && (altAction != null && altAction.toString() == Actions.STAND.toString())){
-        modifier = Modifier.background(Color.Cyan).padding(6.dp).width(20.dp)
-        text = "Ds"
+        modifier = Modifier
+            .background(Color.Cyan)
+            .padding(6.dp)
+            .width(20.dp)
+        text = if(deviationCount != null) deviationCount.toString() + sign else "Ds"
     }else if(action.toString() == "hit"){
-        modifier = Modifier.background(Color.White).padding(6.dp).width(20.dp)
-        text = "H"
+        modifier = Modifier
+            .background(Color.White)
+            .padding(6.dp)
+            .width(20.dp)
+        text = if(deviationCount != null) deviationCount.toString() + sign else "H"
     }else if (action.toString() == "stand"){
-        modifier = Modifier.background(Color.Yellow).padding(6.dp).width(20.dp)
-        text = "S"
+        modifier = Modifier
+            .background(Color.Yellow)
+            .padding(6.dp)
+            .width(20.dp)
+        text = if(deviationCount != null) deviationCount.toString() + sign else "S"
     }else if (action.toString() == "double") {
-        modifier = Modifier.background(Color.Green).padding(6.dp).width(20.dp)
-        text = "D"
+        modifier = Modifier
+            .background(Color.Green)
+            .padding(6.dp)
+            .width(20.dp)
+        text = if(deviationCount != null) deviationCount.toString() + sign else "D"
     }else if(action.toString() == "surrender"){
-        modifier = Modifier.background(Color.Green).padding(2.dp).width(30.dp)
-        text = "LS"
+        modifier = Modifier
+            .background(Color.Green)
+            .padding(5.dp)
+            .width(35.dp)
+        text = if(deviationCount != null) deviationCount.toString() + sign else "LS"
     }else{
-        modifier = Modifier.background(Color.White).padding(2.dp).width(30.dp)
-        text = ""
+        modifier = Modifier
+            .background(Color.White)
+            .width(35.dp)
+            .padding(5.dp)
+        text = if(deviationCount != null) deviationCount.toString() + sign else ""
     }
 }
 
 @Composable
-fun GenerateCell(){
-    if (deviationCount == null) {
-        Text(
-            text!!,
-            modifier = modifier!!,
-            textAlign = TextAlign.Center
-        )
-    } else {
-        Text(
-            deviationCount.toString() + sign,
-            modifier = modifier!!,
-            textAlign = TextAlign.Center,
-            color = Color.Red
-        )
-    }
+fun GenerateCell2(){
+    Text(
+        text!!,
+        modifier = modifier!!,
+        textAlign = TextAlign.Center,
+        color = if(deviationCount != null) Color.Red else Color.Black
+    )
 }

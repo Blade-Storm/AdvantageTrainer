@@ -18,8 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import com.example.advantagetrainer.Settings.Strategy
-import org.json.JSONObject
-import org.json.JSONTokener
+import com.google.gson.Gson
 import java.io.*
 
 @Composable
@@ -28,7 +27,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
     val deck = createDeck(sharedPref = sharedPref)
     var (index, updateIndex) = remember { mutableStateOf(1) }
     var numCardInHandSetting = Settings.numCardInHandMapper[sharedPref.getInt(Settings.NUM_CARDS_IN_HAND, 2)]!!
-    val useDeviations = sharedPref.getBoolean(Settings.USE_DEVIATIONS, false)!!
+    val useDeviations = sharedPref.getBoolean(Settings.USE_DEVIATIONS, false)
     val actionResolver = ActionResolver(setStrategy(sharedPref))
 
     // If the user has setting to flash 1-3 cards set numCardToFlash to a random int between 1-3
@@ -50,7 +49,7 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
         dealerHand.addCard(deck[dealerCardIndex])
 
         // Get the action the player should take
-        var count = (-10..10).random()
+        val count = (-10..10).random()
         val playerAction = actionResolver.getActionFromStrategy(playerHand, dealerHand, count, useDeviations)
 
 
@@ -58,7 +57,9 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
         if(index < deck.size){
             Surface(
                 color = Color.Transparent,
-                modifier = Modifier.fillMaxHeight().fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .fillMaxWidth()
             ) {
                 Column(
                     modifier = Modifier.offset(y = 6.dp, x = 6.dp)
@@ -83,7 +84,12 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                                     Image(
                                         painter = painterResource(deck[index + (numCardInHandSetting - i)].cardImageId),
                                         contentDescription = "Card",
-                                        modifier = Modifier.offset(x = 1.dp * 36 * (i - 1), y = 104.dp - (36.dp * i)).zIndex(i.toFloat())
+                                        modifier = Modifier
+                                            .offset(
+                                                x = 1.dp * 36 * (i - 1),
+                                                y = 104.dp - (36.dp * i)
+                                            )
+                                            .zIndex(i.toFloat())
                                     )
                                 }
                                 // Show 3 cards
@@ -92,7 +98,12 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                                     Image(
                                         painter = painterResource(deck[index + (numCardInHandSetting - i)].cardImageId),
                                         contentDescription = "Card",
-                                        modifier = Modifier.offset(x = 1.dp * 36 * (i - 1), y = 104.dp - (36.dp * i)).zIndex(i.toFloat())
+                                        modifier = Modifier
+                                            .offset(
+                                                x = 1.dp * 36 * (i - 1),
+                                                y = 104.dp - (36.dp * i)
+                                            )
+                                            .zIndex(i.toFloat())
                                     )
                                 }
                             } else if (numCardInHandSetting == 4) {
@@ -100,7 +111,12 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                                     Image(
                                         painter = painterResource(deck[index + (numCardInHandSetting - i)].cardImageId),
                                         contentDescription = "Card",
-                                        modifier = Modifier.offset(x = 1.dp * 36 * (i - 1), y = 104.dp - (36.dp * i)).zIndex(i.toFloat())
+                                        modifier = Modifier
+                                            .offset(
+                                                x = 1.dp * 36 * (i - 1),
+                                                y = 104.dp - (36.dp * i)
+                                            )
+                                            .zIndex(i.toFloat())
                                     )
                                 }
                             } else if (numCardInHandSetting == 5) {
@@ -108,7 +124,12 @@ fun StrategyDrillScreen(sharedPref: SharedPreferences) {
                                     Image(
                                         painter = painterResource(deck[index + (numCardInHandSetting - i)].cardImageId),
                                         contentDescription = "Card",
-                                        modifier = Modifier.offset(x = 1.dp * 36 * (i - 1), y = 104.dp - (36.dp * i)).zIndex(i.toFloat())
+                                        modifier = Modifier
+                                            .offset(
+                                                x = 1.dp * 36 * (i - 1),
+                                                y = 104.dp - (36.dp * i)
+                                            )
+                                            .zIndex(i.toFloat())
                                     )
                                 }
                             }
@@ -249,10 +270,13 @@ fun isOddHand(deck:ArrayList<Card>): Boolean{
 }
 
 @Composable
-fun setStrategy(sharedPref: SharedPreferences): JSONObject {
+fun setStrategy(sharedPref: SharedPreferences): StrategyCombinatorial {
     val strategy = Settings.strategyMapper[sharedPref.getInt(Settings.STRATEGY, 1)]!!
     val inputStream = LocalContext.current.resources.openRawResource(strategy.rawId)
     Game.isSpanishGame = strategy.name == Strategy.SPANISH21_SECRET.name
+    val strategyCombinatorial: StrategyCombinatorial
+
+    val gson = Gson()
 
     val writer: Writer = StringWriter()
     val buffer = CharArray(1024)
@@ -266,8 +290,7 @@ fun setStrategy(sharedPref: SharedPreferences): JSONObject {
         inputStream.close()
     }
 
-    val jsonString: String = writer.toString()
-
-    val tokener = JSONTokener(jsonString)
-    return JSONObject(tokener)
+    strategyCombinatorial = gson.fromJson(writer.toString(), StrategyCombinatorial::class.java)
+    strategyCombinatorial.validateHands()
+    return strategyCombinatorial
 }

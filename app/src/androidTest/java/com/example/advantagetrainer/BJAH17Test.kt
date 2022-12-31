@@ -3,7 +3,7 @@ package com.example.advantagetrainer
 import android.content.Context
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.junit4.createComposeRule
-import junit.framework.TestCase.assertEquals
+import junit.framework.TestCase
 import org.junit.Rule
 import org.junit.Test
 
@@ -49,22 +49,22 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -105,22 +105,22 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -161,22 +161,22 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -218,18 +218,18 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -271,18 +271,18 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FIVE
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -321,16 +321,16 @@ class BJAH17Test {
                     || card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.FOUR
                     || card.name == CardNames.SIX
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.FIVE
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -338,7 +338,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -375,7 +375,7 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -383,18 +383,18 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.FIVE
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -431,7 +431,7 @@ class BJAH17Test {
                     || card.name == CardNames.NINE
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -439,18 +439,18 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.FIVE
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     card.name == CardNames.TEN
                     || card.name == CardNames.JACK
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -486,7 +486,7 @@ class BJAH17Test {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -495,7 +495,7 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -503,7 +503,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -539,7 +539,7 @@ class BJAH17Test {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -548,7 +548,7 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -556,7 +556,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -592,7 +592,7 @@ class BJAH17Test {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -601,7 +601,7 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -609,7 +609,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -645,7 +645,7 @@ class BJAH17Test {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -654,7 +654,7 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -662,7 +662,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -698,7 +698,7 @@ class BJAH17Test {
                     card.name == CardNames.EIGHT
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }else if (
                     card.name == CardNames.TWO
                     || card.name == CardNames.THREE
@@ -707,7 +707,7 @@ class BJAH17Test {
                     || card.name == CardNames.SIX
                     || card.name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     card.name == CardNames.NINE
                     || card.name == CardNames.TEN
@@ -715,7 +715,7 @@ class BJAH17Test {
                     || card.name == CardNames.QUEEN
                     || card.name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -754,11 +754,11 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -767,9 +767,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -807,12 +807,12 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.FOUR
                     || playerHand.cards[1].name == CardNames.FIVE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -821,9 +821,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -859,14 +859,14 @@ class BJAH17Test {
                     playerHand.cards[1].name == CardNames.TWO
                     || playerHand.cards[1].name == CardNames.THREE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     playerHand.cards[1].name == CardNames.FOUR
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -875,9 +875,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -917,7 +917,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -926,9 +926,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -969,7 +969,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SEVEN
                     || playerHand.cards[1].name == CardNames.EIGHT
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.NINE
                     || playerHand.cards[1].name == CardNames.TEN
@@ -977,9 +977,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1018,7 +1018,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.SEVEN
                     || playerHand.cards[1].name == CardNames.EIGHT
@@ -1028,9 +1028,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1069,7 +1069,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.FIVE
                     || playerHand.cards[1].name == CardNames.SIX
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.SEVEN
                     || playerHand.cards[1].name == CardNames.EIGHT
@@ -1079,9 +1079,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1121,7 +1121,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1130,9 +1130,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1172,7 +1172,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1181,9 +1181,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1223,7 +1223,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1232,9 +1232,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1274,7 +1274,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1283,9 +1283,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1325,7 +1325,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1334,9 +1334,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1376,7 +1376,7 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.SIX
                     || playerHand.cards[1].name == CardNames.SEVEN
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 } else if (
                     playerHand.cards[1].name == CardNames.EIGHT
                     || playerHand.cards[1].name == CardNames.NINE
@@ -1385,9 +1385,9 @@ class BJAH17Test {
                     || playerHand.cards[1].name == CardNames.QUEEN
                     || playerHand.cards[1].name == CardNames.KING
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }else if (playerHand.cards[1].name == CardNames.ACE){
-                    assertEquals(Actions.SPLIT, playerAction)
+                    TestCase.assertEquals(Actions.SPLIT, playerAction)
                 }
             }
         }
@@ -1432,9 +1432,9 @@ class BJAH17Test {
                     || card.name == CardNames.KING  // This becomes a hard hand and hits
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1479,9 +1479,9 @@ class BJAH17Test {
                     || card.name == CardNames.KING  // This becomes a hard hand and hits
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1522,9 +1522,9 @@ class BJAH17Test {
                     || card.name == CardNames.FIVE
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1565,9 +1565,9 @@ class BJAH17Test {
                     || card.name == CardNames.FIVE
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1608,9 +1608,9 @@ class BJAH17Test {
                     || card.name == CardNames.FIVE
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1655,9 +1655,9 @@ class BJAH17Test {
                     || card.name == CardNames.KING
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1702,9 +1702,9 @@ class BJAH17Test {
                     || card.name == CardNames.KING
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1750,9 +1750,9 @@ class BJAH17Test {
                     || card.name == CardNames.KING
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1798,9 +1798,9 @@ class BJAH17Test {
                     || card.name == CardNames.KING
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1846,9 +1846,9 @@ class BJAH17Test {
                     || card.name == CardNames.KING
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1894,9 +1894,9 @@ class BJAH17Test {
                     || card.name == CardNames.KING
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1942,9 +1942,9 @@ class BJAH17Test {
                     || card.name == CardNames.KING
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -1990,9 +1990,9 @@ class BJAH17Test {
                     || card.name == CardNames.KING
                     || card.name == CardNames.ACE
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else{
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2032,12 +2032,12 @@ class BJAH17Test {
                     || hand.handTotal == 9
                     || hand.handTotal == 12
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 13
                     || hand.handTotal == 14
@@ -2049,7 +2049,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2088,13 +2088,13 @@ class BJAH17Test {
                     || hand.handTotal == 8
                     || hand.handTotal == 12
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 9
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 13
                     || hand.handTotal == 14
@@ -2106,7 +2106,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2144,13 +2144,13 @@ class BJAH17Test {
                     || hand.handTotal == 7
                     || hand.handTotal == 8
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 9
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 12
                     || hand.handTotal == 13
@@ -2163,7 +2163,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2201,13 +2201,13 @@ class BJAH17Test {
                     || hand.handTotal == 7
                     || hand.handTotal == 8
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 9
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 12
                     || hand.handTotal == 13
@@ -2220,7 +2220,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2258,13 +2258,13 @@ class BJAH17Test {
                     || hand.handTotal == 7
                     || hand.handTotal == 8
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 9
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 12
                     || hand.handTotal == 13
@@ -2277,7 +2277,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2321,12 +2321,12 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2334,7 +2334,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2378,12 +2378,12 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2391,7 +2391,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2434,16 +2434,16 @@ class BJAH17Test {
                     || hand.handTotal == 14
                     || hand.handTotal == 15
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 10
                     || hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 }else if(
                     hand.handTotal == 16
                 ){
-                    assertEquals(Actions.SURRENDER, playerAction)
+                    TestCase.assertEquals(Actions.SURRENDER, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2451,7 +2451,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2494,16 +2494,16 @@ class BJAH17Test {
                     || hand.handTotal == 13
                     || hand.handTotal == 14
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assertEquals(Actions.SURRENDER, playerAction)
+                    TestCase.assertEquals(Actions.SURRENDER, playerAction)
                 } else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2511,7 +2511,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2554,16 +2554,16 @@ class BJAH17Test {
                     || hand.handTotal == 13
                     || hand.handTotal == 14
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assertEquals(Actions.SURRENDER, playerAction)
+                    TestCase.assertEquals(Actions.SURRENDER, playerAction)
                 } else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2571,7 +2571,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2614,16 +2614,16 @@ class BJAH17Test {
                     || hand.handTotal == 13
                     || hand.handTotal == 14
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assertEquals(Actions.SURRENDER, playerAction)
+                    TestCase.assertEquals(Actions.SURRENDER, playerAction)
                 } else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2631,7 +2631,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2674,16 +2674,16 @@ class BJAH17Test {
                     || hand.handTotal == 13
                     || hand.handTotal == 14
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     hand.handTotal == 15
                     || hand.handTotal == 16
                 ){
-                    assertEquals(Actions.SURRENDER, playerAction)
+                    TestCase.assertEquals(Actions.SURRENDER, playerAction)
                 } else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -2691,7 +2691,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2735,23 +2735,23 @@ class BJAH17Test {
                     || hand.handTotal == 14
                     || hand.handTotal == 15
                 ){
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 11
                 ){
-                    assertEquals(Actions.DOUBLE_DOWN, playerAction)
+                    TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
                 } else if (
                     hand.handTotal == 16
                     || hand.handTotal == 17
                 ){
-                    assertEquals(Actions.SURRENDER, playerAction)
+                    TestCase.assertEquals(Actions.SURRENDER, playerAction)
                 } else if (
                     hand.handTotal == 18
                     || hand.handTotal == 19
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2793,7 +2793,7 @@ class BJAH17Test {
                     || hand.handTotal == 11
                     || hand.handTotal == 12
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 13
                     || hand.handTotal == 14
@@ -2805,7 +2805,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2847,7 +2847,7 @@ class BJAH17Test {
                     || hand.handTotal == 11
                     || hand.handTotal == 12
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 13
                     || hand.handTotal == 14
@@ -2859,7 +2859,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2900,7 +2900,7 @@ class BJAH17Test {
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 12
                     || hand.handTotal == 13
@@ -2913,7 +2913,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -2954,7 +2954,7 @@ class BJAH17Test {
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 12
                     || hand.handTotal == 13
@@ -2967,7 +2967,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -3008,7 +3008,7 @@ class BJAH17Test {
                     || hand.handTotal == 10
                     || hand.handTotal == 11
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 12
                     || hand.handTotal == 13
@@ -3021,7 +3021,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -3067,7 +3067,7 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -3075,7 +3075,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -3121,7 +3121,7 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -3129,7 +3129,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -3175,7 +3175,7 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -3183,7 +3183,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -3229,7 +3229,7 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -3237,7 +3237,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -3283,7 +3283,7 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -3291,7 +3291,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -3337,7 +3337,7 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -3345,7 +3345,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -3391,7 +3391,7 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -3399,7 +3399,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -3445,7 +3445,7 @@ class BJAH17Test {
                     || hand.handTotal == 15
                     || hand.handTotal == 16
                 ) {
-                    assertEquals(Actions.HIT, playerAction)
+                    TestCase.assertEquals(Actions.HIT, playerAction)
                 }else if (
                     hand.handTotal == 17
                     || hand.handTotal == 18
@@ -3453,7 +3453,7 @@ class BJAH17Test {
                     || hand.handTotal == 20
                     || hand.handTotal == 21
                 ){
-                    assertEquals(Actions.STAND, playerAction)
+                    TestCase.assertEquals(Actions.STAND, playerAction)
                 }
             }
         }
@@ -3479,8 +3479,8 @@ class BJAH17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                    actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -3505,11 +3505,11 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -3534,11 +3534,11 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -3563,11 +3563,11 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -3592,11 +3592,11 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -3621,11 +3621,11 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard17, dealerHand, 0, false)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -3650,19 +3650,19 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitt, dealerHand, 6, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitj, dealerHand, 6, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitq, dealerHand, 6, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitk, dealerHand, 6, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
         }
     }
 
@@ -3687,19 +3687,19 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitt, dealerHand, 5, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitj, dealerHand, 5, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitq, dealerHand, 5, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitk, dealerHand, 5, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
         }
     }
 
@@ -3724,19 +3724,19 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitt, dealerHand, 4, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitj, dealerHand, 4, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitq, dealerHand, 4, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitk, dealerHand, 4, true)
-            assertEquals(Actions.SPLIT, playerAction)
+            TestCase.assertEquals(Actions.SPLIT, playerAction)
         }
     }
 
@@ -3761,7 +3761,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softa6, dealerHand, 1, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
         }
     }
 
@@ -3786,7 +3786,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softaa5, dealerHand, 1, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -3811,7 +3811,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softa8, dealerHand, 3, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
         }
     }
 
@@ -3836,7 +3836,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softaa7, dealerHand, 3, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -3861,7 +3861,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softa8, dealerHand, 1, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
         }
     }
 
@@ -3886,7 +3886,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softaa7, dealerHand, 1, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -3911,7 +3911,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softa8, dealerHand, -1, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -3936,7 +3936,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softaa7, dealerHand, -1, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -3961,15 +3961,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard9, dealerHand, 1, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard12, dealerHand, 3, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard13, dealerHand, -1, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -3994,15 +3994,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard9_threeCard, dealerHand, 1, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard12_threeCard, dealerHand, 3, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard13_threeCard, dealerHand, -1, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4027,7 +4027,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard12, dealerHand, 2, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -4052,7 +4052,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard12_threeCard, dealerHand, 2, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -4077,7 +4077,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard12, dealerHand, -1, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4102,7 +4102,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard12_threeCard, dealerHand, -1, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4127,7 +4127,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard8, dealerHand, 2, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
         }
     }
 
@@ -4152,7 +4152,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard8_threeCard, dealerHand, 2, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4177,7 +4177,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard9, dealerHand, 3, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
         }
     }
 
@@ -4202,7 +4202,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard9_threeCard, dealerHand, 3, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4227,7 +4227,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 4, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -4252,7 +4252,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 4, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -4277,15 +4277,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 4, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -4310,15 +4310,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 4, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
-            assertEquals(Actions.STAND, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 1, true)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -4343,15 +4343,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 4, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -4376,15 +4376,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 4, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
-            assertEquals(Actions.STAND, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 1, true)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -4409,15 +4409,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 4, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -4442,15 +4442,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 4, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
-            assertEquals(Actions.STAND, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 1, true)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -4475,15 +4475,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 4, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -4508,15 +4508,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 4, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 0, true)
-            assertEquals(Actions.STAND, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 1, true)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -4541,15 +4541,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 3, true)
-            assertEquals(Actions.DOUBLE_DOWN, playerAction)
+            TestCase.assertEquals(Actions.DOUBLE_DOWN, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 5, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 3, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -4574,15 +4574,15 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 3, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 5, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 3, true)
-            assertEquals(Actions.STAND, playerAction)
+            TestCase.assertEquals(Actions.STAND, playerAction)
         }
     }
 
@@ -4607,7 +4607,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 4, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -4632,7 +4632,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 4, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4657,11 +4657,11 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 2, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, -1, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4686,11 +4686,11 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 2, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, -1, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4714,8 +4714,8 @@ class BJAH17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
-            assertEquals(Actions.HIT, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4739,8 +4739,8 @@ class BJAH17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 0, true)
-            assertEquals(Actions.HIT, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4764,8 +4764,8 @@ class BJAH17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
-            assertEquals(Actions.HIT, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4789,8 +4789,8 @@ class BJAH17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 0, true)
-            assertEquals(Actions.HIT, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4814,8 +4814,8 @@ class BJAH17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
-            assertEquals(Actions.HIT, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4839,8 +4839,8 @@ class BJAH17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 0, true)
-            assertEquals(Actions.HIT, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4864,8 +4864,8 @@ class BJAH17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 0, true)
-            assertEquals(Actions.HIT, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4889,8 +4889,8 @@ class BJAH17Test {
             actionResolver = ActionResolver(setStrategy(sharedPref))
 
             playerAction =
-                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 0, true)
-            assertEquals(Actions.HIT, playerAction)
+                actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 
@@ -4915,7 +4915,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
-            assertEquals(Actions.SURRENDER, playerAction)
+            TestCase.assertEquals(Actions.SURRENDER, playerAction)
         }
     }
 
@@ -4940,7 +4940,7 @@ class BJAH17Test {
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)
-            assertEquals(Actions.HIT, playerAction)
+            TestCase.assertEquals(Actions.HIT, playerAction)
         }
     }
 }

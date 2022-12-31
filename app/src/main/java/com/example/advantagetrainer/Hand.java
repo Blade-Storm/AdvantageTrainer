@@ -166,10 +166,6 @@ public class Hand {
         return getCards().get(0);
     }
 
-    public void clearHand(){
-        cards.clear();
-    }
-
     public Hand withCards(List<Card> cards){
         for(int i = 0; i < cards.size(); i++){
             addCard(cards.get(i));
