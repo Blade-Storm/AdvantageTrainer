@@ -118,8 +118,10 @@ fun MyAppNavHost(
             )
         }
         composable("strategydrill") {
+            val actionResolver = ActionResolver(setStrategy(sharedPref))
             StrategyDrillScreen(
-                sharedPref
+                sharedPref,
+                actionResolver
             )
         }
         composable("strategydisplay"){

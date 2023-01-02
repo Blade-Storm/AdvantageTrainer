@@ -22,13 +22,15 @@ import com.google.gson.Gson
 import java.io.*
 
 @Composable
-fun StrategyDrillScreen(sharedPref: SharedPreferences) {
+fun StrategyDrillScreen(
+    sharedPref: SharedPreferences,
+    actionResolver: ActionResolver
+) {
     val cardVisible = remember { mutableStateOf(false) }
     val deck = createDeck(sharedPref = sharedPref)
     var (index, updateIndex) = remember { mutableStateOf(1) }
     var numCardInHandSetting = Settings.numCardInHandMapper[sharedPref.getInt(Settings.NUM_CARDS_IN_HAND, 2)]!!
     val useDeviations = sharedPref.getBoolean(Settings.USE_DEVIATIONS, false)
-    val actionResolver = ActionResolver(setStrategy(sharedPref))
 
     // If the user has setting to flash 1-3 cards set numCardToFlash to a random int between 1-3
     if(numCardInHandSetting == 4){
