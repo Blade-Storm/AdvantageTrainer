@@ -86,6 +86,7 @@ fun MyAppNavHost(
                 onNavigateToCountingDrill = {navController.navigate("countingdrill")},
                 onNavigateToSettings = {navController.navigate("settings")},
                 onNavigateToStrategyDrill = {navController.navigate("strategydrill")},
+                deck,
                 updateDeck
             )
 
@@ -135,6 +136,7 @@ fun HomeScreen(
     onNavigateToCountingDrill: () -> Unit,
     onNavigateToSettings: () -> Unit,
     onNavigateToStrategyDrill: () -> Unit,
+    deck: ArrayList<Card>,
     updateDeck: (ArrayList<Card>) -> Unit,
     ) {
 
@@ -143,7 +145,44 @@ fun HomeScreen(
     val sharedPref = LocalContext.current.getSharedPreferences(
         Settings.SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE)
 
-    updateDeck(createDeck(sharedPref = sharedPref))
+    // Check if we need to update the deck
+    if(deck.size == 0) {
+        updateDeck(createDeck(sharedPref = sharedPref))
+    }else if(deckTypeMapper[sharedPref.getInt(Settings.DECK_TYPE, 0)] == Deck.SPANISH){
+        if(deck.size != 48){
+            updateDeck(createDeck(sharedPref = sharedPref))
+        }
+    }else if(deckTypeMapper[sharedPref.getInt(Settings.DECK_TYPE, 0)] == Deck.BLACKJACK){
+        // Look for the PIP 10s
+        var found10 = false
+        deck.forEach {
+            if (it.name == CardNames.TEN) {
+                found10 = true
+            }
+        }
+
+        if(found10){
+            updateDeck(createDeck(sharedPref = sharedPref))
+        }
+    }else if(deckTypeMapper[sharedPref.getInt(Settings.DECK_TYPE, 0)] == Deck.BLACKJACK_HARD){
+        // Make sure there aren't any 10 value cards
+        var found10Value = false
+        deck.forEach {
+            if (
+                it.name == CardNames.TEN
+                || it.name == CardNames.JACK
+                || it.name == CardNames.QUEEN
+                || it.name == CardNames.KING
+            ) {
+                found10Value = true
+            }
+        }
+
+        if(found10Value){
+            updateDeck(createDeck(sharedPref = sharedPref))
+        }
+    }
+
 
     Column(
         modifier = Modifier

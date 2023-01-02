@@ -30,7 +30,7 @@ class SettingsScreenTest {
         }
 
         composeTestRule.onNode(hasTestTag("SelectedCardSpeedItem")).assertTextEquals("1.00")
-        composeTestRule.onNode(hasTestTag("UseSpanishDeck")).assertIsOff()
+        composeTestRule.onNode(hasTestTag("SelectedDeckTypeItem")).assertTextEquals("BLACKJACK")
         composeTestRule.onNode(hasTestTag("NumOfCardsToFlashItem")).assertTextEquals("1 card")
         composeTestRule.onNode(hasTestTag("NumOfDecksToUseItem")).assertTextEquals("1")
     }
@@ -45,7 +45,7 @@ class SettingsScreenTest {
             with (sharedPref.edit()) {
                 clear()
                 putInt(Settings.CARD_FLASH_SPEED, 1)
-                putBoolean(Settings.USE_SPANISH_DECK, true)
+                putInt(Settings.DECK_TYPE, 2)
                 putInt(Settings.NUM_CARDS_TO_FLASH, 1)
                 putInt(Settings.NUM_DECKS_TO_COUNT, 1)
                 apply()
@@ -57,7 +57,7 @@ class SettingsScreenTest {
         }
 
         composeTestRule.onNode(hasTestTag("SelectedCardSpeedItem")).assertTextEquals("0.50")
-        composeTestRule.onNode(hasTestTag("UseSpanishDeck")).assertIsOn()
+        composeTestRule.onNode(hasTestTag("SelectedDeckTypeItem")).assertTextEquals("SPANISH")
         composeTestRule.onNode(hasTestTag("NumOfCardsToFlashItem")).assertTextEquals("2 cards")
         composeTestRule.onNode(hasTestTag("NumOfDecksToUseItem")).assertTextEquals("2")
     }

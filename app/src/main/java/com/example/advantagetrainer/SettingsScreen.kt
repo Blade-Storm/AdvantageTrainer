@@ -21,11 +21,11 @@ fun SettingsScreen(
         var isDeckToUseExpanded by remember { mutableStateOf(false) }
         var selectedDeckToUseIndex by remember { mutableStateOf(sharedPref.getInt(Settings.DECK_TYPE, 0)) }
 
-        Box(Modifier.testTag("DeckToUseBox")) {
+        Box(Modifier.testTag("DeckTypeBox")) {
             Text(
                 deckTypeMapper[selectedDeckToUseIndex].toString(),
                 modifier = Modifier
-                    .fillMaxWidth().testTag("SelectedDeckToUseItem")
+                    .fillMaxWidth().testTag("SelectedDeckTypeItem")
                     .clickable(onClick = { isDeckToUseExpanded = true }
                     ))
             DropdownMenu(

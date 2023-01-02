@@ -112,36 +112,69 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
                     Modifier.offset(x = xboxOffset, y = yboxOffset)
                 ) {
                     // Show a single card. If there is only 1 card left in the deck to show, show one card regardless of the setting
-                    if (numCardToFlashSetting == 1 && index <= deck.size - 1) {
+                    if (numCardToFlashSetting == 1 || index == deck.size - 1) {
                         Image(
                             painter = painterResource(deck[index].cardImageId),
                             contentDescription = "Card",
                         )
                         // Show 2 cards
-                    } else if (numCardToFlashSetting == 2 && index <= deck.size - 2) {
-                        for(i in 0 until numCardToFlashSetting){
-                            Image(
-                                painter = painterResource(deck[index + i].cardImageId),
-                                contentDescription = "Card",
-                                modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
-                            )
+                    } else if (numCardToFlashSetting == 2 || index == deck.size - 2) {
+                        if(index == deck.size - 2){
+                            for(i in 0 until 2){
+                                Image(
+                                    painter = painterResource(deck[index + i].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
+                                )
+                            }
+                        }else {
+                            for (i in 0 until numCardToFlashSetting) {
+                                Image(
+                                    painter = painterResource(deck[index + i].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(
+                                        x = 36.dp * (i),
+                                        y = 72.dp - (36.dp * (i + 1))
+                                    ).zIndex(i.toFloat())
+                                )
+                            }
                         }
                         // Show 3 cards
-                    } else if (numCardToFlashSetting == 3 && index <= deck.size - 3) {
-                        for(i in 0 until numCardToFlashSetting){
-                            Image(
-                                painter = painterResource(deck[index + i].cardImageId),
-                                contentDescription = "Card",
-                                modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
-                            )
+                    } else if (numCardToFlashSetting == 3 || index == deck.size - 3) {
+                        if(index == deck.size - 3){
+                            for(i in 0 until 3){
+                                Image(
+                                    painter = painterResource(deck[index + i].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
+                                )
+                            }
+                        }else{
+                            for(i in 0 until numCardToFlashSetting){
+                                Image(
+                                    painter = painterResource(deck[index + i].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
+                                )
+                            }
                         }
-                    } else if (numCardToFlashSetting == 4 && index <= deck.size - 4) {
-                        for(i in 0 until numCardToFlashSetting){
-                            Image(
-                                painter = painterResource(deck[index + i].cardImageId),
-                                contentDescription = "Card",
-                                modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
-                            )
+                    } else if (numCardToFlashSetting == 4 || index == deck.size - 4) {
+                        if(index == deck.size - 4){
+                            for(i in 0 until 4){
+                                Image(
+                                    painter = painterResource(deck[index + i].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
+                                )
+                            }
+                        }else{
+                            for(i in 0 until numCardToFlashSetting){
+                                Image(
+                                    painter = painterResource(deck[index + i].cardImageId),
+                                    contentDescription = "Card",
+                                    modifier = Modifier.offset(x = 36.dp * (i), y = 72.dp - (36.dp * (i + 1))).zIndex(i.toFloat())
+                                )
+                            }
                         }
                     }
                 }

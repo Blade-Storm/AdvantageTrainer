@@ -5,6 +5,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.*
 import com.example.advantagetrainer.ui.theme.AdvantageTrainerTheme
 import androidx.compose.ui.test.junit4.createComposeRule
+import com.example.advantagetrainer.Settings.deckTypeMapper
 import org.junit.Rule
 import org.junit.Test
 
@@ -211,7 +212,7 @@ class MainActivityTest {
 
             with (sharedPref.edit()) {
                 clear()
-                putBoolean(Settings.USE_SPANISH_DECK, true)
+                putInt(Settings.DECK_TYPE, 2)
                 apply()
             }
 
@@ -464,7 +465,7 @@ class MainActivityTest {
     }
 
     @Test
-    fun showCard_NumOfCardsToFlashIsFour_DontShowCard() {
+    fun showCard_NumOfCardsToFlashIsFour_ShowCards() {
         val indexOfCardToShow = 1
         val numCardToFlashSetting = 4
 
@@ -483,7 +484,7 @@ class MainActivityTest {
                 ShowCard(deck, indexOfCardToShow, numCardToFlashSetting)
             }
         }
-        composeTestRule.onAllNodes(hasContentDescription("Card")).assertCountEquals(0)
+        composeTestRule.onAllNodes(hasContentDescription("Card")).assertCountEquals(4)
     }
 
     @Test
