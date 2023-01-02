@@ -8,6 +8,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import com.example.advantagetrainer.Settings.deckTypeMapper
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -16,26 +17,34 @@ fun SettingsScreen(
     sharedPref: SharedPreferences
 ) {
     Column{
-        var isSpanishDeck by remember { mutableStateOf(sharedPref.getBoolean(Settings.USE_SPANISH_DECK, false)) }
-        Box(Modifier.testTag("DeckTypeBox")){
-            Column{
-                Text("- Use Spanish21 deck? Default is Blackjack.")
-                Row{
-                    Checkbox(
-                        checked = isSpanishDeck,
-                        onCheckedChange = {
-                            isSpanishDeck = it
-                            with (sharedPref.edit()) {
-                                putBoolean(Settings.USE_SPANISH_DECK, it)
-                                apply()
-                            }
-                        },
-                        Modifier.testTag("UseSpanishDeck")
-                    )
-                    Text("Spanish21 Deck", modifier = Modifier.padding(12.dp))
+        Text("- Deck to use in counting and strategy drills: ")
+        var isDeckToUseExpanded by remember { mutableStateOf(false) }
+        var selectedDeckToUseIndex by remember { mutableStateOf(sharedPref.getInt(Settings.DECK_TYPE, 0)) }
+
+        Box(Modifier.testTag("DeckToUseBox")) {
+            Text(
+                deckTypeMapper[selectedDeckToUseIndex].toString(),
+                modifier = Modifier
+                    .fillMaxWidth().testTag("SelectedDeckToUseItem")
+                    .clickable(onClick = { isDeckToUseExpanded = true }
+                    ))
+            DropdownMenu(
+                expanded = isDeckToUseExpanded,
+                onDismissRequest = { isDeckToUseExpanded = false },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                deckTypeMapper.values.forEachIndexed { index, s ->
+                    DropdownMenuItem(onClick = {
+                        selectedDeckToUseIndex = index
+                        isDeckToUseExpanded = false
+                        with (sharedPref.edit()) {
+                            putInt(Settings.DECK_TYPE, index)
+                            apply()
+                        }
+                    },
+                        text = { Text(text = s.toString()) })
                 }
             }
-
         }
 
         Text("Counting Drills: ")

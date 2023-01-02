@@ -15,16 +15,36 @@ public class Settings {
         }
     }
 
+    public enum Deck{
+        BLACKJACK ("Blackjack"),
+        BLACKJACK_HARD ("Blackjack Hard Mode"),
+        SPANISH ("Spanish 21");
+
+        public final String name;
+        Deck(String name) {
+            this.name = name;
+        }
+    }
+
     // Constants
     public final static String SETTINGS_FILE_LOCATION = "com.example.advantagetrainer";
     public final static String CARD_FLASH_SPEED = "cardFlashSpeed";
-    public final static String USE_SPANISH_DECK = "useSpanishDeck";
+    public final static String DECK_TYPE = "deckTypeToUse";
     public final static String NUM_CARDS_TO_FLASH = "numCardsToFlash";
     public final static String NUM_DECKS_TO_COUNT = "numDecksToCount";
     public final static String NUM_CARDS_IN_HAND = "numCardsInHand";
     public final static String STRATEGY = "strategy";
     public final static String USE_DEVIATIONS = "useDeviations";
 
+    // Maps the index from the settings selection to the value
+    public final static Map<Integer, Deck> deckTypeMapper;
+
+    static{
+        deckTypeMapper = new HashMap<>();
+        deckTypeMapper.put(0, Deck.BLACKJACK);
+        deckTypeMapper.put(1, Deck.BLACKJACK_HARD);
+        deckTypeMapper.put(2, Deck.SPANISH);
+    }
 
     // Maps the index from the settings selection to the value
     public final static Map<Integer, Long> cardFlashSpeedMapper;

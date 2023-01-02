@@ -24,10 +24,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.advantagetrainer.Settings.Deck
+import com.example.advantagetrainer.Settings.deckTypeMapper
 import com.example.advantagetrainer.ui.theme.AdvantageTrainerTheme
-import org.json.JSONObject
-import org.json.JSONTokener
-import java.io.*
 
 
 class MainActivity : ComponentActivity() {
@@ -71,11 +70,10 @@ fun MyAppNavHost(
 
     with (sharedPref.edit()) {
         putInt(Settings.CARD_FLASH_SPEED, sharedPref.getInt(Settings.CARD_FLASH_SPEED, 0))
-        putBoolean(Settings.USE_SPANISH_DECK, sharedPref.getBoolean(Settings.USE_SPANISH_DECK, false))
+        putInt(Settings.DECK_TYPE, sharedPref.getInt(Settings.DECK_TYPE, 0))
         putInt(Settings.NUM_CARDS_TO_FLASH, sharedPref.getInt(Settings.NUM_CARDS_TO_FLASH, 1))
         apply()
     }
-
 
     NavHost(
         modifier = modifier,
@@ -87,7 +85,8 @@ fun MyAppNavHost(
                 onNavigateToCouponCalculator = { navController.navigate("couponcalculator") },
                 onNavigateToCountingDrill = {navController.navigate("countingdrill")},
                 onNavigateToSettings = {navController.navigate("settings")},
-                onNavigateToStrategyDrill = {navController.navigate("strategydrill")}
+                onNavigateToStrategyDrill = {navController.navigate("strategydrill")},
+                updateDeck
             )
 
         }
@@ -135,8 +134,17 @@ fun HomeScreen(
     onNavigateToCouponCalculator: () -> Unit,
     onNavigateToCountingDrill: () -> Unit,
     onNavigateToSettings: () -> Unit,
-    onNavigateToStrategyDrill: () -> Unit
-) {
+    onNavigateToStrategyDrill: () -> Unit,
+    updateDeck: (ArrayList<Card>) -> Unit,
+    ) {
+
+    // Create the deck for the drills here so that we don't have to on those pages.
+    // It causes a bug where the correct deck type isn't loaded
+    val sharedPref = LocalContext.current.getSharedPreferences(
+        Settings.SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE)
+
+    updateDeck(createDeck(sharedPref = sharedPref))
+
     Column(
         modifier = Modifier
             .padding(24.dp)
@@ -176,7 +184,7 @@ fun HomeScreen(
 
 @Composable
 fun createDeck(sharedPref: SharedPreferences): ArrayList<Card>{
-    val useSpanishDeck = sharedPref.getBoolean(Settings.USE_SPANISH_DECK, false)
+    val deckToUse = sharedPref.getInt(Settings.DECK_TYPE, 0)
     val numDeckToCountSetting = sharedPref.getInt(Settings.NUM_DECKS_TO_COUNT, 0)
     var numDecksToCount = 1
 
@@ -191,11 +199,21 @@ fun createDeck(sharedPref: SharedPreferences): ArrayList<Card>{
     for (i in 0 until numDecksToCount){
         for (suit in Suits.values()) {
             CardValueMapper.cardValueMapper.forEach { (key, value) ->
-                if(key == CardNames.TEN && useSpanishDeck){
+                if(key == CardNames.TEN && deckTypeMapper[deckToUse]!!.name == Deck.SPANISH.name){
                     return@forEach // Continue
+                }else if(
+                    (key == CardNames.TEN
+                    || key == CardNames.JACK
+                    || key == CardNames.QUEEN
+                    || key == CardNames.KING)
+                    && deckTypeMapper[deckToUse]!!.name == Deck.BLACKJACK_HARD.name
+                ){
+                    val id = LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/$suit${CardNames.ACE}", null, null)
+                    deck.add(Card(suit, CardNames.ACE, null, id))
+                }else{
+                    val id = LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/$suit$key", null, null)
+                    deck.add(Card(suit, key, value, id))
                 }
-                val id = LocalContext.current.resources.getIdentifier("com.example.advantagetrainer:drawable/$suit$key", null, null)
-                deck.add(Card(suit, key, value, id))
             }
         }
     }
