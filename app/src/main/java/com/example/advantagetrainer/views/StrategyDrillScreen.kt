@@ -233,46 +233,6 @@ fun StrategyDrillScreen(
     }
 }
 
-fun getValidHandToShow(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int): Int {
-    val hand = Hand()
-
-    if(index + numCardToFlashSetting < deck.size){
-        // Create the hand out of the cards
-        for(i in 0 until numCardToFlashSetting){
-            hand.addCard(deck[index + i])
-        }
-
-        return if(hand.didBust() || isOddHand(hand.cards)){
-            getValidHandToShow(deck, index + 1, numCardToFlashSetting)
-        }else{
-            index
-        }
-    }else if(deck.size < numCardToFlashSetting){
-        // Something illogical is going on. This will throw an exception later
-        return -1
-    }else{
-        // We went through the whole deck and couldn't find a hand to show the user. Shuffle the deck and try again
-        deck.shuffle()
-        return getValidHandToShow(deck, 0, numCardToFlashSetting)
-    }
-}
-
-fun isOddHand(deck:ArrayList<Card>): Boolean{
-    val hand = Hand()
-
-    // Create the hand out of the first two cards
-    for(i in 0 until 2){
-        hand.addCard(deck[i])
-    }
-
-    // Check for odd hands like if the first two cards are blackjack but the hand has more than two cards
-    if(hand.isBlackjack && deck.size > 2){
-        return true
-    }
-
-    return false
-}
-
 @Composable
 fun setStrategy(sharedPref: SharedPreferences): StrategyCombinatorial {
     val strategy = Settings.strategyMapper[sharedPref.getInt(Settings.STRATEGY, 1)]!!
