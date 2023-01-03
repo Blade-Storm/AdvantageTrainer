@@ -2,6 +2,10 @@ package com.example.advantagetrainer
 
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.junit4.createComposeRule
+import com.example.advantagetrainer.enums.CardNames
+import com.example.advantagetrainer.enums.Suits
+import com.example.advantagetrainer.views.getValidHandToShow
+import com.example.advantagetrainer.views.isOddHand
 import org.junit.Rule
 import org.junit.Test
 

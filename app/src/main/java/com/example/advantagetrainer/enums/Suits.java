@@ -1,4 +1,4 @@
-package com.example.advantagetrainer;
+package com.example.advantagetrainer.enums;
 
 import androidx.annotation.NonNull;
 

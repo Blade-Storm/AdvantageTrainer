@@ -3,6 +3,9 @@ package com.example.advantagetrainer
 import android.content.Context
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.junit4.createComposeRule
+import com.example.advantagetrainer.enums.Actions
+import com.example.advantagetrainer.enums.CardNames
+import com.example.advantagetrainer.views.setStrategy
 import junit.framework.TestCase
 import org.junit.Rule
 import org.junit.Test

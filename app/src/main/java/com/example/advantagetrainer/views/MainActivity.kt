@@ -1,4 +1,4 @@
-package com.example.advantagetrainer
+package com.example.advantagetrainer.views
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -24,8 +24,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.advantagetrainer.*
 import com.example.advantagetrainer.Settings.Deck
 import com.example.advantagetrainer.Settings.deckTypeMapper
+import com.example.advantagetrainer.enums.CardNames
+import com.example.advantagetrainer.enums.Suits
 import com.example.advantagetrainer.ui.theme.AdvantageTrainerTheme
 
 

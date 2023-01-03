@@ -5,7 +5,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.*
 import com.example.advantagetrainer.ui.theme.AdvantageTrainerTheme
 import androidx.compose.ui.test.junit4.createComposeRule
-import com.example.advantagetrainer.Settings.deckTypeMapper
+import com.example.advantagetrainer.enums.CardNames
+import com.example.advantagetrainer.enums.Suits
+import com.example.advantagetrainer.views.GenerateAppView
+import com.example.advantagetrainer.views.ShowCard
+import com.example.advantagetrainer.views.createDeck
 import org.junit.Rule
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.advantagetrainer
+package com.example.advantagetrainer.views
 
 import android.content.SharedPreferences
 import android.os.CountDownTimer
@@ -17,6 +17,8 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
+import com.example.advantagetrainer.Card
+import com.example.advantagetrainer.Settings
 
 @Composable
 fun CountingDrillScreen(

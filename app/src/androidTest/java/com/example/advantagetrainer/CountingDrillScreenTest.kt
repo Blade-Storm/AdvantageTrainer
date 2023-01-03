@@ -11,6 +11,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.advantagetrainer.ui.theme.AdvantageTrainerTheme
+import com.example.advantagetrainer.views.CountingDrillScreen
 import org.junit.Rule
 import org.junit.Test
 

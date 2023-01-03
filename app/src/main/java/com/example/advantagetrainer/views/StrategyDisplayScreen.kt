@@ -1,4 +1,4 @@
-package com.example.advantagetrainer
+package com.example.advantagetrainer.views
 
 import android.content.SharedPreferences
 import androidx.compose.foundation.background
@@ -13,6 +13,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.example.advantagetrainer.CardValueMapper
+import com.example.advantagetrainer.StrategyCombinatorial
+import com.example.advantagetrainer.enums.Actions
+import com.example.advantagetrainer.enums.CardNames
+import com.example.advantagetrainer.enums.StrategyDeviationSign
 
 var action: String? = null
 var deviationCount: String? = null
@@ -289,7 +294,8 @@ fun StrategyDisplayScreen(
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
-                    if (CardNames.stringToCardNames(dealerHands[i]) == CardNames.ACE || CardValueMapper.cardValueMapper[(CardNames.stringToCardNames(dealerHands[i]))]!! > 5){
+                    if (CardNames.stringToCardNames(dealerHands[i]) == CardNames.ACE || CardValueMapper.cardValueMapper[(CardNames.stringToCardNames(
+                            dealerHands[i]))]!! > 5){
                         Text(
                             dealerHands[i].uppercase(),
                             modifier = Modifier

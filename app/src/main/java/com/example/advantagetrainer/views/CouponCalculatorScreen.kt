@@ -1,4 +1,4 @@
-package com.example.advantagetrainer
+package com.example.advantagetrainer.views
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.selection.selectable
@@ -77,7 +77,7 @@ fun CouponCalculatorScreen(
 
                     TextField(
                         value = couponBet,
-                        onValueChange = { it ->
+                        onValueChange = {
                             updateCouponBetValue(it)
                         },
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -137,7 +137,7 @@ fun calculateCoupon(
     onCouponExpectedValueChange: (String) -> Unit,
 ): BigDecimal? {
     var expectedValue = 0.0
-    var houseGameEdge = 0.50 + (couponGameEdge.toDouble() / 200.0)
+    val houseGameEdge = 0.50 + (couponGameEdge.toDouble() / 200.0)
     var action = 0.0
 
     if(couponSelection == Coupons.MATCH_PLAY){

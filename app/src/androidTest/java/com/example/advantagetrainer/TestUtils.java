@@ -1,5 +1,8 @@
 package com.example.advantagetrainer;
 
+import com.example.advantagetrainer.enums.CardNames;
+import com.example.advantagetrainer.enums.Suits;
+
 import java.util.List;
 
 public class TestUtils {

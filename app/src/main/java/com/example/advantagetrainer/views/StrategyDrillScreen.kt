@@ -1,4 +1,4 @@
-package com.example.advantagetrainer
+package com.example.advantagetrainer.views
 
 import android.content.SharedPreferences
 import androidx.compose.foundation.Image
@@ -17,7 +17,9 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
+import com.example.advantagetrainer.*
 import com.example.advantagetrainer.Settings.Strategy
+import com.example.advantagetrainer.enums.Actions
 import com.google.gson.Gson
 import java.io.*
 

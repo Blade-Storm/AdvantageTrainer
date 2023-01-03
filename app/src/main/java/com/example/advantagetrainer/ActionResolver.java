@@ -1,12 +1,15 @@
 package com.example.advantagetrainer;
 
+import com.example.advantagetrainer.enums.Actions;
+import com.example.advantagetrainer.enums.StrategyDeviationSign;
+
 public class ActionResolver {
     public Actions action = null;
     public Actions altAction = null;
     public Actions deviationAction = null;
     private final StrategyCombinatorial strategy;
 
-    ActionResolver(StrategyCombinatorial strategy){
+    public ActionResolver(StrategyCombinatorial strategy){
         this.strategy = strategy;
     }
 

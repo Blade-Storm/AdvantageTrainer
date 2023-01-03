@@ -1,5 +1,7 @@
 package com.example.advantagetrainer;
 
+import com.example.advantagetrainer.enums.CardNames;
+
 import java.util.HashMap;
 import java.util.Map;
 

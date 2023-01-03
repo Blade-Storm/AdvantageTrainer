@@ -1,13 +1,18 @@
 package com.example.advantagetrainer;
 
 import androidx.annotation.NonNull;
+
+import com.example.advantagetrainer.enums.Actions;
+import com.example.advantagetrainer.enums.CardNames;
+import com.example.advantagetrainer.enums.StrategyDeviationSign;
+
 import java.util.ArrayList;
 
 public class StrategyCombinatorial{
-    ArrayList<Hand> hard;
-    ArrayList<Hand> soft;
-    ArrayList<Hand> split;
-    ArrayList<Hand> surrender;
+    public ArrayList<Hand> hard;
+    public ArrayList<Hand> soft;
+    public ArrayList<Hand> split;
+    public ArrayList<Hand> surrender;
 
 
     StrategyCombinatorial(
@@ -145,15 +150,15 @@ public class StrategyCombinatorial{
     }
 
     public static class Hand {
-        String handType;
-        CardNames dealerCard;
-        CardNames playerCard;
-        Integer playerHandTotal;
-        Actions playerAction;
-        Actions playerAltAction;
-        Actions deviationAction;
-        Integer deviationCount;
-        StrategyDeviationSign deviationSign;
+        public String handType;
+        public CardNames dealerCard;
+        public CardNames playerCard;
+        public Integer playerHandTotal;
+        public Actions playerAction;
+        public Actions playerAltAction;
+        public Actions deviationAction;
+        public Integer deviationCount;
+        public StrategyDeviationSign deviationSign;
 
         Hand(
                 String handType,

@@ -1,6 +1,9 @@
 package com.example.advantagetrainer;
 
 import androidx.annotation.NonNull;
+
+import com.example.advantagetrainer.enums.CardNames;
+
 import java.util.ArrayList;
 import java.util.List;
 

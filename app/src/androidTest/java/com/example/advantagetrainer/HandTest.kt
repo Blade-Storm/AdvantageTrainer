@@ -3,6 +3,8 @@ package com.example.advantagetrainer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.junit4.createComposeRule
 import com.example.advantagetrainer.Hand.HandType
+import com.example.advantagetrainer.enums.CardNames
+import com.example.advantagetrainer.enums.Suits
 import junit.framework.TestCase.*
 import org.junit.Rule
 import org.junit.Test
