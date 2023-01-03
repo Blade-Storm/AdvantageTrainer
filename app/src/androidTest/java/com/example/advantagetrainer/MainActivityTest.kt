@@ -21,7 +21,7 @@ class MainActivityTest {
 
     @Test
     fun homeScreen_ShouldHaveButtonsForOtherScreens() {
-        val buttonTags = listOf<String>("CountingDrillButton", "CouponCalculatorButton", "StrategyDrillButton", "SettingsButton")
+        val buttonTags = listOf<String>("CountingDrillButton", "CouponCalculatorButton", "StrategyDrillButton", "SettingsButton", "AddHandDrillButton")
 
         // Start the app
         composeTestRule.setContent {
