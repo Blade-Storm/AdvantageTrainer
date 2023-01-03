@@ -2,7 +2,7 @@ on: push
 
 jobs:
   connected-tests:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -16,4 +16,9 @@ jobs:
           cache: 'gradle'
 
       - name: Run connected tests
-        run: ./gradlew connectedCheck
+          uses: ReactiveCircus/android-emulator-runner@v2
+          with:
+            api-level: 30
+            target: google_apis
+            arch: x86_64
+            script: ./gradlew connectedCheck
