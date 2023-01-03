@@ -124,7 +124,7 @@ public class Hand {
 
     public boolean didBust(){
         // The player or dealer busts if their hand total is greater than 21
-        return handTotal > 21;
+        return getHandTotal() > 21;
     }
 
     public void addCard(Card card){
