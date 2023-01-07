@@ -35,6 +35,7 @@ public class Settings {
     public final static String NUM_CARDS_IN_HAND = "numCardsInHand";
     public final static String STRATEGY = "strategy";
     public final static String USE_DEVIATIONS = "useDeviations";
+    public final static String COUNTING_SYSTEM = "countingSystem";
 
     // Maps the index from the settings selection to the value
     public final static Map<Integer, Deck> deckTypeMapper;

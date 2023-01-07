@@ -30,6 +30,7 @@ import com.example.advantagetrainer.Settings.deckTypeMapper
 import com.example.advantagetrainer.enums.CardNames
 import com.example.advantagetrainer.enums.Suits
 import com.example.advantagetrainer.ui.theme.AdvantageTrainerTheme
+import com.google.gson.JsonObject
 
 
 class MainActivity : ComponentActivity() {
@@ -75,6 +76,7 @@ fun MyAppNavHost(
         putInt(Settings.CARD_FLASH_SPEED, sharedPref.getInt(Settings.CARD_FLASH_SPEED, 0))
         putInt(Settings.DECK_TYPE, sharedPref.getInt(Settings.DECK_TYPE, 0))
         putInt(Settings.NUM_CARDS_TO_FLASH, sharedPref.getInt(Settings.NUM_CARDS_TO_FLASH, 1))
+        putString(Settings.COUNTING_SYSTEM, sharedPref.getString(Settings.COUNTING_SYSTEM, JsonObject().toString()))
         apply()
     }
 
@@ -124,6 +126,7 @@ fun MyAppNavHost(
         composable("settings") {
             SettingsScreen(
                 onNavigateToStrategyDisplayScreen = { navController.navigate("strategydisplay") },
+                onNavigateToCountingSystemEditScreen = { navController.navigate("countingsystemedit") },
                 sharedPref
             )
         }
@@ -139,6 +142,12 @@ fun MyAppNavHost(
                 sharedPref
             )
         }
+        composable("countingsystemedit"){
+            CountingSystemEditScreen(
+                sharedPref,
+                onNavigateToSettings = {navController.navigate("settings")},
+            )
+        }
     }
 }
 
@@ -151,8 +160,7 @@ fun HomeScreen(
     onNavigateToStrategyDrill: () -> Unit,
     deck: ArrayList<Card>,
     updateDeck: (ArrayList<Card>) -> Unit,
-    ) {
-
+    ){
     // Create the deck for the drills here so that we don't have to on those pages.
     // It causes a bug where the correct deck type isn't loaded
     val sharedPref = LocalContext.current.getSharedPreferences(
