@@ -1,8 +1,6 @@
 package com.example.advantagetrainer
 
 import android.content.Context
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.*
@@ -17,7 +15,7 @@ import org.junit.Test
 
 
 class CountingDrillScreenTest {
-    private val TEST_SETTINGS_FILE_LOCATION = "com.example.advantagetrainertest"
+    var testUtils = TestUtils()
 
     @get:Rule
     val composeTestRule = createComposeRule()
@@ -29,7 +27,7 @@ class CountingDrillScreenTest {
         // Start the app
         composeTestRule.setContent {
             val sharedPref = LocalContext.current.getSharedPreferences(
-                TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
+                testUtils.TEST_SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE
             )
 
             with(sharedPref.edit()) {
@@ -39,7 +37,6 @@ class CountingDrillScreenTest {
             }
 
             val navController = rememberNavController()
-            val (deck, updateDeck) = remember { mutableStateOf(ArrayList<Card>()) }
 
             NavHost(
                 modifier = Modifier,
@@ -49,8 +46,6 @@ class CountingDrillScreenTest {
                 composable("countingDrillScreen") {
                     CountingDrillScreen(
                         sharedPref,
-                        deck,
-                        updateDeck
                     )
                 }
             }
@@ -58,8 +53,6 @@ class CountingDrillScreenTest {
             AdvantageTrainerTheme {
                 CountingDrillScreen(
                     sharedPref,
-                    deck,
-                    updateDeck
                 )
             }
         }

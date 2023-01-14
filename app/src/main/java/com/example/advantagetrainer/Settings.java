@@ -26,6 +26,17 @@ public class Settings {
         }
     }
 
+    public enum CountingTest{
+        NO_TEST ("No test"),
+        END_OF_DRILL ("Single card removed, tested at end of drill"),
+        RANDOM ("Randomly tested throughout the drill");
+
+        public final String name;
+        CountingTest(String name) {
+            this.name = name;
+        }
+    }
+
     // Constants
     public final static String SETTINGS_FILE_LOCATION = "com.example.advantagetrainer";
     public final static String CARD_FLASH_SPEED = "cardFlashSpeed";
@@ -36,6 +47,7 @@ public class Settings {
     public final static String STRATEGY = "strategy";
     public final static String USE_DEVIATIONS = "useDeviations";
     public final static String COUNTING_SYSTEM = "countingSystem";
+    public final static String COUNTING_TEST = "countingTest";
 
     // Maps the index from the settings selection to the value
     public final static Map<Integer, Deck> deckTypeMapper;
@@ -96,10 +108,21 @@ public class Settings {
     // Maps the index from the settings selection to the value
     public final static Map<Integer, Strategy> strategyMapper;
 
-    static{
+    static {
         strategyMapper = new HashMap<>();
         strategyMapper.put(0, Strategy.SPANISH21_SECRET);
         strategyMapper.put(1, Strategy.BJA_H17);
         strategyMapper.put(2, Strategy.BJA_S17);
     }
+
+    // Maps the index from the settings selection to the value
+    public final static Map<Integer, CountingTest> countingTestMapper;
+
+    static {
+        countingTestMapper = new HashMap<>();
+        countingTestMapper.put(0, CountingTest.NO_TEST);
+        countingTestMapper.put(1, CountingTest.END_OF_DRILL);
+        countingTestMapper.put(2, CountingTest.RANDOM);
+    }
+
 }

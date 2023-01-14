@@ -16,10 +16,7 @@ import com.example.advantagetrainer.Settings
 import com.example.advantagetrainer.Settings.deckTypeMapper
 import com.example.advantagetrainer.enums.CardNames
 import com.google.gson.Gson
-import com.google.gson.JsonObject
-import java.io.*
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
     onNavigateToStrategyDisplayScreen: () -> Unit,
@@ -211,6 +208,53 @@ fun SettingsScreen(
                 }
             }
         }
+
+        Column(
+            modifier = Modifier.padding(12.dp)
+        ) {
+            // TODO: Use mapper in settings instead of hardcoded list
+            Text("Counting Test")
+            val countingTestType = listOf("No test", "End of drill")
+            var isCountingTestTypeExpanded by remember { mutableStateOf(false) }
+            var selectedCountingTestTypeIndex by remember {
+                mutableStateOf(
+                    sharedPref.getInt(
+                        Settings.COUNTING_TEST,
+                        0
+                    )
+                )
+            }
+
+            Box(Modifier.testTag("CountingTestTypeBox")) {
+                Text(
+                    countingTestType[selectedCountingTestTypeIndex], modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag("CountingTestTypeItem")
+                        .clickable(onClick = { isCountingTestTypeExpanded = true })
+                )
+                DropdownMenu(
+                    expanded = isCountingTestTypeExpanded,
+                    onDismissRequest = { isCountingTestTypeExpanded = false },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    countingTestType.forEachIndexed { index, s ->
+                        DropdownMenuItem(onClick = {
+                            selectedCountingTestTypeIndex = index
+                            isCountingTestTypeExpanded = false
+                            with(sharedPref.edit()) {
+                                putInt(Settings.COUNTING_TEST, index)
+                                apply()
+                            }
+                        },
+                            text = { Text(text = s) })
+                    }
+                }
+            }
+        }
+
+
+
+
         Column(
             modifier = Modifier.padding(12.dp)
         ) {
@@ -325,8 +369,7 @@ fun SettingsScreen(
                     }
                 }
 
-                Box(
-                ) {
+                Box{
                     Text(
                         modifier = Modifier
                             .clickable { onNavigateToStrategyDisplayScreen() },
@@ -391,7 +434,7 @@ fun TableScreen(countingSystem: CountingSystem) {
     horizontalArrangement = Arrangement.Center
     ){
         for(i in cardNameList.indices){
-            Column() {
+            Column{
                 val cardNameText = if(cardNameList[i].first == CardNames.ACE){
                     "A"
                 }else if(cardNameList[i].first == CardNames.TEN){

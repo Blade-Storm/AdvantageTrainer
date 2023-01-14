@@ -106,8 +106,6 @@ fun MyAppNavHost(
         composable("countingdrill") {
             CountingDrillScreen(
                 sharedPref,
-                deck,
-                updateDeck
             )
         }
         composable("couponcalculator") {
@@ -165,7 +163,7 @@ fun HomeScreen(
     // It causes a bug where the correct deck type isn't loaded
     val sharedPref = LocalContext.current.getSharedPreferences(
         Settings.SETTINGS_FILE_LOCATION, Context.MODE_PRIVATE)
-    maybeCreateDeck(sharedPref, deck, updateDeck)
+    MaybeCreateDeck(sharedPref, deck, updateDeck)
 
     Column(
         modifier = Modifier
@@ -252,7 +250,7 @@ fun createDeck(sharedPref: SharedPreferences): ArrayList<Card>{
 }
 
 @Composable
-fun maybeCreateDeck(
+fun MaybeCreateDeck(
     sharedPref: SharedPreferences,
     deck: ArrayList<Card>,
     updateDeck: (ArrayList<Card>) -> Unit
