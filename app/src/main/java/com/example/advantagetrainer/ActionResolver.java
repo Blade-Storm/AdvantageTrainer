@@ -2,6 +2,7 @@ package com.example.advantagetrainer;
 
 import com.example.advantagetrainer.enums.Actions;
 import com.example.advantagetrainer.enums.StrategyDeviationSign;
+import java.util.Objects;
 
 public class ActionResolver {
     public Actions action = null;
@@ -30,7 +31,7 @@ public class ActionResolver {
     public Actions checkSurrender(Hand playerHand, Hand dealerHand, int count, boolean useDeviations) {
         StrategyCombinatorial.Hand currentStrategyHand;
 
-        if(playerHand.canSurrender() && playerHand.getHandType() != Hand.HandType.SOFT){
+        if(playerHand.canSurrender() && playerHand.getHandType() != Hand.HandType.SOFT && strategy.surrender != null){
             // Get the surrender hands from the strategy
             for (int i = 0; i < strategy.surrender.size(); i++){
                 action = strategy.surrender.get(i).playerAction;
@@ -59,12 +60,26 @@ public class ActionResolver {
     public Actions checkSplit(Hand playerHand, Hand dealerHand, int count, boolean useDeviations) {
         StrategyCombinatorial.Hand currentStrategyHand;
 
-        if(playerHand.canSplit()){
+        if(playerHand.canSplit() && strategy.split != null){
             // Get the splits hands from the strategy
             for (int i = 0; i < strategy.split.size(); i++){
                 currentStrategyHand = strategy.split.get(i);
 
-                if(dealerHand.getDealerUpCard().getName() == currentStrategyHand.dealerCard && playerHand.getCards().get(0).getName() == currentStrategyHand.playerCard){
+                // dealerHandTotal in the strategy is not null for hole card strategy
+                if(currentStrategyHand.dealerHandTotal != null){
+                    // Check to make sure the hand types for both players are the same as the strategy
+                    if(Objects.equals(currentStrategyHand.handType, Hand.HandType.SPLIT.toString())
+                            && dealerHand.getHandType() == Hand.HandType.stringToHandType(currentStrategyHand.dealerHandType)
+                    ){
+                        if(playerHand.getCards().get(0).getName() == currentStrategyHand.playerCard && dealerHand.getHandTotal() == currentStrategyHand.dealerHandTotal){
+                            if(currentStrategyHand.playerAction == Actions.SPLIT){
+                                return Actions.SPLIT;
+                            }else{
+                                return null;
+                            }
+                        }
+                    }
+                }else if(dealerHand.getDealerUpCard().getName() == currentStrategyHand.dealerCard && playerHand.getCards().get(0).getName() == currentStrategyHand.playerCard){
                     // Check for deviation action
                     if(useDeviations && currentStrategyHand.deviationAction != null){
                         deviationAction = checkDeviations(currentStrategyHand, count);
@@ -113,7 +128,27 @@ public class ActionResolver {
         altAction = strategyHand.playerAltAction;
         deviationAction = strategyHand.deviationAction;
 
-        if(playerHand.getHandTotal() == strategyHand.playerHandTotal && dealerHand.getDealerUpCard().getName() == strategyHand.dealerCard){
+
+        // Hole card strategies don't have a dealer card. Instead they have a dealerHandTotal
+        if(strategyHand.dealerHandTotal != null){
+            // Check to make sure the hand types for both players are the same as the strategy
+            if(playerHand.getHandType() == Hand.HandType.stringToHandType(strategyHand.handType)
+                    && dealerHand.getHandType() == Hand.HandType.stringToHandType(strategyHand.dealerHandType)
+            ){
+                if(playerHand.getHandTotal() == strategyHand.playerHandTotal && dealerHand.getHandTotal() == strategyHand.dealerHandTotal){
+                    if(altAction != null && altAction == Actions.DOUBLE_DOWN){
+                        if(playerHand.canDoubleDown()){
+                            return Actions.DOUBLE_DOWN;
+                        }else{
+                            return action;
+                        }
+                    }else{
+                        return action;
+                    }
+                }
+            }
+            // Counting strategies have a dealerCard
+        }else if(playerHand.getHandTotal() == strategyHand.playerHandTotal && dealerHand.getDealerUpCard().getName() == strategyHand.dealerCard){
             if(useDeviations && checkDeviations(strategyHand, count) != null){
                 if(deviationAction == Actions.DOUBLE_DOWN && playerHand.canDoubleDown()){
                     return Actions.DOUBLE_DOWN;
@@ -145,6 +180,7 @@ public class ActionResolver {
         }
         return null;
     }
+
     private Actions checkDeviations(StrategyCombinatorial.Hand hand, int count) {
         if(hand.deviationSign == StrategyDeviationSign.GREATER){
             if(count > hand.deviationCount ){
@@ -166,5 +202,4 @@ public class ActionResolver {
 
         return null;
     }
-
 }

@@ -33,7 +33,7 @@ fun StrategyDisplayScreen(
     sharedPref: SharedPreferences
 ) {
     // Get strategy JSON
-    val strategy = setStrategy(sharedPref = sharedPref)
+    val strategy = setCountingStrategy(sharedPref = sharedPref)
     val strategyHard = strategy.hard
     val strategySoft = strategy.soft
     val strategySplit = strategy.split

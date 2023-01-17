@@ -3,6 +3,7 @@ package com.example.advantagetrainer;
 import androidx.annotation.NonNull;
 
 import com.example.advantagetrainer.enums.CardNames;
+import com.example.advantagetrainer.enums.StrategyDeviationSign;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,8 @@ import java.util.List;
 public class Hand {
     public enum HandType {
         HARD ("hard"),
-        SOFT ("soft");
+        SOFT ("soft"),
+        SPLIT ("split");
 
         private final String name;
 
@@ -21,6 +23,15 @@ public class Hand {
         @NonNull
         public String toString() {
             return this.name;
+        }
+
+        public static HandType stringToHandType(String handType){
+            switch(handType){
+                case "hard": return HARD;
+                case "soft": return SOFT;
+                case "split": return SPLIT;
+                default: throw new IllegalArgumentException();
+            }
         }
     }
 

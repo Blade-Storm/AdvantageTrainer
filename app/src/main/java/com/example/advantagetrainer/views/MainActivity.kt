@@ -92,6 +92,7 @@ fun MyAppNavHost(
                 onNavigateToCountingDrill = {navController.navigate("countingdrill")},
                 onNavigateToSettings = {navController.navigate("settings")},
                 onNavigateToStrategyDrill = {navController.navigate("strategydrill")},
+                onNavigateToHoleCardDrill = {navController.navigate("holecarddrill")},
                 deck,
                 updateDeck
             )
@@ -129,7 +130,7 @@ fun MyAppNavHost(
             )
         }
         composable("strategydrill") {
-            val actionResolver = ActionResolver(setStrategy(sharedPref))
+            val actionResolver = ActionResolver(setCountingStrategy(sharedPref))
             StrategyDrillScreen(
                 sharedPref,
                 actionResolver
@@ -146,6 +147,11 @@ fun MyAppNavHost(
                 onNavigateToSettings = {navController.navigate("settings")},
             )
         }
+        composable("holecarddrill"){
+            HoleCardDrillScreen(
+                sharedPref
+            )
+        }
     }
 }
 
@@ -156,6 +162,7 @@ fun HomeScreen(
     onNavigateToCountingDrill: () -> Unit,
     onNavigateToSettings: () -> Unit,
     onNavigateToStrategyDrill: () -> Unit,
+    onNavigateToHoleCardDrill: () -> Unit,
     deck: ArrayList<Card>,
     updateDeck: (ArrayList<Card>) -> Unit,
     ){
@@ -190,6 +197,12 @@ fun HomeScreen(
             Modifier.testTag("StrategyDrillButton")
         ) {
             Text(text = "Strategy Drill")
+        }
+        Button(
+            onClick = onNavigateToHoleCardDrill,
+            Modifier.testTag("HoleCardDrillButton")
+        ) {
+            Text(text = "Hole Card Drill")
         }
         Button(
            onClick = onNavigateToCouponCalculator,

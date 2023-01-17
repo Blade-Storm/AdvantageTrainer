@@ -328,12 +328,12 @@ fun SettingsScreen(
 
             Text("Strategy to use:")
             // TODO: Use mapper in settings instead of hardcoded list
-            val strategyItems = Settings.Strategy.values()
+            val countingStrategyItems = Settings.CountingStrategy.values()
             var isStrategyExpanded by remember { mutableStateOf(false) }
             var strategyIndex by remember {
                 mutableStateOf(
                     sharedPref.getInt(
-                        Settings.STRATEGY,
+                        Settings.COUNTING_STRATEGY,
                         1
                     )
                 )
@@ -346,7 +346,7 @@ fun SettingsScreen(
                     Modifier.testTag("StrategyToUse"),
                 ) {
                     Text(
-                        strategyItems[strategyIndex].name,
+                        countingStrategyItems[strategyIndex].name,
                         modifier = Modifier
                             .testTag("StrategyToUseItem")
                             .clickable(onClick = { isStrategyExpanded = true })
@@ -355,12 +355,12 @@ fun SettingsScreen(
                         expanded = isStrategyExpanded,
                         onDismissRequest = { isStrategyExpanded = false }
                     ) {
-                        strategyItems.forEachIndexed { index, s ->
+                        countingStrategyItems.forEachIndexed { index, s ->
                             DropdownMenuItem(onClick = {
                                 strategyIndex = index
                                 isStrategyExpanded = false
                                 with(sharedPref.edit()) {
-                                    putInt(Settings.STRATEGY, index)
+                                    putInt(Settings.COUNTING_STRATEGY, index)
                                     apply()
                                 }
                             },

@@ -18,7 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import com.example.advantagetrainer.*
-import com.example.advantagetrainer.Settings.Strategy
+import com.example.advantagetrainer.Settings.CountingStrategy
 import com.example.advantagetrainer.enums.Actions
 import com.google.gson.Gson
 import java.io.*
@@ -234,10 +234,10 @@ fun StrategyDrillScreen(
 }
 
 @Composable
-fun setStrategy(sharedPref: SharedPreferences): StrategyCombinatorial {
-    val strategy = Settings.strategyMapper[sharedPref.getInt(Settings.STRATEGY, 1)]!!
+fun setCountingStrategy(sharedPref: SharedPreferences): StrategyCombinatorial {
+    val strategy = Settings.countingStrategyMapper[sharedPref.getInt(Settings.COUNTING_STRATEGY, 1)]!!
     val inputStream = LocalContext.current.resources.openRawResource(strategy.rawId)
-    Game.isSpanishGame = strategy.name == Strategy.SPANISH21_SECRET.name
+    Game.isSpanishGame = strategy.name == CountingStrategy.SPANISH21_SECRET.name
     val strategyCombinatorial: StrategyCombinatorial
 
     val gson = Gson()
@@ -258,3 +258,4 @@ fun setStrategy(sharedPref: SharedPreferences): StrategyCombinatorial {
     strategyCombinatorial.validateHands()
     return strategyCombinatorial
 }
+

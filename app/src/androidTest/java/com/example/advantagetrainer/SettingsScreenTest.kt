@@ -26,7 +26,7 @@ class SettingsScreenTest {
             }
 
             AdvantageTrainerTheme {
-                SettingsScreen({}, sharedPref = sharedPref)
+                SettingsScreen({},{}, sharedPref = sharedPref)
             }
         }
 
@@ -53,7 +53,7 @@ class SettingsScreenTest {
             }
 
             AdvantageTrainerTheme {
-                SettingsScreen({}, sharedPref = sharedPref)
+                SettingsScreen({},{}, sharedPref = sharedPref)
             }
         }
 

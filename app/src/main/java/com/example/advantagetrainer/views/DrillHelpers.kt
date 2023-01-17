@@ -1,15 +1,18 @@
 package com.example.advantagetrainer.views
 
+import android.content.SharedPreferences
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import com.example.advantagetrainer.Card
-import com.example.advantagetrainer.Hand
+import com.example.advantagetrainer.*
+import com.google.gson.Gson
+import java.io.*
 
 fun getValidHandToShow(
     deck: ArrayList<Card>,
@@ -149,4 +152,31 @@ fun ShowCard(deck: ArrayList<Card>, index: Int, numCardToFlashSetting: Int) {
             }
 
     }
+}
+
+
+@Composable
+fun setHoleCardStrategy(sharedPref: SharedPreferences): StrategyCombinatorial {
+    val strategy = Settings.holeCardStrategyMapper[sharedPref.getInt(Settings.HOLE_CARD_STRATEGY, 0)]!!
+    val inputStream = LocalContext.current.resources.openRawResource(strategy.rawId)
+    // Game.isSpanishGame = strategy.name == Settings.CountingStrategy.SPANISH21_SECRET.name
+    val strategyCombinatorial: StrategyCombinatorial
+
+    val gson = Gson()
+
+    val writer: Writer = StringWriter()
+    val buffer = CharArray(1024)
+    try {
+        val reader: Reader = BufferedReader(InputStreamReader(inputStream, "UTF-8"))
+        var n: Int
+        while (reader.read(buffer).also { n = it } != -1) {
+            writer.write(buffer, 0, n)
+        }
+    } finally {
+        inputStream.close()
+    }
+
+    strategyCombinatorial = gson.fromJson(writer.toString(), StrategyCombinatorial::class.java)
+    strategyCombinatorial.validateHands()
+    return strategyCombinatorial
 }

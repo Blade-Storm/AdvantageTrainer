@@ -4,13 +4,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Settings {
-    public enum Strategy{
+    public enum CountingStrategy {
         SPANISH21_SECRET (R.raw.sp21secretmonkeycount),
         BJA_H17 (R.raw.bjah17),
         BJA_S17 (R.raw.bjas17);
 
         public final int rawId;
-        Strategy(int id) {
+        CountingStrategy(int id) {
+            this.rawId = id;
+        }
+    }
+
+    public enum HoleCardStrategy {
+        WIZARD_BASIC (R.raw.wizardofoddsholecardbasic);
+
+        public final int rawId;
+        HoleCardStrategy(int id) {
             this.rawId = id;
         }
     }
@@ -44,10 +53,11 @@ public class Settings {
     public final static String NUM_CARDS_TO_FLASH = "numCardsToFlash";
     public final static String NUM_DECKS_TO_COUNT = "numDecksToCount";
     public final static String NUM_CARDS_IN_HAND = "numCardsInHand";
-    public final static String STRATEGY = "strategy";
+    public final static String COUNTING_STRATEGY = "countingStrategy";
     public final static String USE_DEVIATIONS = "useDeviations";
     public final static String COUNTING_SYSTEM = "countingSystem";
     public final static String COUNTING_TEST = "countingTest";
+    public final static String HOLE_CARD_STRATEGY = "holeCardStrategy";
 
     // Maps the index from the settings selection to the value
     public final static Map<Integer, Deck> deckTypeMapper;
@@ -106,13 +116,21 @@ public class Settings {
     }
 
     // Maps the index from the settings selection to the value
-    public final static Map<Integer, Strategy> strategyMapper;
+    public final static Map<Integer, CountingStrategy> countingStrategyMapper;
 
     static {
-        strategyMapper = new HashMap<>();
-        strategyMapper.put(0, Strategy.SPANISH21_SECRET);
-        strategyMapper.put(1, Strategy.BJA_H17);
-        strategyMapper.put(2, Strategy.BJA_S17);
+        countingStrategyMapper = new HashMap<>();
+        countingStrategyMapper.put(0, CountingStrategy.SPANISH21_SECRET);
+        countingStrategyMapper.put(1, CountingStrategy.BJA_H17);
+        countingStrategyMapper.put(2, CountingStrategy.BJA_S17);
+    }
+
+    // Maps the index from the settings selection to the value
+    public final static Map<Integer, HoleCardStrategy> holeCardStrategyMapper;
+
+    static {
+        holeCardStrategyMapper = new HashMap<>();
+        holeCardStrategyMapper.put(0, HoleCardStrategy.WIZARD_BASIC);
     }
 
     // Maps the index from the settings selection to the value

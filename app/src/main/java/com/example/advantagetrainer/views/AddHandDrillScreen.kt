@@ -3,6 +3,7 @@ package com.example.advantagetrainer.views
 import android.content.SharedPreferences
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.*
@@ -80,6 +81,7 @@ fun AddHandDrillScreen (
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AnswerField(
     deck: ArrayList<Card>,

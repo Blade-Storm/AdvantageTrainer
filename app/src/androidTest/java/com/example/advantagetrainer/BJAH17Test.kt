@@ -5,7 +5,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.junit4.createComposeRule
 import com.example.advantagetrainer.enums.Actions
 import com.example.advantagetrainer.enums.CardNames
-import com.example.advantagetrainer.views.setStrategy
+import com.example.advantagetrainer.views.setCountingStrategy
 import junit.framework.TestCase
 import org.junit.Rule
 import org.junit.Test
@@ -30,11 +30,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -86,11 +86,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -142,11 +142,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -198,11 +198,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -251,11 +251,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -304,11 +304,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -360,11 +360,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -416,11 +416,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -472,11 +472,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -525,11 +525,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -578,11 +578,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -631,11 +631,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -684,11 +684,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -737,11 +737,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -791,11 +791,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -845,11 +845,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -899,11 +899,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -950,11 +950,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -1001,11 +1001,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -1052,11 +1052,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -1103,11 +1103,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -1154,11 +1154,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -1205,11 +1205,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -1256,11 +1256,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -1307,11 +1307,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -1358,11 +1358,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards){
                 val playerHand = Hand()
@@ -1409,11 +1409,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1456,11 +1456,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1503,11 +1503,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1546,11 +1546,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1589,11 +1589,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1632,11 +1632,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1679,11 +1679,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1726,11 +1726,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1774,11 +1774,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1822,11 +1822,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1870,11 +1870,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1918,11 +1918,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -1966,11 +1966,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(card in testUtils.cards) {
                 val playerHand = Hand()
@@ -2014,11 +2014,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2071,11 +2071,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2128,11 +2128,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2185,11 +2185,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2242,11 +2242,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2299,11 +2299,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2356,11 +2356,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2413,11 +2413,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2473,11 +2473,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2533,11 +2533,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2593,11 +2593,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2653,11 +2653,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2713,11 +2713,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands) {
                 playerAction =
@@ -2773,11 +2773,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -2827,11 +2827,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -2881,11 +2881,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -2935,11 +2935,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -2989,11 +2989,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -3043,11 +3043,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -3097,11 +3097,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -3151,11 +3151,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -3205,11 +3205,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -3259,11 +3259,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -3313,11 +3313,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -3367,11 +3367,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -3421,11 +3421,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             for(hand in testUtils.hardHands_threeCard) {
                 playerAction =
@@ -3475,11 +3475,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
@@ -3500,11 +3500,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
@@ -3529,11 +3529,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
@@ -3558,11 +3558,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
@@ -3587,11 +3587,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
@@ -3616,11 +3616,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 0, false)
@@ -3645,11 +3645,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitt, dealerHand, 6, true)
@@ -3682,11 +3682,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitt, dealerHand, 5, true)
@@ -3719,11 +3719,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.splitt, dealerHand, 4, true)
@@ -3756,11 +3756,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softa6, dealerHand, 1, true)
@@ -3781,11 +3781,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softaa5, dealerHand, 1, true)
@@ -3806,11 +3806,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softa8, dealerHand, 3, true)
@@ -3831,11 +3831,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softaa7, dealerHand, 3, true)
@@ -3856,11 +3856,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softa8, dealerHand, 1, true)
@@ -3881,11 +3881,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softaa7, dealerHand, 1, true)
@@ -3906,11 +3906,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softa8, dealerHand, -1, true)
@@ -3931,11 +3931,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.softaa7, dealerHand, -1, true)
@@ -3956,11 +3956,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard9, dealerHand, 1, true)
@@ -3989,11 +3989,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard9_threeCard, dealerHand, 1, true)
@@ -4022,11 +4022,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard12, dealerHand, 2, true)
@@ -4047,11 +4047,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard12_threeCard, dealerHand, 2, true)
@@ -4072,11 +4072,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard12, dealerHand, -1, true)
@@ -4097,11 +4097,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard12_threeCard, dealerHand, -1, true)
@@ -4122,11 +4122,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard8, dealerHand, 2, true)
@@ -4147,11 +4147,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard8_threeCard, dealerHand, 2, true)
@@ -4172,11 +4172,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard9, dealerHand, 3, true)
@@ -4197,11 +4197,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard9_threeCard, dealerHand, 3, true)
@@ -4222,11 +4222,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 4, true)
@@ -4247,11 +4247,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 4, true)
@@ -4272,11 +4272,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
@@ -4305,11 +4305,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
@@ -4338,11 +4338,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
@@ -4371,11 +4371,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
@@ -4404,11 +4404,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
@@ -4437,11 +4437,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
@@ -4470,11 +4470,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 4, true)
@@ -4503,11 +4503,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 4, true)
@@ -4536,11 +4536,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10, dealerHand, 3, true)
@@ -4569,11 +4569,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard10_threeCard, dealerHand, 3, true)
@@ -4602,11 +4602,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16, dealerHand, 4, true)
@@ -4627,11 +4627,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard16_threeCard, dealerHand, 4, true)
@@ -4652,11 +4652,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, 2, true)
@@ -4681,11 +4681,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, 2, true)
@@ -4710,11 +4710,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
@@ -4735,11 +4735,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)
@@ -4760,11 +4760,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
@@ -4785,11 +4785,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)
@@ -4810,11 +4810,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
@@ -4835,11 +4835,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)
@@ -4860,11 +4860,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
@@ -4885,11 +4885,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)
@@ -4910,11 +4910,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15, dealerHand, -1, true)
@@ -4935,11 +4935,11 @@ class BJAH17Test {
 
             with(sharedPref.edit()) {
                 clear()
-                putInt(Settings.STRATEGY, 1)
+                putInt(Settings.COUNTING_STRATEGY, 1)
                 apply()
             }
 
-            actionResolver = ActionResolver(setStrategy(sharedPref))
+            actionResolver = ActionResolver(setCountingStrategy(sharedPref))
 
             playerAction =
                 actionResolver.getActionFromStrategy(testUtils.hard15_threeCard, dealerHand, -1, true)

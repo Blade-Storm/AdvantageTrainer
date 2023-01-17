@@ -123,8 +123,8 @@ public class StrategyCombinatorial{
     }
 
     private void checkDealerCardInformation(Hand hand){
-        if(hand.dealerCard == null){
-            throw new IllegalArgumentException("Hand missing dealerCard: " + hand);
+        if(hand.dealerCard == null && hand.dealerHandTotal == null){
+            throw new IllegalArgumentException("Hand missing dealerCard information: " + hand);
         }
     }
 
@@ -151,8 +151,10 @@ public class StrategyCombinatorial{
 
     public static class Hand {
         public String handType;
+        public String dealerHandType;
         public CardNames dealerCard;
         public CardNames playerCard;
+        public Integer dealerHandTotal;
         public Integer playerHandTotal;
         public Actions playerAction;
         public Actions playerAltAction;
@@ -162,8 +164,10 @@ public class StrategyCombinatorial{
 
         Hand(
                 String handType,
+                String dealerHandType,
                 CardNames dealerCard,
                 CardNames playerCard,
+                Integer dealerHandTotal,
                 Integer playerHandTotal,
                 Actions playerAction,
                 Actions playerAltAction,
@@ -172,8 +176,10 @@ public class StrategyCombinatorial{
                 StrategyDeviationSign deviationSign
         ){
             this.handType = handType;
+            this.dealerHandType = dealerHandType;
             this.playerCard = playerCard;
             this.dealerCard =  dealerCard;
+            this.dealerHandTotal = dealerHandTotal;
             this.playerHandTotal = playerHandTotal;
             this.playerAction = playerAction;
             this.playerAltAction = playerAltAction;
@@ -187,8 +193,10 @@ public class StrategyCombinatorial{
             String string = "\n";
 
             string += "handType: " + this.handType + "\n";
+            string += "dealerHandType: " + this.dealerHandType + "\n";
             string += "dealerCard: " + this.dealerCard + "\n";
             string += "playerCard: " + this.playerCard + "\n";
+            string += "dealerHandTotal" + this.dealerHandTotal + "\n";
             string += "playerHandTotal: " + this.playerHandTotal + "\n";
             string += "playerAction: " + this.playerAction + "\n";
             string += "playerAltAction: " + this.playerAltAction + "\n";

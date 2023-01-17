@@ -56,7 +56,7 @@ public class TestUtils {
     Hand hard17 = new Hand().withCards(List.of(cardt, card7));
     Hand hard18 = new Hand().withCards(List.of(card8, cardt));
     Hand hard19 = new Hand().withCards(List.of(card9, cardt));
-    Hand hard20 = new Hand().withCards(List.of(cardt, cardt));
+    Hand hard20 = new Hand().withCards(List.of(cardt, card9, carda));
     Hand hard21 = new Hand().withCards(List.of(card8, card7, card6));
     List<Hand> hardHands = List.of(hard2,hard3,hard4,hard5,hard6,hard7,hard8,hard9,hard10,hard11,hard12,hard13,hard14,hard15,hard16,hard17,hard18,hard19,hard20,hard21);
 
