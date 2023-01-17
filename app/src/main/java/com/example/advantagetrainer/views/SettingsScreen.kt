@@ -19,8 +19,9 @@ import com.google.gson.Gson
 
 @Composable
 fun SettingsScreen(
-    onNavigateToStrategyDisplayScreen: () -> Unit,
+    onNavigateToCountingStrategyDisplayScreen: () -> Unit,
     onNavigateToCountingSystemEditScreen: () -> Unit,
+    onNavigateToHoleCardStrategyDisplayScreen: () -> Unit,
     sharedPref: SharedPreferences
 ) {
     Column(
@@ -275,7 +276,7 @@ fun SettingsScreen(
 
 
         Text(
-            "Strategy/Add Hand Drill Settings",
+            "Strategy and Add Hand Drill Settings",
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(5.dp, 10.dp, 0.dp, 5.dp)
         )
@@ -372,7 +373,7 @@ fun SettingsScreen(
                 Box{
                     Text(
                         modifier = Modifier
-                            .clickable { onNavigateToStrategyDisplayScreen() },
+                            .clickable { onNavigateToCountingStrategyDisplayScreen() },
                         color = Color(0xFF3366CC),
                         text = "View strategy table"
                     )
@@ -406,6 +407,198 @@ fun SettingsScreen(
                             Modifier.testTag("UseDeviations")
                         )
                         Text("Use deviations in strategy", modifier = Modifier.padding(0.dp, 12.dp))
+                    }
+                }
+            }
+        }
+
+        Text(
+            "Hole Card Drill Settings",
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(5.dp, 10.dp, 0.dp, 5.dp)
+        )
+        Column(
+            modifier = Modifier.padding(12.dp)
+        ) {
+            Text("Number of cards in hand")
+            // TODO: Use mapper in settings instead of hardcoded list
+            val numCardInHandHoleCardItems = listOf("2 cards", "3 cards", "2-4 cards", "2-5 cards")
+            var isNumCardInHandHoleCardExpanded by remember { mutableStateOf(false) }
+            var selectedNumCardsInHandHoleCardIndex by remember {
+                mutableStateOf(
+                    sharedPref.getInt(
+                        Settings.NUM_CARDS_IN_HAND_HOLE_CARD,
+                        0
+                    )
+                )
+            }
+
+            Box(Modifier.testTag("NumOfCardsInHandHoleCardBox")) {
+                Text(
+                    numCardInHandHoleCardItems[selectedNumCardsInHandHoleCardIndex], modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag("NumOfCardsInHandHoleCardItem")
+                        .clickable(onClick = { isNumCardInHandHoleCardExpanded = true })
+                )
+                DropdownMenu(
+                    expanded = isNumCardInHandHoleCardExpanded,
+                    onDismissRequest = { isNumCardInHandHoleCardExpanded = false },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    numCardInHandHoleCardItems.forEachIndexed { index, s ->
+                        DropdownMenuItem(onClick = {
+                            selectedNumCardsInHandHoleCardIndex = index
+                            isNumCardInHandHoleCardExpanded = false
+                            with(sharedPref.edit()) {
+                                putInt(Settings.NUM_CARDS_IN_HAND_HOLE_CARD, index)
+                                apply()
+                            }
+                        },
+                            text = { Text(text = s) })
+                    }
+                }
+            }
+        }
+
+        Column(
+            modifier = Modifier.padding(12.dp)
+        ) {
+
+            Text("Strategy to use:")
+            // TODO: Use mapper in settings instead of hardcoded list
+            val holeCardStrategyItems = Settings.HoleCardStrategy.values()
+            var isHoleCardStrategyExpanded by remember { mutableStateOf(false) }
+            var holeCardStrategyIndex by remember {
+                mutableStateOf(
+                    sharedPref.getInt(
+                        Settings.HOLE_CARD_STRATEGY,0
+                    )
+                )
+            }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                Arrangement.SpaceBetween
+            ) {
+                Box(
+                    Modifier.testTag("HoleCardStrategyToUse"),
+                ) {
+                    Text(
+                        holeCardStrategyItems[holeCardStrategyIndex].name,
+                        modifier = Modifier
+                            .testTag("HoleCardStrategyToUseItem")
+                            .clickable(onClick = { isHoleCardStrategyExpanded = true })
+                    )
+                    DropdownMenu(
+                        expanded = isHoleCardStrategyExpanded,
+                        onDismissRequest = { isHoleCardStrategyExpanded = false }
+                    ) {
+                        holeCardStrategyItems.forEachIndexed { index, s ->
+                            DropdownMenuItem(onClick = {
+                                holeCardStrategyIndex = index
+                                isHoleCardStrategyExpanded = false
+                                with(sharedPref.edit()) {
+                                    putInt(Settings.HOLE_CARD_STRATEGY, index)
+                                    apply()
+                                }
+                            },
+                                text = { Text(text = s.name) })
+                        }
+                    }
+                }
+
+                Box{
+                    Text(
+                        modifier = Modifier
+                            .clickable { onNavigateToHoleCardStrategyDisplayScreen() },
+                        color = Color(0xFF3366CC),
+                        text = "View strategy table"
+                    )
+                }
+            }
+        }
+
+        Column(
+            modifier = Modifier.padding(12.dp)
+        ) {
+            Text("Speed of dealer card flash, in seconds")
+            var isDealerSpeedDropdownExpanded by remember { mutableStateOf(false) }
+            // TODO: Use mapper in settings instead of hardcoded list
+            val dealerCardSpeedItems = listOf("0.25", "0.50", "1.00", "1.50", "2.00")
+            var selectedDealerCardSpeedIndex by remember {
+                mutableStateOf(
+                    sharedPref.getInt(
+                        Settings.DEALER_CARD_FLASH_SPEED,
+                        2
+                    )
+                )
+            }
+
+            Box(Modifier.testTag("DealerCardFlashSpeedBox")) {
+                Text(
+                    dealerCardSpeedItems[selectedDealerCardSpeedIndex],
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag("SelectedDealerCardSpeedItem")
+                        .clickable(onClick = { isDealerSpeedDropdownExpanded = true }
+                        ))
+                DropdownMenu(
+                    expanded = isDealerSpeedDropdownExpanded,
+                    onDismissRequest = { isDealerSpeedDropdownExpanded = false },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    dealerCardSpeedItems.forEachIndexed { index, s ->
+                        DropdownMenuItem(onClick = {
+                            selectedDealerCardSpeedIndex = index
+                            isDealerSpeedDropdownExpanded = false
+                            with(sharedPref.edit()) {
+                                putInt(Settings.DEALER_CARD_FLASH_SPEED, index)
+                                apply()
+                            }
+                        },
+                            text = { Text(text = s) })
+                    }
+                }
+            }
+        }
+
+        Column(
+            modifier = Modifier.padding(12.dp)
+        ) {
+            Text("Peek position of dealer card")
+            var isDealerPeekPositionDropdownExpanded by remember { mutableStateOf(false) }
+            // TODO: Use mapper in settings instead of hardcoded list
+            val dealerCardPeekPositionItems = listOf("")
+            var selectedDealerPeekPositionIndex by remember {
+                mutableStateOf(
+                    sharedPref.getInt(
+                        Settings.DEALER_PEEK_POSITION,0
+                    )
+                )
+            }
+
+            Box(Modifier.testTag("DealerCardFlashSpeedBox")) {
+                Text(
+                    dealerCardPeekPositionItems[selectedDealerPeekPositionIndex],
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag("SelectedDealerCardSpeedItem")
+                        .clickable(onClick = { isDealerPeekPositionDropdownExpanded = true }
+                        ))
+                DropdownMenu(
+                    expanded = isDealerPeekPositionDropdownExpanded,
+                    onDismissRequest = { isDealerPeekPositionDropdownExpanded = false },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    dealerCardPeekPositionItems.forEachIndexed { index, s ->
+                        DropdownMenuItem(onClick = {
+                            selectedDealerPeekPositionIndex = index
+                            isDealerPeekPositionDropdownExpanded = false
+                            with(sharedPref.edit()) {
+                                putInt(Settings.DEALER_PEEK_POSITION, index)
+                                apply()
+                            }
+                        },
+                            text = { Text(text = s) })
                     }
                 }
             }

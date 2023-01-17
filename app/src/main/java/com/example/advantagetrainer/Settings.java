@@ -16,7 +16,7 @@ public class Settings {
     }
 
     public enum HoleCardStrategy {
-        WIZARD_BASIC (R.raw.wizardofoddsholecardbasic);
+        BLACKJACK_WIZARD_BASIC(R.raw.wizardofoddsholecardbasic);
 
         public final int rawId;
         HoleCardStrategy(int id) {
@@ -49,10 +49,13 @@ public class Settings {
     // Constants
     public final static String SETTINGS_FILE_LOCATION = "com.example.advantagetrainer";
     public final static String CARD_FLASH_SPEED = "cardFlashSpeed";
+    public final static String DEALER_CARD_FLASH_SPEED = "dealerCardFlashSpeed";
+    public final static String DEALER_PEEK_POSITION = "dealerPeekPosition";
     public final static String DECK_TYPE = "deckTypeToUse";
     public final static String NUM_CARDS_TO_FLASH = "numCardsToFlash";
     public final static String NUM_DECKS_TO_COUNT = "numDecksToCount";
     public final static String NUM_CARDS_IN_HAND = "numCardsInHand";
+    public final static String NUM_CARDS_IN_HAND_HOLE_CARD = "numCardsInHandHoleCard";
     public final static String COUNTING_STRATEGY = "countingStrategy";
     public final static String USE_DEVIATIONS = "useDeviations";
     public final static String COUNTING_SYSTEM = "countingSystem";
@@ -130,7 +133,7 @@ public class Settings {
 
     static {
         holeCardStrategyMapper = new HashMap<>();
-        holeCardStrategyMapper.put(0, HoleCardStrategy.WIZARD_BASIC);
+        holeCardStrategyMapper.put(0, HoleCardStrategy.BLACKJACK_WIZARD_BASIC);
     }
 
     // Maps the index from the settings selection to the value

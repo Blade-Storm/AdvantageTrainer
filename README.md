@@ -11,5 +11,4 @@ Coupon Calculator
 Settings
 4. Look into:
    1. Adding home button to settings screen (so when the edit screen is accessed you dont have to go back through that)
-5. Update spanish strategy to have forfeit hands
 6. Create GH Action to run tests on Main merge

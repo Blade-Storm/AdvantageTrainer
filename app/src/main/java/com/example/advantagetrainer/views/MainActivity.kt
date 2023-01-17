@@ -124,8 +124,9 @@ fun MyAppNavHost(
         }
         composable("settings") {
             SettingsScreen(
-                onNavigateToStrategyDisplayScreen = { navController.navigate("strategydisplay") },
+                onNavigateToCountingStrategyDisplayScreen = { navController.navigate("countingstrategydisplay") },
                 onNavigateToCountingSystemEditScreen = { navController.navigate("countingsystemedit") },
+                onNavigateToHoleCardStrategyDisplayScreen = { navController.navigate("holecardstrategydisplay") },
                 sharedPref
             )
         }
@@ -136,11 +137,17 @@ fun MyAppNavHost(
                 actionResolver
             )
         }
-        composable("strategydisplay"){
-            StrategyDisplayScreen(
+        composable("countingstrategydisplay"){
+            CountingStrategyDisplayScreen(
                 sharedPref
             )
         }
+        composable("holecardstrategydisplay"){
+            HoleCardStrategyDisplayScreen(
+                sharedPref
+            )
+        }
+
         composable("countingsystemedit"){
             CountingSystemEditScreen(
                 sharedPref,
