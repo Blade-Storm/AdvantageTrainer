@@ -10,7 +10,6 @@ Hand > Add, Settings
 Coupon Calculator
 Settings
 4. Look into:
-   1. Update the counting strategy edit screen to have better UI
-   2. Settings section for Add Hand Drill
-   3. Adding home button to settings screen (so when the edit screen is accessed you dont have to go back through that)
-5. Create GH Action to run tests on Main merge
+   1. Adding home button to settings screen (so when the edit screen is accessed you dont have to go back through that)
+5. Update spanish strategy to have forfeit hands
+6. Create GH Action to run tests on Main merge

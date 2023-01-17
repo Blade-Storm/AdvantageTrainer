@@ -275,7 +275,7 @@ fun SettingsScreen(
 
 
         Text(
-            "Strategy Drill Settings",
+            "Strategy/Add Hand Drill Settings",
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(5.dp, 10.dp, 0.dp, 5.dp)
         )

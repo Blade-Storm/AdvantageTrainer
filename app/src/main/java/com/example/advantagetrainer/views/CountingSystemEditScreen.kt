@@ -1,15 +1,20 @@
 package com.example.advantagetrainer.views
 
 import android.content.SharedPreferences
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.ScrollState
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.unit.dp
 import com.example.advantagetrainer.CountingSystem
 import com.example.advantagetrainer.Settings
 import com.example.advantagetrainer.enums.CardNames
@@ -32,23 +37,37 @@ fun CountingSystemEditScreen(
     var three by remember { mutableStateOf(if(countingSystem.map[CardNames.THREE] == null) "0.0" else countingSystem.map[CardNames.THREE].toString()) }
     var two by remember { mutableStateOf(if(countingSystem.map[CardNames.TWO] == null) "0.0" else countingSystem.map[CardNames.TWO].toString()) }
 
-    Column {
-        Row {
-            Text(CardNames.ACE.toString().uppercase())
+    Column (modifier = Modifier.verticalScroll(rememberScrollState())){
+        Row (
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(5.dp)
+        ){
+            Text(
+                CardNames.ACE.toString().uppercase(),
+                modifier = Modifier.padding(10.dp)
+            )
 
 
             countingSystem.updateMap(CardNames.ACE, ace.toDoubleOrNull())
             TextField(
+                modifier = Modifier.height(IntrinsicSize.Min),
                 value = ace,
                 onValueChange = {
                     ace = it
                 },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             )
+
         }
 
-        Row {
-            Text(CardNames.TEN.toString().uppercase())
+        Row (
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(5.dp)
+        ){
+            Text(
+                CardNames.TEN.toString().uppercase(),
+                modifier = Modifier.padding(10.dp)
+            )
 
             countingSystem.updateMap(CardNames.TEN, ten.toDoubleOrNull())
             TextField(
@@ -60,8 +79,14 @@ fun CountingSystemEditScreen(
             )
         }
 
-        Row {
-            Text(CardNames.NINE.toString().uppercase())
+        Row (
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(5.dp)
+        ){
+            Text(
+                CardNames.NINE.toString().uppercase(),
+                modifier = Modifier.padding(10.dp)
+            )
 
             countingSystem.updateMap(CardNames.NINE, nine.toDoubleOrNull())
             TextField(
@@ -73,8 +98,14 @@ fun CountingSystemEditScreen(
             )
         }
 
-        Row {
-            Text(CardNames.EIGHT.toString().uppercase())
+        Row (
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(5.dp)
+        ){
+            Text(
+                CardNames.EIGHT.toString().uppercase(),
+                modifier = Modifier.padding(10.dp)
+            )
 
             countingSystem.updateMap(CardNames.EIGHT, eight.toDoubleOrNull())
             TextField(
@@ -86,8 +117,14 @@ fun CountingSystemEditScreen(
             )
         }
 
-        Row {
-            Text(CardNames.SEVEN.toString().uppercase())
+        Row (
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(5.dp)
+        ){
+            Text(
+                CardNames.SEVEN.toString().uppercase(),
+                modifier = Modifier.padding(10.dp)
+            )
 
             countingSystem.updateMap(CardNames.SEVEN, seven.toDoubleOrNull())
             TextField(
@@ -99,8 +136,14 @@ fun CountingSystemEditScreen(
             )
         }
 
-        Row {
-            Text(CardNames.SIX.toString().uppercase())
+        Row (
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(5.dp)
+        ){
+            Text(
+                CardNames.SIX.toString().uppercase(),
+                modifier = Modifier.padding(10.dp)
+            )
 
             countingSystem.updateMap(CardNames.SIX, six.toDoubleOrNull())
             TextField(
@@ -112,8 +155,14 @@ fun CountingSystemEditScreen(
             )
         }
 
-        Row {
-            Text(CardNames.FIVE.toString().uppercase())
+        Row (
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(5.dp)
+        ){
+            Text(
+                CardNames.FIVE.toString().uppercase(),
+                modifier = Modifier.padding(10.dp)
+            )
 
             countingSystem.updateMap(CardNames.FIVE, five.toDoubleOrNull())
             TextField(
@@ -125,8 +174,14 @@ fun CountingSystemEditScreen(
             )
         }
 
-        Row {
-            Text(CardNames.FOUR.toString().uppercase())
+        Row (
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(5.dp)
+        ){
+            Text(
+                CardNames.FOUR.toString().uppercase(),
+                modifier = Modifier.padding(10.dp)
+            )
 
             countingSystem.updateMap(CardNames.FOUR, four.toDoubleOrNull())
             TextField(
@@ -138,8 +193,14 @@ fun CountingSystemEditScreen(
             )
         }
 
-        Row {
-            Text(CardNames.THREE.toString().uppercase())
+        Row (
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(5.dp)
+        ){
+            Text(
+                CardNames.THREE.toString().uppercase(),
+                modifier = Modifier.padding(10.dp)
+            )
 
             countingSystem.updateMap(CardNames.THREE, three.toDoubleOrNull())
             TextField(
@@ -151,8 +212,14 @@ fun CountingSystemEditScreen(
             )
         }
 
-        Row {
-            Text(CardNames.TWO.toString().uppercase())
+        Row (
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(5.dp)
+        ){
+            Text(
+                CardNames.TWO.toString().uppercase(),
+                modifier = Modifier.padding(10.dp)
+            )
 
             countingSystem.updateMap(CardNames.TWO, two.toDoubleOrNull())
             TextField(
@@ -164,13 +231,23 @@ fun CountingSystemEditScreen(
             )
         }
 
-        Button(onClick = {
-            setCountingSystem(sharedPref, countingSystem)
-            onNavigateToSettings()
-        }) {
-            Text("Save")
+        Column(
+            modifier = Modifier
+                .padding(24.dp)
+                .fillMaxWidth()
+                .fillMaxHeight(),
+            verticalArrangement = Arrangement.Bottom,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ){
+            Button(
+                onClick = {
+                    setCountingSystem(sharedPref, countingSystem)
+                    onNavigateToSettings()
+                }
+            ) {
+                Text("Save")
+            }
         }
-
     }
 }
 
