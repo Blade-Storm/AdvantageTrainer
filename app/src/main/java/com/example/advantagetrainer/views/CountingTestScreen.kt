@@ -1,6 +1,7 @@
 package com.example.advantagetrainer.views
 
 import android.content.SharedPreferences
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -12,6 +13,7 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import com.example.advantagetrainer.Card
 
@@ -38,10 +40,13 @@ fun CountingTestScreen (
             label = { Text("Current count?") }
         )
 
+        val context = LocalContext.current
         Button(
             onClick = {
                 if (count == userInput.toDoubleOrNull()) {
                     updateCountingDeck(newDeck) // Create a new deck
+                }else{
+                    Toast.makeText(context, "Current Running Count: $count", Toast.LENGTH_SHORT).show()
                 }
             },
             Modifier.testTag("SubmitButton")

@@ -1,7 +1,9 @@
 package com.example.advantagetrainer.views
 
 import android.content.SharedPreferences
+import android.widget.Toast
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
@@ -9,7 +11,9 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.example.advantagetrainer.Card
 import com.example.advantagetrainer.Hand
@@ -96,15 +100,25 @@ fun AnswerField(
 
     TextField(
         value = userInput,
-        onValueChange = { userInput = it},
+        onValueChange = { userInput = it },
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
         label = { Text("Hand Total") }
     )
 
+    val context = LocalContext.current
+    // Create the hand
+    val hand = Hand()
+    for(i in 0 until numCardInHandSetting){
+        hand.addCard(deck[index + i])
+    }
+
     Button(onClick = {
-        if(isUserCorrect(deck, index, numCardInHandSetting, userInput)){
+        if(isUserCorrect(hand, userInput)){
             userInput = ""
             deck.shuffle()
             updateIndex((0 until deck.size).random())
+        }else{
+            Toast.makeText(context, "Hand Total: " + hand.handTotal.toString(), Toast.LENGTH_SHORT).show()
         }
     },
         Modifier.testTag("SubmitButton")
@@ -114,17 +128,10 @@ fun AnswerField(
 }
 
 fun isUserCorrect(
-    deck: ArrayList<Card>,
-    index: Int,
-    numCardToFlash: Int,
+    hand: Hand,
     userInput: String
 ): Boolean {
     var userString = ""
-    // Create the hand
-    val hand = Hand()
-    for(i in 0 until numCardToFlash){
-        hand.addCard(deck[index + i])
-    }
 
     // Check if the user input contains `S` for Soft Hand. Get the next sequence of digits to convert to Int
     if(userInput[0].uppercase() == "S"){

@@ -1,6 +1,8 @@
 package com.example.advantagetrainer.views
 
+import android.content.Context
 import android.content.SharedPreferences
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
@@ -140,6 +142,8 @@ fun StrategyDrillScreen(
                         }
                     }
                 }
+
+                val context = LocalContext.current
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Bottom,
@@ -153,27 +157,21 @@ fun StrategyDrillScreen(
                         modifier = Modifier.fillMaxWidth()
                     ){
                         Button(onClick = {
-                            if(playerAction == Actions.DOUBLE_DOWN){
-                                updateIndex((0 until deck.size).random())
-                            }
+                            checkPlayerSelection(playerAction, Actions.DOUBLE_DOWN, updateIndex, context, deck.size)
                         },
                             Modifier.testTag("DoubleButton")
                         ) {
                             Text(text = "Double")
                         }
                         Button(onClick = {
-                            if(playerAction == Actions.HIT){
-                                updateIndex((0 until deck.size).random())
-                            }
+                            checkPlayerSelection(playerAction, Actions.HIT, updateIndex, context, deck.size)
                         },
                             Modifier.testTag("HitButton")
                         ) {
                             Text(text = "Hit")
                         }
                         Button(onClick = {
-                            if(playerAction == Actions.STAND){
-                                updateIndex((0 until deck.size).random())
-                            }
+                            checkPlayerSelection(playerAction, Actions.STAND, updateIndex, context, deck.size)
                         },
                             Modifier.testTag("StandButton")
                         ) {
@@ -185,18 +183,14 @@ fun StrategyDrillScreen(
                         modifier = Modifier.fillMaxWidth()
                     ){
                         Button(onClick = {
-                            if(playerAction == Actions.SPLIT){
-                                updateIndex((0 until deck.size).random())
-                            }
+                            checkPlayerSelection(playerAction, Actions.SPLIT, updateIndex, context, deck.size)
                         },
                             Modifier.testTag("SplitButton")
                         ) {
                             Text(text = "Split")
                         }
                         Button(onClick = {
-                            if(playerAction == Actions.SURRENDER){
-                                updateIndex((0 until deck.size).random())
-                            }
+                            checkPlayerSelection(playerAction, Actions.SURRENDER, updateIndex, context, deck.size)
                         },
                             Modifier.testTag("SurrenderButton")
                         ) {
@@ -259,3 +253,16 @@ fun setCountingStrategy(sharedPref: SharedPreferences): StrategyCombinatorial {
     return strategyCombinatorial
 }
 
+fun checkPlayerSelection(
+    strategyAction: Actions,
+    playerSelection: Actions,
+    updateIndex: (Int) -> Unit,
+    context: Context,
+    deckSize: Int
+) {
+    if(strategyAction == playerSelection){
+        updateIndex((0 until deckSize).random())
+    }else{
+        Toast.makeText(context, "Correct Action: " + strategyAction.name, Toast.LENGTH_SHORT).show()
+    }
+}
