@@ -13,18 +13,21 @@ public class StrategyCombinatorial{
     public ArrayList<Hand> soft;
     public ArrayList<Hand> split;
     public ArrayList<Hand> surrender;
+    public ArrayList<Hand> forfeit;
 
 
     StrategyCombinatorial(
             ArrayList<Hand> hard,
             ArrayList<Hand> soft,
             ArrayList<Hand> split,
-            ArrayList<Hand> surrender
+            ArrayList<Hand> surrender,
+            ArrayList<Hand> forfeit
     ){
         this.hard = hard;
         this.soft = soft;
         this.split = split;
         this.surrender = surrender;
+        this.forfeit = forfeit;
 
         validateHands();
     }
