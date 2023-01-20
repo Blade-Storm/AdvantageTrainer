@@ -3992,146 +3992,6 @@
       "dealerHandTotal": 21,
       "playerHandTotal": 21,
       "playerAction": "STAND"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 2,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 3,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 4,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 5,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 6,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 7,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 8,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 9,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 10,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 11,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 12,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 13,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 14,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 15,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 16,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 17,
-      "playerAction": "HIT"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 18,
-      "playerAction": "STAND"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 19,
-      "playerAction": "STAND"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 20,
-      "playerAction": "STAND"
-    },
-    {
-      "handType": "hard",
-      "dealerHandType": "soft",
-      "dealerHandTotal": 20,
-      "playerHandTotal": 21,
-      "playerAction": "STAND"
     }
   ],
   "soft": [
@@ -6667,7 +6527,7 @@
     {
       "handType": "split",
       "dealerHandType": "hard",
-      "dealerHandTotal": 8,
+      "dealerHandTotal": 9,
       "playerHandTotal": 14,
       "playerCard": "SEVEN"
     },
@@ -8460,8 +8320,7 @@
       "dealerHandType": "soft",
       "dealerHandTotal": 17,
       "playerHandTotal": 12,
-      "playerCard": "ACE",
-      "playerAction": "SPLIT"
+      "playerCard": "ACE"
     },
     {
       "handType": "split",

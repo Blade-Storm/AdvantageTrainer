@@ -19,14 +19,14 @@ import com.example.advantagetrainer.enums.Actions
 import com.example.advantagetrainer.enums.CardNames
 import com.example.advantagetrainer.enums.StrategyDeviationSign
 
-var action: String? = null
-var deviationCount: String? = null
-var deviationAction: String? = null
-var sign: String? = null
-var altAction: String? = null
-var modifier: Modifier? = null
-var text: String? = null
-val dealerHands = arrayListOf("2","3","4","5","6","7","8","9","t","a")
+private var action: String? = null
+private var deviationCount: String? = null
+private var deviationAction: String? = null
+private var sign: String? = null
+private var altAction: String? = null
+private var modifier: Modifier? = null
+private var text: String? = null
+private val dealerHands = arrayListOf("2","3","4","5","6","7","8","9","t","a")
 
 @Composable
 fun CountingStrategyDisplayScreen(
@@ -98,7 +98,7 @@ fun CountingStrategyDisplayScreen(
                                         dealerHands[i]
                                     ).name
                                 ) {
-                                    assignCellValues2(strategySplit[j])
+                                    assignCellValues(strategySplit[j])
 
                                     text = if(action != null) "Y" else "N"
                                     text = if(deviationCount != null) deviationCount.toString() + sign else text
@@ -110,7 +110,7 @@ fun CountingStrategyDisplayScreen(
                                         .padding(6.dp)
                                         .width(20.dp)
 
-                                    GenerateCell2()
+                                    GenerateCell()
                                 }
                             }
                         }
@@ -189,9 +189,9 @@ fun CountingStrategyDisplayScreen(
                                         dealerHands[i]
                                     ).name
                                 ) {
-                                    assignCellValues2(strategySoft[j])
-                                    assignCellModifier2()
-                                    GenerateCell2()
+                                    assignCellValues(strategySoft[j])
+                                    assignCellModifier()
+                                    GenerateCell()
                                 }
                             }
                         }
@@ -254,9 +254,9 @@ fun CountingStrategyDisplayScreen(
                                         dealerHands[i]
                                     ).name
                                 ) {
-                                    assignCellValues2(strategyHard[j])
-                                    assignCellModifier2()
-                                    GenerateCell2()
+                                    assignCellValues(strategyHard[j])
+                                    assignCellModifier()
+                                    GenerateCell()
                                 }
                             }
                         }
@@ -321,9 +321,9 @@ fun CountingStrategyDisplayScreen(
                                         dealerHands[i]
                                     ).name
                                 ) {
-                                    assignCellValues2(strategySurrender[j])
-                                    assignCellModifier2()
-                                    GenerateCell2()
+                                    assignCellValues(strategySurrender[j])
+                                    assignCellModifier()
+                                    GenerateCell()
                                 }
                             }
                         }
@@ -387,9 +387,9 @@ fun CountingStrategyDisplayScreen(
                                         dealerHands[i]
                                     ).name
                                 ) {
-                                    assignCellValues2(strategyForfeit[j])
-                                    assignCellModifier2()
-                                    GenerateCell2()
+                                    assignCellValues(strategyForfeit[j])
+                                    assignCellModifier()
+                                    GenerateCell()
                                 }
                             }
                         }
@@ -400,7 +400,7 @@ fun CountingStrategyDisplayScreen(
     }
 }
 
-fun assignCellValues2(strategyHand: StrategyCombinatorial.Hand){
+private fun assignCellValues(strategyHand: StrategyCombinatorial.Hand){
     if (strategyHand.deviationAction != null) {
         deviationCount = strategyHand.deviationCount.toString()
         sign = strategyHand.deviationSign.toString()
@@ -420,7 +420,7 @@ fun assignCellValues2(strategyHand: StrategyCombinatorial.Hand){
     altAction = if(strategyHand.playerAltAction != null) strategyHand.playerAltAction.toString() else null
 }
 
-fun assignCellModifier2(){
+private fun assignCellModifier(){
     if(action.toString() == Actions.DOUBLE_DOWN.toString() && (altAction != null && altAction.toString() == Actions.STAND.toString())){
         modifier = Modifier
             .background(Color.Cyan)
@@ -461,7 +461,7 @@ fun assignCellModifier2(){
 }
 
 @Composable
-fun GenerateCell2(){
+private fun GenerateCell(){
     Text(
         text!!,
         modifier = modifier!!,
