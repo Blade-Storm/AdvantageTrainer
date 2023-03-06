@@ -417,6 +417,9 @@ fun SettingsScreen(
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(5.dp, 10.dp, 0.dp, 5.dp)
         )
+
+        // TODO: Finish Hole Card drills and settings
+        /*
         Column(
             modifier = Modifier.padding(12.dp)
         ) {
@@ -459,6 +462,7 @@ fun SettingsScreen(
                 }
             }
         }
+        */
 
         Column(
             modifier = Modifier.padding(12.dp)
@@ -517,6 +521,8 @@ fun SettingsScreen(
             }
         }
 
+        // TODO: Finish hole card drills and settings
+        /*
         Column(
             modifier = Modifier.padding(12.dp)
         ) {
@@ -603,6 +609,7 @@ fun SettingsScreen(
                 }
             }
         }
+         */
     }
 }
 

@@ -16,7 +16,8 @@ public class Settings {
     }
 
     public enum HoleCardStrategy {
-        BLACKJACK_WIZARD_BASIC(R.raw.wizardofoddsholecardbasic);
+        BLACKJACK_WIZARD_BASIC(R.raw.wizardofoddsholecardbasic),
+        SP21_BASIC(R.raw.sp21holecardbasic);
 
         public final int rawId;
         HoleCardStrategy(int id) {
@@ -134,6 +135,7 @@ public class Settings {
     static {
         holeCardStrategyMapper = new HashMap<>();
         holeCardStrategyMapper.put(0, HoleCardStrategy.BLACKJACK_WIZARD_BASIC);
+        holeCardStrategyMapper.put(1, HoleCardStrategy.SP21_BASIC);
     }
 
     // Maps the index from the settings selection to the value

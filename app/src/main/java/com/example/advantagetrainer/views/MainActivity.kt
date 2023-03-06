@@ -205,12 +205,16 @@ fun HomeScreen(
         ) {
             Text(text = "Strategy Drill")
         }
+        // TODO: Finish hole card drills and settings
+        /*
         Button(
             onClick = onNavigateToHoleCardDrill,
             Modifier.testTag("HoleCardDrillButton")
         ) {
             Text(text = "Hole Card Drill")
         }
+         */
+
         Button(
            onClick = onNavigateToCouponCalculator,
            Modifier.testTag("CouponCalculatorButton")

@@ -36,6 +36,7 @@ fun HoleCardStrategyDisplayScreen (sharedPref: SharedPreferences) {
     val strategySplit = strategy.split
     val strategySurrender = strategy.surrender
     val strategyForfeit = strategy.forfeit
+    val playerSoftHandsColumn: MutableSet<String> = mutableSetOf("")
 
     Column(
         modifier = Modifier
@@ -131,8 +132,8 @@ fun HoleCardStrategyDisplayScreen (sharedPref: SharedPreferences) {
                     horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = Modifier.background(Color.LightGray)
                 ) {
-                    strategySplit.sortedWith(nullsFirst(compareBy { it.playerHandTotal }))
-                    strategySplit.reverse()
+                    // strategySplit.sortedWith(nullsFirst(compareBy { it.playerHandTotal }))
+                    //strategySplit.reverse()
                     for(i in 0 until strategySplit.size){
                         if(strategySplit[i].playerCard == CardNames.ACE){
                             set.add("A,A")
@@ -197,49 +198,15 @@ fun HoleCardStrategyDisplayScreen (sharedPref: SharedPreferences) {
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.Center
             ) {
-                val set: MutableSet<String> = mutableSetOf("")
                 Column(
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = Modifier.background(Color.LightGray)
                 ) {
-                    strategySoft.sortBy { it.playerHandTotal }
-                    strategySoft.reverse()
-                    for(i in 0 until strategySoft.size){
-                        if(strategySoft[i].playerCard != null ){
-                            val card = CardValueMapper.cardValueMapper[strategySoft[i].playerCard].toString()
-                            set.add("$card,$card")
-                        }else if(strategySoft[i].playerCard == null){
-                            set.add(strategySoft[i].playerHandTotal.toString())
-                        }
-                    }
-
-                    set.forEach {
-                        if(it == ""){
-                            Text(text = "", modifier = Modifier.padding(6.dp))
-                        }else if(it == "12"){
-                            Text(text = "A,A", modifier = Modifier.padding(6.dp))
-                        }else if(it == "13"){
-                            Text(text = "A,2", modifier = Modifier.padding(6.dp))
-                        }else if(it == "14"){
-                            Text(text = "A,3", modifier = Modifier.padding(6.dp))
-                        }else if(it == "15"){
-                            Text(text = "A,4", modifier = Modifier.padding(6.dp))
-                        }else if(it == "16"){
-                            Text(text = "A,5", modifier = Modifier.padding(6.dp))
-                        }else if(it == "17"){
-                            Text(text = "A,6", modifier = Modifier.padding(6.dp))
-                        }else if(it == "18"){
-                            Text(text = "A,7", modifier = Modifier.padding(6.dp))
-                        }else if(it == "19"){
-                            Text(text = "A,8", modifier = Modifier.padding(6.dp))
-                        }else if(it == "20"){
-                            Text(text = "A,9", modifier = Modifier.padding(6.dp))
-                        }
-                    }
+                    GeneratePlayerSoftHandsColumn(strategySoft, playerSoftHandsColumn)
                 }
                 for (i in 0 until dealerHardHandTotals.size) {
-                    Column() {
+                    Column {
                         Text(
                             dealerHardHandTotals[i].uppercase(),
                             modifier = Modifier
@@ -275,49 +242,15 @@ fun HoleCardStrategyDisplayScreen (sharedPref: SharedPreferences) {
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.Center
             ) {
-                val set: MutableSet<String> = mutableSetOf("")
                 Column(
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = Modifier.background(Color.LightGray)
                 ) {
-                    strategySoft.sortBy { it.playerHandTotal }
-                    strategySoft.reverse()
-                    for(i in 0 until strategySoft.size){
-                        if(strategySoft[i].playerCard != null ){
-                            val card = CardValueMapper.cardValueMapper[strategySoft[i].playerCard].toString()
-                            set.add("$card,$card")
-                        }else if(strategySoft[i].playerCard == null){
-                            set.add(strategySoft[i].playerHandTotal.toString())
-                        }
-                    }
-
-                    set.forEach {
-                        if(it == ""){
-                            Text(text = "", modifier = Modifier.padding(6.dp))
-                        }else if(it == "12"){
-                            Text(text = "A,A", modifier = Modifier.padding(6.dp))
-                        }else if(it == "13"){
-                            Text(text = "A,2", modifier = Modifier.padding(6.dp))
-                        }else if(it == "14"){
-                            Text(text = "A,3", modifier = Modifier.padding(6.dp))
-                        }else if(it == "15"){
-                            Text(text = "A,4", modifier = Modifier.padding(6.dp))
-                        }else if(it == "16"){
-                            Text(text = "A,5", modifier = Modifier.padding(6.dp))
-                        }else if(it == "17"){
-                            Text(text = "A,6", modifier = Modifier.padding(6.dp))
-                        }else if(it == "18"){
-                            Text(text = "A,7", modifier = Modifier.padding(6.dp))
-                        }else if(it == "19"){
-                            Text(text = "A,8", modifier = Modifier.padding(6.dp))
-                        }else if(it == "20"){
-                            Text(text = "A,9", modifier = Modifier.padding(6.dp))
-                        }
-                    }
+                    GeneratePlayerSoftHandsColumn(strategySoft, playerSoftHandsColumn)
                 }
                 for (i in 0 until dealerSoftHandTotals.size) {
-                    Column() {
+                    Column {
                         Text(
                             dealerSoftHandTotals[i].uppercase(),
                             modifier = Modifier
@@ -368,7 +301,7 @@ fun HoleCardStrategyDisplayScreen (sharedPref: SharedPreferences) {
                             val card = CardValueMapper.cardValueMapper[strategyHard[i].playerCard].toString()
                             set.add("$card,$card")
                         }else if(strategyHard[i].playerCard == null){
-                            if(strategyHard[i].playerHandTotal in 8..18){
+                            if(strategyHard[i].playerHandTotal in 7..18){
                                 set.add(strategyHard[i].playerHandTotal.toString())
                             }
                         }
@@ -379,7 +312,7 @@ fun HoleCardStrategyDisplayScreen (sharedPref: SharedPreferences) {
                     }
                 }
                 for (i in 0 until dealerHardHandTotals.size) {
-                    Column() {
+                    Column {
                         Text(
                             dealerHardHandTotals[i].uppercase(),
                             modifier = Modifier
@@ -390,7 +323,7 @@ fun HoleCardStrategyDisplayScreen (sharedPref: SharedPreferences) {
                         )
 
                         for (j in 0 until strategyHard.size) {
-                            if(strategyHard[j].playerHandTotal in 8..18){
+                            if(strategyHard[j].playerHandTotal in 7..18){
                                 if (strategyHard[j].dealerHandTotal == dealerHardHandTotals[i].toInt() && Hand.HandType.stringToHandType(strategyHard[j].dealerHandType) == Hand.HandType.HARD) {
                                     assignCellValues(strategyHard[j])
                                     assignCellModifier()
@@ -439,7 +372,7 @@ fun HoleCardStrategyDisplayScreen (sharedPref: SharedPreferences) {
                     }
                 }
                 for (i in 0 until dealerSoftHandTotals.size) {
-                    Column() {
+                    Column {
                         Text(
                             dealerSoftHandTotals[i].uppercase(),
                             modifier = Modifier
@@ -598,6 +531,44 @@ fun HoleCardStrategyDisplayScreen (sharedPref: SharedPreferences) {
     }
 }
 
+@Composable
+fun GeneratePlayerSoftHandsColumn(strategySoft: ArrayList<StrategyCombinatorial.Hand>, playerSoftHandsColumn: MutableSet<String>) {
+    strategySoft.sortBy { it.playerHandTotal }
+    strategySoft.reverse()
+    for(i in 0 until strategySoft.size){
+        if(strategySoft[i].playerCard != null ){
+            val card = CardValueMapper.cardValueMapper[strategySoft[i].playerCard].toString()
+            playerSoftHandsColumn.add("$card,$card")
+        }else if(strategySoft[i].playerCard == null){
+            playerSoftHandsColumn.add(strategySoft[i].playerHandTotal.toString())
+        }
+    }
+
+    playerSoftHandsColumn.forEach {
+        if(it == ""){
+            Text(text = "", modifier = Modifier.padding(6.dp))
+        }else if(it == "12"){
+            Text(text = "A,A", modifier = Modifier.padding(6.dp))
+        }else if(it == "13"){
+            Text(text = "A,2", modifier = Modifier.padding(6.dp))
+        }else if(it == "14"){
+            Text(text = "A,3", modifier = Modifier.padding(6.dp))
+        }else if(it == "15"){
+            Text(text = "A,4", modifier = Modifier.padding(6.dp))
+        }else if(it == "16"){
+            Text(text = "A,5", modifier = Modifier.padding(6.dp))
+        }else if(it == "17"){
+            Text(text = "A,6", modifier = Modifier.padding(6.dp))
+        }else if(it == "18"){
+            Text(text = "A,7", modifier = Modifier.padding(6.dp))
+        }else if(it == "19"){
+            Text(text = "A,8", modifier = Modifier.padding(6.dp))
+        }else if(it == "20"){
+            Text(text = "A,9", modifier = Modifier.padding(6.dp))
+        }
+    }
+}
+
 private fun assignCellValues(strategyHand: StrategyCombinatorial.Hand){
     action = if(strategyHand.playerAction != null) strategyHand.playerAction.toString() else null
     altAction = if(strategyHand.playerAltAction != null) strategyHand.playerAltAction.toString() else null
@@ -608,7 +579,7 @@ private fun assignCellModifier(){
         modifier = Modifier
             .background(Color.Cyan)
             .padding(6.dp)
-            .width(20.dp)
+            .width(25.dp)
         text = "Ds"
     }else if(action.toString() == "hit"){
         modifier = Modifier
